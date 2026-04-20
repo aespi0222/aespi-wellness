@@ -1,0 +1,5 @@
+{
+  "name": "AESPI - Wellness Studio",
+  "description": "AESPI Wellness Studio delivering BIXEPS Pro sessions that promote muscle health, recovery, and overall vitality.",
+  "requestFramePermissions": ["geolocation"]
+}

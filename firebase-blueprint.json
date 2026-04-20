@@ -1,0 +1,49 @@
+{
+  "entities": {
+    "Inquiry": {
+      "title": "Inquiry",
+      "description": "A client inquiry submitted via the contact form.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the person inquiring."
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "The email address of the person inquiring."
+        },
+        "phone": {
+          "type": "string",
+          "description": "The phone number of the person inquiring."
+        },
+        "service": {
+          "type": "string",
+          "description": "The service they are interested in."
+        },
+        "message": {
+          "type": "string",
+          "description": "The message or question from the client."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the inquiry was submitted."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["new", "contacted", "closed"],
+          "description": "The current status of the inquiry."
+        }
+      },
+      "required": ["name", "email", "message", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/inquiries/{inquiryId}": {
+      "schema": "Inquiry",
+      "description": "Collection of client inquiries."
+    }
+  }
+}
