@@ -2,7 +2,7 @@ import { GoogleGenAI } from "@google/genai";
 import { BRAND, SERVICES } from "../constants";
 
 const ai = new GoogleGenAI({ 
-  apiKey: process.env.GEMINI_API_KEY || (import.meta.env.VITE_GEMINI_API_KEY as string) 
+  apiKey: (typeof process !== 'undefined' && process.env.GEMINI_API_KEY) || (import.meta.env.VITE_GEMINI_API_KEY as string) || ""
 });
 
 const SYSTEM_INSTRUCTION = `
