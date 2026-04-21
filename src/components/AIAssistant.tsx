@@ -52,7 +52,7 @@ export function AIAssistant() {
       {/* Floating Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-8 left-8 z-50 bg-primary text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group"
+        className="fixed bottom-8 left-8 z-50 bg-accent text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform flex items-center justify-center group"
         aria-label="AI Wellness Guide"
       >
         <Sparkles size={28} className="group-hover:animate-pulse" />
@@ -71,7 +71,7 @@ export function AIAssistant() {
             className="fixed bottom-24 left-8 z-50 w-[350px] md:w-[400px] h-[500px] bg-white rounded-3xl shadow-3xl border border-slate-200 overflow-hidden flex flex-col"
           >
             {/* Header */}
-            <div className="bg-primary p-6 text-white flex items-center justify-between">
+            <div className="bg-accent p-6 text-white flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="bg-white/20 p-2 rounded-xl">
                   <Sparkles size={20} />
@@ -98,13 +98,13 @@ export function AIAssistant() {
                   className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
                 >
                   <div className={`flex gap-2 max-w-[85%] ${msg.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
-                    <div className={`mt-1 p-1 rounded-lg ${msg.role === 'user' ? 'bg-secondary text-white' : 'bg-primary text-white'}`}>
+                    <div className={`mt-1 p-1 rounded-lg ${msg.role === 'user' ? 'bg-secondary text-white' : 'bg-accent text-white'}`}>
                       {msg.role === 'user' ? <User size={14} /> : <Bot size={14} />}
                     </div>
                     <div className={`p-4 rounded-2xl text-sm leading-relaxed ${
                       msg.role === 'user' 
                         ? 'bg-white border border-slate-200 text-slate-900 rounded-tr-none shadow-sm' 
-                        : 'bg-primary text-white rounded-tl-none'
+                        : 'bg-accent text-white rounded-tl-none'
                     }`}>
                       {msg.text}
                     </div>
@@ -141,7 +141,7 @@ export function AIAssistant() {
                 <button
                   type="submit"
                   disabled={!input.trim() || isLoading}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-primary text-white p-2 rounded-xl disabled:opacity-50 transition-all hover:scale-105"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 bg-accent text-white p-2 rounded-xl disabled:opacity-50 transition-all hover:scale-105"
                 >
                   <Send size={18} />
                 </button>
