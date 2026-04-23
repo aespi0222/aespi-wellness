@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
+import { existsSync } from "fs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -8,74 +9,56 @@ const __dirname = path.dirname(__filename);
 async function startServer() {
   const app = express();
   const PORT = Number(process.env.PORT) || 3000;
+  const isProduction = process.env.NODE_ENV === "production";
 
   app.use(express.json());
 
-  app.get("/api/ping", (req, res) => {
-    res.send("pong " + new Date().toISOString());
+  // Health check
+  app.get("/api/health", (req, res) => {
+    res.json({ status: "ok", mode: isProduction ? "production" : "development" });
   });
 
-  // API Route for Contact Form Proxy
+  // Contact Form Proxy
   app.post("/api/contact", async (req, res) => {
     const { formId, ...data } = req.body;
-
-    if (!formId) {
-      return res.status(400).json({ error: "Form ID is required" });
-    }
+    if (!formId) return res.status(400).json({ error: "Missing formId" });
 
     try {
       const response = await fetch(`https://formspree.io/f/${formId}`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(data)
       });
-
-      const responseData = await response.json();
-      
-      if (response.ok) {
-        res.status(200).json(responseData);
-      } else {
-        res.status(response.status).json(responseData);
-      }
+      const result = await response.json();
+      res.status(response.status).json(result);
     } catch (error) {
-      console.error("Server-side Contact Error:", error);
-      res.status(500).json({ error: "Internal server error" });
+      res.status(500).json({ error: "Failed to send contact form" });
     }
   });
 
-  // Vite middleware for development
-  if (process.env.NODE_ENV !== "production") {
-    const { createServer: createViteServer } = await import("vite");
-    const vite = await createViteServer({
-      server: { middlewareMode: true },
-      appType: "spa",
-    });
-    app.use(vite.middlewares);
+  // Serve Application
+  if (!isProduction) {
+    try {
+      const { createServer: createViteServer } = await import("vite");
+      const vite = await createViteServer({
+        server: { middlewareMode: true },
+        appType: "spa",
+      });
+      app.use(vite.middlewares);
+    } catch (err) {
+      console.error("Vite failed to load:", err);
+    }
   } else {
-    // Serve static files from the 'dist' directory
-    const distPath = path.resolve(__dirname, 'dist');
-    console.log(`Starting production server. Serving assets from: ${distPath}`);
-    
+    const distPath = path.resolve(process.cwd(), 'dist');
     app.use(express.static(distPath));
-    
-    // SPA Fallback for all other routes
-    app.get('*', (req, res) => {
-      res.sendFile(path.join(distPath, 'index.html'));
-    });
+    app.get('*', (req, res) => res.sendFile(path.join(distPath, 'index.html')));
   }
 
-  // Global Error Handler
-  app.use((err: any, req: any, res: any, next: any) => {
-    console.error("Critical Server Error:", err);
-    res.status(500).send("A server error occurred.");
-  });
-
   app.listen(PORT, "0.0.0.0", () => {
-    console.log(`Server is running at http://0.0.0.0:${PORT}`);
+    console.log(`Server listening on port ${PORT}`);
   });
 }
 
-startServer();
+startServer().catch(err => {
+  console.error("[AESPI Server] Fatal Startup Error:", err);
+});

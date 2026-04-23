@@ -1,37 +1,35 @@
 import { GoogleGenAI } from "@google/genai";
-import { BRAND, SERVICES } from "../constants";
 
-// The environment injects the GEMINI_API_KEY as process.env.GEMINI_API_KEY
-// We use a safe access pattern to prevent crashes if it's missing
-const ai = new GoogleGenAI({ 
-  apiKey: (typeof process !== 'undefined' ? process.env.GEMINI_API_KEY : "") || ""
-});
+export async function getAIResponse(userMessage: string, history: { role: 'user' | 'model', parts: { text: string }[] }[] = []) {
+  try {
+    const apiKey = process.env.GEMINI_API_KEY;
+    
+    if (!apiKey || apiKey === "ai studio free tier") {
+      return "I'm ready to help, but it looks like the AI API Key is not configured yet. Please check your environment variables.";
+    }
 
-const SYSTEM_INSTRUCTION = `
+    const ai = new GoogleGenAI({ apiKey });
+
+    const SYSTEM_INSTRUCTION = `
 You are the AESPI Wellness Studio AI Assistant. 
 Your goal is to help potential clients understand our science-backed, non-invasive therapies designed mainly for seniors to maintain independence and vitality.
 
 Studio Information:
-- Name: ${BRAND.name}
-- Tagline: ${BRAND.tagline}
-- Address: ${BRAND.address}
-- WhatsApp: ${BRAND.whatsapp}
-- Email: ${BRAND.email}
-- Opening Hours: ${BRAND.openingHours.map(h => `${h.day}: ${h.time}`).join(", ")}
+- Name: AESPI
+- WhatsApp: +65 8799 7199
+- Address: 2 Venture Drive, #02-22 Vision Exchange, Singapore 608526
 
 Services:
-${SERVICES.map(s => `- ${s.title}: ${s.description} Benefits: ${s.benefits.join(", ")}`).join("\n")}
+- BIXEPS Pro: Gentle muscle activation using magnetic mitohormesis.
+- Molecular Hydrogen: Relaxing cellular therapy for inflammation and sleep.
+- Power Plate: Low-impact vibration for bone density and circulation.
 
 Guidelines:
-1. Be professional, warm, and encouraging.
-2. Emphasize that treatments are non-invasive, painless, and require no physical strain (no sweat).
-3. If asked about booking, suggest using the WhatsApp button or booking a trial session.
-4. Keep responses concise and focused on wellness benefits for seniors and injury recovery.
-5. If you don't know the answer, politely suggest they contact us via WhatsApp at ${BRAND.whatsapp}.
+1. Be warm and professional.
+2. Emphasize that treatments are non-invasive and "no sweat."
+3. Encourage using the WhatsApp button for bookings.
 `;
 
-export async function getAIResponse(userMessage: string, history: { role: 'user' | 'model', parts: { text: string }[] }[] = []) {
-  try {
     const response = await ai.models.generateContent({
       model: "gemini-3-flash-preview",
       contents: [
@@ -45,8 +43,11 @@ export async function getAIResponse(userMessage: string, history: { role: 'user'
     });
 
     return response.text || "I'm sorry, I couldn't process that request.";
-  } catch (error) {
+  } catch (error: any) {
     console.error("Gemini API Error:", error);
-    return "The AI assistant is currently unavailable. Please contact us via WhatsApp at +65 8799 7199 for immediate assistance.";
+    if (error.message?.includes("API key not valid")) {
+      return "The AI assistant's API key is invalid. Please ensure a valid Gemini API key is provided in the configuration.";
+    }
+    return "The AI assistant is currently unavailable. Please contact us via WhatsApp for immediate assistance.";
   }
 }
