@@ -18,6 +18,13 @@ async function startServer() {
     res.json({ status: "ok", mode: isProduction ? "production" : "development" });
   });
 
+  // Config API for Runtime Variables
+  app.get("/api/config", (req, res) => {
+    res.json({
+      bannerMessage: process.env.VITE_BANNER_MESSAGE || ""
+    });
+  });
+
   // Contact Form Proxy
   app.post("/api/contact", async (req, res) => {
     const { formId, ...data } = req.body;

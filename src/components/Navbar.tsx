@@ -22,9 +22,18 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [showTrialChoice, setShowTrialChoice] = useState(false);
+  const [bannerMessage, setBannerMessage] = useState("");
   const location = useLocation();
 
   useEffect(() => {
+    // Fetch runtime config
+    fetch('/api/config')
+      .then(res => res.json())
+      .then(data => {
+        if (data.bannerMessage) setBannerMessage(data.bannerMessage);
+      })
+      .catch(err => console.error("Banner fetch failed:", err));
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
@@ -43,8 +52,6 @@ export function Navbar() {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, [location]);
-
-  const bannerMessage = process.env.VITE_BANNER_MESSAGE;
 
   return (
     <>
