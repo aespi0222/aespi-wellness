@@ -57,8 +57,16 @@ async function startServer() {
     }
   } else {
     const distPath = path.resolve(process.cwd(), 'dist');
-    app.use(express.static(distPath));
-    app.get('*', (req, res) => res.sendFile(path.join(distPath, 'index.html')));
+    if (existsSync(distPath)) {
+      app.use(express.static(distPath));
+      app.get('*', (req, res) => {
+        res.sendFile(path.join(distPath, 'index.html'));
+      });
+    } else {
+      app.get('*', (req, res) => {
+        res.status(404).send("Build in progress or missing. Refresh soon.");
+      });
+    }
   }
 
   app.listen(PORT, "0.0.0.0", () => {
@@ -66,6 +74,4 @@ async function startServer() {
   });
 }
 
-startServer().catch(err => {
-  console.error("[AESPI Server] Fatal Startup Error:", err);
-});
+startServer().catch(console.error);
