@@ -2,7 +2,6 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import { readdirSync, existsSync } from "fs";
-import { GoogleGenAI } from "@google/genai";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -54,6 +53,7 @@ async function startServer() {
     }
 
     try {
+      const { GoogleGenAI } = await import("@google/genai");
       const genAI = new GoogleGenAI(apiKey);
       const model = genAI.getGenerativeModel({ 
         model: "gemini-3-flash-preview",
@@ -121,34 +121,19 @@ async function startServer() {
     app.use(vite.middlewares);
   } else {
     const distPath = path.join(process.cwd(), 'dist');
-    console.log(`Checking for build artifacts in: ${distPath}`);
-    
-    // Check if dist exists and log its content for debugging
-    if (existsSync(distPath)) {
-      console.log(`Found dist folder. Contents: ${readdirSync(distPath).join(', ')}`);
-    } else {
-      console.error(`CRITICAL ERROR: dist folder not found at ${distPath}`);
-    }
-
     app.use(express.static(distPath));
     
-    // SPA Fallback: Serve index.html for any request that doesn't match a static file
+    // SPA Fallback
     app.get('*', (req, res) => {
-      // Avoid sending index.html for missing assets (js, css, images)
-      if (req.url.includes('.') && !req.url.startsWith('/#')) {
-        return res.status(404).send('Not found');
-      }
-      
-      const indexPath = path.join(distPath, 'index.html');
-      console.log(`Serving SPA fallback from: ${indexPath}`);
-      res.sendFile(indexPath, (err) => {
-        if (err) {
-          console.error(`ERROR: index.html not found at ${indexPath}`);
-          res.status(500).send(`Server Error: index.html not found. (Path: ${indexPath})`);
-        }
-      });
+      res.sendFile(path.join(distPath, 'index.html'));
     });
   }
+
+  // Error handling middleware
+  app.use((err: any, req: any, res: any, next: any) => {
+    console.error("Global Server Error:", err);
+    res.status(500).send("Internal Server Error: " + err.message);
+  });
 
   app.listen(PORT, "0.0.0.0", () => {
     console.log(`Server running on http://localhost:${PORT}`);
