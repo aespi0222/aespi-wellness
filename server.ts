@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
+import { readdirSync, existsSync } from "fs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -10,6 +11,10 @@ async function startServer() {
   const PORT = Number(process.env.PORT) || 3000;
 
   app.use(express.json());
+
+  app.get("/api/ping", (req, res) => {
+    res.send("pong " + new Date().toISOString());
+  });
 
   // API Route for Contact Form Proxy
   app.post("/api/contact", async (req, res) => {
@@ -55,6 +60,15 @@ async function startServer() {
     app.use(vite.middlewares);
   } else {
     const distPath = path.join(process.cwd(), 'dist');
+    console.log(`Checking for build artifacts in: ${distPath}`);
+    
+    // Check if dist exists and log its content for debugging
+    if (existsSync(distPath)) {
+      console.log(`Found dist folder. Contents: ${readdirSync(distPath).join(', ')}`);
+    } else {
+      console.error(`CRITICAL ERROR: dist folder not found at ${distPath}`);
+    }
+
     app.use(express.static(distPath));
     
     // SPA Fallback: Serve index.html for any request that doesn't match a static file
