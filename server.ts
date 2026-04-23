@@ -54,26 +54,27 @@ async function startServer() {
 
     try {
       const { GoogleGenAI } = await import("@google/genai");
-      const genAI = new GoogleGenAI(apiKey);
-      const model = genAI.getGenerativeModel({ 
-        model: "gemini-3-flash-preview",
-        systemInstruction: SYSTEM_INSTRUCTION
-      });
+      const ai = new GoogleGenAI({ apiKey });
 
-      const result = await model.generateContent({
+      const response = await ai.models.generateContent({
+        model: "gemini-3-flash-preview",
         contents: [
           ...(history || []),
           { role: "user", parts: [{ text: message }] }
         ],
-        generationConfig: {
+        config: {
+          systemInstruction: SYSTEM_INSTRUCTION,
           temperature: 0.7,
         }
       });
 
-      res.json({ text: result.response.text() });
-    } catch (error) {
+      res.json({ text: response.text || "I'm sorry, I couldn't process that request." });
+    } catch (error: any) {
       console.error("Gemini Proxy Error:", error);
-      res.status(500).json({ error: "Failed to get AI response" });
+      res.status(500).json({ 
+        error: "AI Error: " + (error.message || "Unknown error"),
+        details: process.env.NODE_ENV !== 'production' ? error : undefined
+      });
     }
   });
 

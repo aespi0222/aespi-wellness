@@ -36,11 +36,14 @@ export function AIAssistant() {
     setMessages(prev => [...prev, { role: 'user', text: userMessage }]);
     setIsLoading(true);
 
-    // Format history for Gemini
-    const history = messages.map(msg => ({
-      role: msg.role,
-      parts: [{ text: msg.text }]
-    }));
+    // Format history for Gemini, skipping the very first welcome message if it's from the model
+    // Gemini history often works better when starting with a 'user' message
+    const history = messages
+      .filter((_, idx) => idx !== 0) // Skip the initial welcome message
+      .map(msg => ({
+        role: msg.role,
+        parts: [{ text: msg.text }]
+      }));
 
     const response = await getAIResponse(userMessage, history);
     setMessages(prev => [...prev, { role: 'model', text: response }]);
