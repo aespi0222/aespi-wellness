@@ -44,7 +44,7 @@ export function Navbar() {
     }
   }, [location]);
 
-  const bannerMessage = import.meta.env.VITE_BANNER_MESSAGE;
+  const bannerMessage = process.env.VITE_BANNER_MESSAGE;
 
   return (
     <>

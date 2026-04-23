@@ -18,18 +18,11 @@ import { ScrollToHash } from './components/ScrollToHash';
 import { AIAssistant } from './components/AIAssistant';
 
 export default function App() {
-  const bannerMessage = process.env.VITE_BANNER_MESSAGE;
-
   return (
     <Router>
       <GoogleAnalytics />
       <ScrollToHash />
       <div className="min-h-screen bg-slate-50 font-sans selection:bg-primary/20 selection:text-primary">
-        {bannerMessage && (
-          <div className="bg-primary text-white py-2 px-4 text-center text-sm font-medium sticky top-0 z-[60] shadow-md">
-            {bannerMessage}
-          </div>
-        )}
         <Navbar />
         <main>
           <Routes>
