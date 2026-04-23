@@ -1,3 +1,4 @@
+import { SEO } from '../components/SEO';
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
@@ -37,6 +38,11 @@ export function H2Hydrogen() {
 
   return (
     <div className="pt-32 pb-20">
+      <SEO 
+        title="Molecular Hydrogen Therapy - Cellular Rejuvenation" 
+        description="Discover the benefits of Molecular Hydrogen (H2) inhalation at AESPI. Reduce oxidative stress, inflammation, and improve sleep with the smallest therapeutic molecule."
+        canonical="/h2-hydrogen"
+      />
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-secondary/5 -z-10" />

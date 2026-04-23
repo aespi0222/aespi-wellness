@@ -1,3 +1,4 @@
+import { SEO } from '../components/SEO';
 import { motion } from 'motion/react';
 import { Activity, Zap, Shield, TrendingUp, Users, CheckCircle2, ArrowLeft, Dumbbell, Heart, Timer } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -7,6 +8,11 @@ import { ResourceSection } from '../components/ResourceSection';
 export function PowerPlate() {
   return (
     <div className="pt-32 pb-20">
+      <SEO 
+        title="Power Plate Whole Body Vibration Training" 
+        description="Improve bone density, balance, and circulation with Power Plate at AESPI. Scientific whole-body vibration technology for effective, low-impact senior fitness in Singapore."
+        canonical="/powerplate"
+      />
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-accent/5 -z-10" />

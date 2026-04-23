@@ -1,3 +1,4 @@
+import { SEO } from '../components/SEO';
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
@@ -37,6 +38,11 @@ export function Bixeps() {
 
   return (
     <div className="pt-32 pb-20">
+      <SEO 
+        title="BIXEPS Pro Muscle Activation Technology" 
+        description="Learn about BIXEPS Pro at AESPI Wellness Studio. Patented Magnetic Mitohormesis for non-invasive muscle activation, strength improvement, and senior mobility in Singapore."
+        canonical="/bixeps"
+      />
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-primary/5 -z-10" />
