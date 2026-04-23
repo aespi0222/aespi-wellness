@@ -11,3 +11,5 @@ env:
     value: production
   - variable: PORT
     value: "8080"
+  - variable: GEMINI_API_KEY
+    secret: GEMINI_API_KEY

@@ -9,7 +9,11 @@ export const GoogleAnalytics = () => {
 
   useEffect(() => {
     if (GA_ID) {
-      ReactGA.initialize(GA_ID);
+      try {
+        ReactGA.initialize(GA_ID);
+      } catch (error) {
+        console.warn('Google Analytics initialization failed (likely due to storage restrictions):', error);
+      }
     }
   }, []);
 

@@ -103,8 +103,8 @@ export function AIAssistant() {
                     </div>
                     <div className={`p-4 rounded-2xl text-sm leading-relaxed ${
                       msg.role === 'user' 
-                        ? 'bg-white border border-slate-200 text-slate-900 rounded-tr-none shadow-sm' 
-                        : 'bg-accent text-white rounded-tl-none'
+                        ? 'bg-white border border-slate-200 text-slate-700 rounded-tr-none shadow-sm' 
+                        : 'bg-accent/10 text-slate-800 border border-accent/20 rounded-tl-none shadow-sm'
                     }`}>
                       {msg.text}
                     </div>
@@ -113,9 +113,9 @@ export function AIAssistant() {
               ))}
               {isLoading && (
                 <div className="flex justify-start">
-                  <div className="flex gap-2 items-center bg-slate-200 p-4 rounded-2xl rounded-tl-none">
-                    <Loader2 size={16} className="animate-spin text-slate-600" />
-                    <span className="text-xs text-slate-600 font-medium italic">Thinking...</span>
+                  <div className="flex gap-2 items-center bg-slate-100 p-4 rounded-2xl rounded-tl-none border border-slate-200 shadow-sm">
+                    <Loader2 size={16} className="animate-spin text-accent" />
+                    <span className="text-xs text-slate-500 font-medium italic">Thinking...</span>
                   </div>
                 </div>
               )}

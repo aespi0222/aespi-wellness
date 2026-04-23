@@ -5,8 +5,25 @@ import firebaseConfig from '../firebase-applet-config.json';
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+// Initialize Firestore safely
 export const db = getFirestore(app, firebaseConfig.firestoreDatabaseId);
+
+// Auth initialization with potential restricted environment handling
+import { setPersistence, browserLocalPersistence, inMemoryPersistence } from 'firebase/auth';
+
 export const auth = getAuth(app);
+
+// Attempt to set persistence to local, fallback to in-memory if storage is blocked (e.g. in certain iframe environments)
+if (typeof window !== 'undefined') {
+  setPersistence(auth, browserLocalPersistence).catch((err) => {
+    if (err.code === 'auth/operation-not-supported-in-this-environment' || err.message?.includes('insecure')) {
+      console.warn('Firebase Auth: Local storage not supported, falling back to in-memory persistence.');
+      return setPersistence(auth, inMemoryPersistence);
+    }
+    throw err;
+  });
+}
 
 // Error handling types
 export enum OperationType {
