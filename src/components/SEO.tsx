@@ -14,13 +14,17 @@ export function SEO({
   description, 
   canonical, 
   ogType = 'website',
-  ogImage = '/images/about.JPG'
+  ogImage = 'https://www.aespi.com.sg/images/about.JPG'
 }: SEOProps) {
   const siteTitle = BRAND.name;
   const fullTitle = title ? `${title} | ${siteTitle}` : `${siteTitle} | Active Aging & Muscle Health Singapore`;
   const defaultDescription = "AESPI Wellness Studio at Jurong East offers BIXEPS, Power Plate, and H2 Hydrogen therapy. Specialized in active aging, muscle recovery, and senior vitality in Singapore.";
   const metaDescription = description || defaultDescription;
-  const url = canonical ? `https://www.aespi.com.sg${canonical}` : 'https://www.aespi.com.sg/';
+  const baseUrl = 'https://www.aespi.com.sg';
+  const url = canonical ? `${baseUrl}${canonical}` : `${baseUrl}/`;
+
+  // Fix relative images for OG
+  const finalOgImage = ogImage.startsWith('http') ? ogImage : `${baseUrl}${ogImage}`;
 
   return (
     <Helmet>
@@ -34,14 +38,14 @@ export function SEO({
       <meta property="og:url" content={url} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={metaDescription} />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:image" content={finalOgImage} />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:url" content={url} />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={metaDescription} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image" content={finalOgImage} />
 
       {/* Structured Data (Local Business) */}
       <script type="application/ld+json">
