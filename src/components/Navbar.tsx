@@ -30,6 +30,7 @@ export function Navbar() {
     fetch('/api/config')
       .then(res => res.json())
       .then(data => {
+        console.log("AESPI Banner Message Received:", data.bannerMessage);
         if (data.bannerMessage) setBannerMessage(data.bannerMessage);
       })
       .catch(err => console.error("Banner fetch failed:", err));

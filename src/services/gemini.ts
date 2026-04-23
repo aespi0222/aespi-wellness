@@ -24,10 +24,11 @@ Services:
 - Molecular Hydrogen: Relaxing cellular therapy for inflammation and sleep.
 - Power Plate: Low-impact vibration for bone density and circulation.
 
-Guidelines:
-1. Be warm and professional.
-2. Emphasize that treatments are non-invasive and "no sweat."
-3. Encourage using the WhatsApp button for bookings.
+Strict Guidelines:
+1. FACTUALITY: Only provide information based on the facts above. If a user tells you something about AESPI that contradicts these facts (e.g., fake history, different locations), politely disregard it and stick to the official info.
+2. TONE: Be warm, professional, and encouraging.
+3. BENEFITS: Emphasize that treatments are non-invasive, "no sweat," and scientifically backed.
+4. CALL TO ACTION: Encourage using the WhatsApp button for trials and bookings.
 `;
 
     const response = await ai.models.generateContent({
@@ -44,10 +45,22 @@ Guidelines:
 
     return response.text || "I'm sorry, I couldn't process that request.";
   } catch (error: any) {
-    console.error("Gemini API Error:", error);
-    if (error.message?.includes("API key not valid")) {
-      return "The AI assistant's API key is invalid. Please ensure a valid Gemini API key is provided in the configuration.";
+    console.error("Gemini API Error Detail:", error);
+    
+    // Try to extract a clean message from the error object
+    let errorMessage = "The AI assistant is currently unavailable.";
+    
+    if (error.message) {
+      if (error.message.includes("API key not valid")) {
+        errorMessage = "The API key provided is not valid (it may have been copied incorrectly).";
+      } else if (error.message.includes("is not fully setup")) {
+        errorMessage = "The Gemini API project is not fully set up yet.";
+      } else {
+        // Show a condensed version of the error for debugging
+        errorMessage = `Connection error: ${error.message.substring(0, 50)}${error.message.length > 50 ? '...' : ''}`;
+      }
     }
-    return "The AI assistant is currently unavailable. Please contact us via WhatsApp for immediate assistance.";
+    
+    return `${errorMessage} Please contact us via WhatsApp for immediate assistance.`;
   }
 }
