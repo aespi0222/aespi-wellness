@@ -18,7 +18,7 @@ import { ScrollToHash } from './components/ScrollToHash';
 import { AIAssistant } from './components/AIAssistant';
 
 export default function App() {
-  const bannerMessage = import.meta.env.VITE_BANNER_MESSAGE;
+  const bannerMessage = process.env.VITE_BANNER_MESSAGE;
 
   return (
     <Router>
