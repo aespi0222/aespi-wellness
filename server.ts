@@ -1,5 +1,4 @@
 import express from "express";
-import { createServer as createViteServer } from "vite";
 import path from "path";
 import { fileURLToPath } from "url";
 
@@ -48,6 +47,7 @@ async function startServer() {
 
   // Vite middleware for development
   if (process.env.NODE_ENV !== "production") {
+    const { createServer: createViteServer } = await import("vite");
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: "spa",
@@ -56,12 +56,20 @@ async function startServer() {
   } else {
     const distPath = path.join(process.cwd(), 'dist');
     app.use(express.static(distPath));
+    
+    // SPA Fallback: Serve index.html for any request that doesn't match a static file
     app.get('*', (req, res) => {
+      // Avoid sending index.html for missing assets (js, css, images)
+      if (req.url.includes('.') && !req.url.startsWith('/#')) {
+        return res.status(404).send('Not found');
+      }
+      
       const indexPath = path.join(distPath, 'index.html');
+      console.log(`Serving SPA fallback from: ${indexPath}`);
       res.sendFile(indexPath, (err) => {
         if (err) {
-          console.error(`Error sending index.html from ${indexPath}:`, err);
-          res.status(500).send("Server Error: index.html not found. Please ensure the build completed successfully.");
+          console.error(`ERROR: index.html not found at ${indexPath}`);
+          res.status(500).send(`Server Error: index.html not found. (Path: ${indexPath})`);
         }
       });
     });
