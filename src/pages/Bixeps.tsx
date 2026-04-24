@@ -479,32 +479,32 @@ export function Bixeps() {
               initial={{ opacity: 0, scale: 0.9, y: 20 }}
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
-              className="relative w-full max-w-4xl bg-white rounded-[40px] shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
+              className="relative w-full max-w-4xl bg-white rounded-[32px] md:rounded-[40px] shadow-2xl overflow-hidden h-[95vh] md:max-h-[90vh] flex flex-col"
             >
               <button
                 onClick={() => setShowBooking(false)}
-                className="absolute top-6 right-6 z-10 p-2 bg-slate-100 hover:bg-slate-200 rounded-full text-slate-500 transition-colors"
+                className="absolute top-4 right-4 md:top-6 md:right-6 z-10 p-2 bg-slate-100 hover:bg-slate-200 rounded-full text-slate-500 transition-colors"
               >
                 <X size={24} />
               </button>
 
-              <div className="p-8 md:p-12 pb-6 text-center">
-                <h2 className="text-3xl font-bold text-slate-900 mb-2">Book Your BIXEPS Pro Trial</h2>
-                <p className="text-slate-500 text-sm mb-4">Experience the future of muscle activation at Vision Exchange.</p>
+              <div className="p-6 md:p-12 pb-4 text-center">
+                <h2 className="text-2xl md:text-3xl font-bold text-slate-900 mb-2">Book Your BIXEPS Pro Trial</h2>
+                <p className="text-slate-500 text-xs md:text-sm mb-4">Experience the future of muscle activation at Vision Exchange.</p>
                 
-                <div className="inline-flex flex-col items-center gap-1 px-6 py-3 bg-primary/5 rounded-2xl border border-primary/10">
-                  <p className="text-primary font-bold">Trial Session: $50</p>
+                <div className="inline-flex flex-col items-center gap-1 px-4 py-2 md:px-6 md:py-3 bg-primary/5 rounded-2xl border border-primary/10">
+                  <p className="text-primary font-bold text-sm md:text-base">Trial Session: $50</p>
                   <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Includes BIXEPS + Body Composition Analysis</p>
-                  <p className="text-[10px] text-secondary font-bold">Full fee redeemable when you join the BIXEPS program</p>
                 </div>
               </div>
 
-              <div className="flex-1 overflow-y-auto">
-                <div className="min-h-[600px] w-full bg-slate-50">
+              <div className="flex-1 overflow-y-auto overflow-x-hidden">
+                <div className="min-h-[700px] w-full bg-slate-50 pb-20">
                   <iframe
                     src="https://calendly.com/aespisp/60min?hide_event_type_details=1&hide_gdpr_banner=1"
                     width="100%"
-                    height="700"
+                    height="100%"
+                    className="w-full min-h-[700px]"
                     frameBorder="0"
                     title="Select a Date & Time - Calendly"
                   ></iframe>
