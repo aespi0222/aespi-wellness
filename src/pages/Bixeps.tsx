@@ -423,17 +423,20 @@ export function Bixeps() {
                   <Zap size={32} />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">BIXEPS Pro</h3>
-                <p className="text-secondary-light font-bold mb-6">Performance & Recovery</p>
-                <p className="text-slate-300 text-sm mb-8 leading-relaxed">
-                  Enhanced intensity for athletes, post-rehab patients, and intensive recovery needs.
+                <p className="text-secondary-light font-bold mb-4">The Professional Standard</p>
+                <p className="text-slate-300 text-sm mb-6 leading-relaxed italic">
+                  "Everything in BIXEPS, and more."
+                </p>
+                <p className="text-slate-400 text-xs mb-8 leading-relaxed">
+                  BIXEPS Pro builds upon the foundational technology with higher-flux density and targeted protocols used exclusively in professional wellness environments.
                 </p>
                 <ul className="space-y-4">
                   {[
-                    "10-20 Minute Sessions",
-                    "1-3x a Week Protocol",
-                    "Deep-Tissue Activation",
-                    "Accelerated Recovery",
-                    "Peak Performance Optimization"
+                    "Everything in Standard BIXEPS",
+                    "Professional-Only Intensity Levels",
+                    "Higher Magnetic Flux Density",
+                    "Studio-Supervised Protocols",
+                    "Weekly High-Frequency Recovery"
                   ].map((item, i) => (
                     <li key={i} className="flex items-center gap-3 text-sm text-slate-100">
                       <CheckCircle2 size={18} className="text-secondary-light shrink-0" />

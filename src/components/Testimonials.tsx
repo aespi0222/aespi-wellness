@@ -70,7 +70,7 @@ export function Testimonials({ serviceFilter }: TestimonialsProps) {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-bold mt-4 text-gray-900"
           >
-            Real Results from Real People
+            Real Results from Our Customers
           </motion.h2>
         </div>
 
