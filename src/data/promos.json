@@ -1,0 +1,14 @@
+{
+  "active": true,
+  "id": "longevity-trial-2024",
+  "title": "Start Your Longevity Strategy",
+  "subtitle": "Limited Availability",
+  "description": "Book your comprehensive Muscle Resilience Activation + Longevity Biometrics",
+  "image": "/images/promo-banner.png",
+  "ctaText": "Secure Your Session",
+  "ctaLink": "/bixeps",
+  "startDate": "2024-01-01T00:00:00Z",
+  "endDate": "2026-12-31T23:59:59Z",
+  "popupDelay": 2000,
+  "frequencyDays": 0
+}

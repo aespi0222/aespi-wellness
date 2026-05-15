@@ -16,12 +16,14 @@ import { BRAND } from './constants';
 import { GoogleAnalytics } from './components/GoogleAnalytics';
 import { ScrollToHash } from './components/ScrollToHash';
 import { AIAssistant } from './components/AIAssistant';
+import PromoPopup from './components/PromoPopup';
 
 export default function App() {
   return (
     <Router>
       <GoogleAnalytics />
       <ScrollToHash />
+      <PromoPopup />
       <div className="min-h-screen bg-surface font-sans selection:bg-primary/20 selection:text-primary">
         <Navbar />
         <main>
