@@ -59,7 +59,7 @@ export function SEO({
           "telephone": "+65 8799 7199",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "2 Venture Drive, #01-28/29 Vision Exchange",
+            "streetAddress": "2 Venture Drive, #02-22 Vision Exchange",
             "addressLocality": "Singapore",
             "postalCode": "608526",
             "addressCountry": "SG"

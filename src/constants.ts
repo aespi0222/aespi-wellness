@@ -2,11 +2,11 @@ export const BRAND = {
   name: "AESPI",
   tagline: "Live Stronger. Age Better.",
   logo: "/images/logo.png",
-  address: "2 Venture Drive, #01-28/29 Vision Exchange, Singapore 608526",
+  address: "2 Venture Drive, #02-22 Vision Exchange, Singapore 608526",
   whatsapp: "+65 8799 7199",
   whatsappUrl: "https://wa.me/6587997199",
   phoneUrl: "tel:+6587997199",
-  email: "hello@aespi.com.sg",
+  email: "enquiry@aespi.com.sg",
   socials: {
     facebook: "https://www.facebook.com/aespisp",
     instagram: "https://www.instagram.com/aespi_sp",
