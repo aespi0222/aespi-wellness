@@ -22,7 +22,7 @@ export default function App() {
     <Router>
       <GoogleAnalytics />
       <ScrollToHash />
-      <div className="min-h-screen bg-slate-50 font-sans selection:bg-primary/20 selection:text-primary">
+      <div className="min-h-screen bg-surface font-sans selection:bg-primary/20 selection:text-primary">
         <Navbar />
         <main>
           <Routes>

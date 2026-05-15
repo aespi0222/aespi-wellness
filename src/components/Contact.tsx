@@ -287,10 +287,10 @@ export function Contact() {
                         name="subject"
                         className="w-full px-5 py-4 rounded-2xl bg-white border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all appearance-none"
                       >
-                        <option>General Inquiry</option>
-                        <option>Book a Trial</option>
-                        <option>BIXEPS Pro Wellness</option>
-                        <option>Molecular Hydrogen</option>
+                        <option>Longevity Strategy (Complete Ecosystem)</option>
+                        <option>Muscle Resilience (BIXEPS Pro)</option>
+                        <option>Cellular Recovery (H2 Hydrogen)</option>
+                        <option>Functional Movement (Power Plate)</option>
                       </select>
                     </div>
                     <div className="space-y-2">
@@ -336,7 +336,7 @@ export function Contact() {
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="AESPI - BIXEPS Pro@Jurong East Location Map"
+            title="AESPI Wellness Collective @ Jurong East Location Map"
           />
         </motion.div>
       </div>

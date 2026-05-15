@@ -17,8 +17,8 @@ export function SEO({
   ogImage = 'https://www.aespi.com.sg/images/about.JPG'
 }: SEOProps) {
   const siteTitle = BRAND.name;
-  const fullTitle = title ? `${title} | ${siteTitle}` : `${siteTitle} | Active Aging & Muscle Health Singapore`;
-  const defaultDescription = "AESPI Wellness Studio at Jurong East offers BIXEPS, Power Plate, and H2 Hydrogen therapy. Specialized in active aging, muscle recovery, and senior vitality in Singapore.";
+  const fullTitle = title ? `${title} | ${siteTitle}` : `${siteTitle} | Longevity, Mobility & Healthy Ageing Singapore`;
+  const defaultDescription = "AESPI Wellness Studio at Jurong East offers a science-backed longevity ecosystem including Muscle Resilience, Cellular Recovery, and Functional Movement protocols. Specialized in biological resilience and healthy ageing for seniors in Singapore.";
   const metaDescription = description || defaultDescription;
   const baseUrl = 'https://www.aespi.com.sg';
   const url = canonical ? `${baseUrl}${canonical}` : `${baseUrl}/`;
@@ -59,7 +59,7 @@ export function SEO({
           "telephone": "+65 8799 7199",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "2 Venture Drive, #02-22 Vision Exchange",
+            "streetAddress": "2 Venture Drive, #01-28/29 Vision Exchange",
             "addressLocality": "Singapore",
             "postalCode": "608526",
             "addressCountry": "SG"

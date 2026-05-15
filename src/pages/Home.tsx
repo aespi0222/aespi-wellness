@@ -1,6 +1,8 @@
 import { SEO } from '../components/SEO';
 import { Hero } from '../components/Hero';
+import { MissionStatement } from '../components/MissionStatement';
 import { Services } from '../components/Services';
+import { WhoWeServe } from '../components/WhoWeServe';
 import { WhyChooseUs } from '../components/WhyChooseUs';
 import { Testimonials } from '../components/Testimonials';
 import { About } from '../components/About';
@@ -12,10 +14,12 @@ export function Home() {
     <>
       <SEO />
       <Hero />
+      <MissionStatement />
       <Services />
+      <WhoWeServe />
       <WhyChooseUs />
-      <Testimonials />
       <About />
+      <Testimonials />
       <FAQ />
       <Contact />
     </>

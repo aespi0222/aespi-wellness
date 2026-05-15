@@ -1,12 +1,12 @@
 export const BRAND = {
   name: "AESPI",
-  tagline: "Igniting Muscles",
+  tagline: "Live Stronger. Age Better.",
   logo: "/images/logo.png",
-  address: "2 Venture Drive, #02-22 Vision Exchange, Singapore 608526",
+  address: "2 Venture Drive, #01-28/29 Vision Exchange, Singapore 608526",
   whatsapp: "+65 8799 7199",
   whatsappUrl: "https://wa.me/6587997199",
   phoneUrl: "tel:+6587997199",
-  email: "enquiry@aespi.com.sg",
+  email: "hello@aespi.com.sg",
   socials: {
     facebook: "https://www.facebook.com/aespisp",
     instagram: "https://www.instagram.com/aespi_sp",
@@ -23,42 +23,42 @@ export const BRAND = {
 export const SERVICES = [
   {
     id: "bixeps",
-    title: "BIXEPS Pro",
-    subtitle: "Igniting Muscles",
+    title: "Muscle Resilience",
+    subtitle: "Pillar 01: Sarcopenia Prevention",
     image: "/images/bixeps.jpg",
-    description: "Gentle muscle activation using magnetic mitohormesis. Improve balance and strength without physical strain. Perfect for seniors.",
-    benefits: ["No Sweat", "No Strain", "Muscle Activation", "Joint Pain Relief"],
-    cta: "Learn More",
+    description: "The core of physical independence. Our non-invasive technology activates muscle fibers using gentle magnetic fields, maintaining strength and mobility without traditional physical strain.",
+    benefits: ["Sarcopenia Prevention", "Neuromuscular Activation", "Biological Resilience", "Zero Strain Mobility"],
+    cta: "Restore Muscle Vitality",
     link: "/bixeps",
   },
   {
     id: "h2",
-    title: "Molecular Hydrogen",
-    subtitle: "Recover Faster",
+    title: "Cellular Recovery",
+    subtitle: "Pillar 02: Oxidative Stress Management",
     image: "/images/hydrogen.png",
-    description: "A relaxing cellular therapy that reduces inflammation and improves sleep quality. Rejuvenate your body from the inside out.",
-    benefits: ["Boosts Energy", "Fights Inflammation", "Improves Sleep", "Supports Gut Health", "Rejuvenate Skin"],
-    cta: "Learn More",
+    description: "Rejuvenate your system from the source. High-purity Molecular Hydrogen therapy targets chronic inflammation, accelerating systemic recovery and improving cognitive clarity.",
+    benefits: ["Inflammation Reduction", "Enhanced Recovery", "Cognitive Health Span", "Sleep Optimization"],
+    cta: "Optimise Cellular Health",
     link: "/h2-hydrogen",
   },
   {
     id: "powerplate",
-    title: "Power Plate",
-    subtitle: "Move Better",
+    title: "Functional Movement",
+    subtitle: "Pillar 03: Stability & Bone Density",
     image: "/images/powerplate.jpg",
-    description: "Low-impact vibration technology to improve bone density and circulation. A safe way to stay active and mobile.",
-    benefits: ["Move Better", "Feel Better", "Live Better", "Low Impact"],
-    cta: "Learn More",
+    description: "Precision-driven stability for active living. Whole-body vibration training enhances motor control and bone mineral density, providing a safe foundation for confident movement.",
+    benefits: ["Bone Density Support", "Stability & Proprioception", "Improved Circulation", "Low-Impact Training"],
+    cta: "Enhance Movement",
     link: "/powerplate",
   },
   {
     id: "inbody",
-    title: "Body Composition",
-    subtitle: "Know Your Body",
+    title: "Longevity Biometrics",
+    subtitle: "Pillar 04: Data-Driven Calibration",
     image: "/images/body-composition.png",
-    description: "Medical-grade analysis to track muscle mass and sarcopenia risk. Understand your health to age with confidence.",
-    benefits: ["Body Composition", "Muscle Fat", "Obesity", "Muscle Balance", "Sarcopenia Risk"],
-    cta: "Learn More",
+    description: "Know your biological markers. Medical-grade analysis tracks your health span through muscle-to-fat ratios and sarcopenia risk, allowing for a precise longevity strategy.",
+    benefits: ["Precision Biometrics", "Sarcopenia Screening", "Visceral Fat Data", "Health Span Tracking"],
+    cta: "Analyse Your Markers",
     link: "/body-composition",
   },
 ];
@@ -68,50 +68,50 @@ export const TESTIMONIALS = [
     id: 1,
     name: "James",
     age: "",
-    content: "I can walk and can jog on the spot for a few seconds now. My walking is much more stable after starting BIXEPS Pro.",
-    service: "BIXEPS Pro"
+    content: "I can walk and can jog on the spot for a few seconds now. My walking is much more stable after starting the Longevity Protocol.",
+    service: "Mobility & Strength"
   },
   {
     id: 2,
     name: "Jenny Sim",
     age: "",
-    content: "I can now get up from a squatting position without needing to hold onto someone or something for support. It's a huge improvement.",
-    service: "BIXEPS Pro"
+    content: "I can now get up from a squatting position without needing to hold onto someone or something for support. It's a huge improvement in my daily autonomy.",
+    service: "Muscle Resilience"
   },
   {
     id: 3,
     name: "Josephine Ho",
     age: "",
-    content: "I walk faster now and with more power. I don't get tired as easily as I used to. BIXEPS Pro has given me back my energy.",
-    service: "BIXEPS Pro"
+    content: "I walk faster now and with more power. I don't get tired as easily as I used to. The ecosystem approach has given me back my energy.",
+    service: "Energy & Vitality"
   },
   {
     id: 4,
     name: "Angela Chan",
     age: "",
-    content: "I had meniscus tears in both knees. After BIXEPS Pro, I have no more knee pain and can finally resume my regular exercises.",
-    service: "BIXEPS Pro"
+    content: "I had meniscus tears in both knees. After the recovery sessions, I have no more knee pain and can finally resume my regular exercises with confidence.",
+    service: "Joint Recovery"
   },
   {
     id: 5,
     name: "Ng Ah Siam",
     age: "",
-    content: "I have much better stability now and don't wobble when changing clothes. My calf muscles feel stronger and I have more stamina.",
-    service: "BIXEPS Pro"
+    content: "I have much better stability now and don't wobble when changing clothes. My foundation feels stronger and I have more stamina for my grandkids.",
+    service: "Functional Balance"
   },
   {
     id: 6,
     name: "Foo Yong Hong",
     age: "53",
-    content: "The severe pain at my hips has reduced significantly. The sessions are very comfortable and convenient. It really works!",
-    service: "BIXEPS Pro"
+    content: "The severe pain at my hips has reduced significantly. The non-invasive nature of the protocols is what I appreciate most. It really works!",
+    service: "Pain Management"
   },
   {
     id: 7,
     name: "Alvin Tan",
     age: "59",
-    content: "Increased strength and stamina. I'm now running and hiking 7km twice weekly. It has really helped my injury recovery and metabolic rate.",
-    service: "BIXEPS Pro"
+    content: "Increased strength and stamina. I'm now running and hiking 7km twice weekly. It has really helped my biological recovery rate.",
+    service: "Longevity Optimization"
   }
 ];
 

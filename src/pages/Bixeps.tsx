@@ -39,84 +39,77 @@ export function Bixeps() {
   return (
     <div className="pt-32 pb-20">
       <SEO 
-        title="BIXEPS Pro Muscle Activation Technology" 
-        description="Learn about BIXEPS Pro at AESPI Wellness Studio. Patented Magnetic Mitohormesis for non-invasive muscle activation, strength improvement, and senior mobility in Singapore."
+        title="Muscle Resilience & Sarcopenia Prevention" 
+        description="Build biological strength and autonomy. Our non-invasive muscle resilience technology helps seniors prevent sarcopenia and improve balance at AESPI Wellness Studio Singapore."
         canonical="/bixeps"
       />
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-primary/5 -z-10" />
-        <div className="max-w-7xl mx-auto px-6">
-          <Link to="/" className="inline-flex items-center gap-2 text-primary font-bold mb-8 hover:gap-3 transition-all">
-            <ArrowLeft size={20} /> Back to Home
+      <section className="relative py-24 md:py-32 overflow-hidden bg-surface">
+        <div className="absolute inset-0 z-0 opacity-30">
+          <div className="absolute top-0 right-0 w-[50%] h-full bg-gradient-to-l from-primary/10 to-transparent" />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <Link to="/" className="inline-flex items-center gap-2 text-primary font-bold mb-12 hover:gap-4 transition-all group">
+            <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" /> Back to Strategy
           </Link>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-12 gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              className="lg:col-span-7"
             >
-              <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
-                BIXEPS Pro: <span className="text-primary italic">Igniting Muscles</span>
+              <span className="inline-block px-4 py-1.5 bg-primary/5 text-primary text-[10px] font-bold uppercase tracking-[.25em] rounded-full mb-8">
+                Foundation: Muscle Resilience
+              </span>
+              <h1 className="text-5xl md:text-8xl font-serif text-slate-900 mb-8 leading-[1.1]">
+                Rebuild Your <br /> <span className="italic text-primary">Biological Strength.</span>
               </h1>
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                A patented muscle activation technology designed to help seniors maintain strength and independence. 
-                Experience the power of Magnetic Mitohormesis to improve balance and prevent muscle loss without physical strain.
+              <p className="text-xl text-slate-500 mb-12 leading-relaxed font-light max-w-2xl">
+                Maintain independence through patented muscle activation. Our non-invasive technology helps seniors prevent sarcopenia and improve balance <span className="font-medium text-slate-900 underline decoration-secondary/30 decoration-4 underline-offset-4">without physical strain</span>.
               </p>
-              <div className="flex flex-col gap-4">
-                <div className="flex flex-wrap gap-4">
+              <div className="flex flex-col gap-6">
+                <div className="flex flex-wrap gap-5">
                   <button
                     onClick={handleBookTrial}
-                    className="bg-primary text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-primary/25 transition-all min-w-[180px]"
+                    className="bg-primary text-white px-10 py-5 rounded-full font-bold shadow-xl shadow-primary/10 hover:shadow-primary/20 transition-all transform hover:-translate-y-0.5"
                   >
-                    Book a Trial Now
+                    Start Recovery Protocol
                   </button>
                 </div>
-                <p className="text-sm text-slate-400 font-medium italic">
-                  *Trial: $50 (includes BIXEPS & Body Composition Analysis). Redeemable when you join the BIXEPS program.
-                </p>
+                <div className="flex items-center gap-2 text-sm text-slate-400 font-medium italic">
+                  <span className="w-1.5 h-1.5 rounded-full bg-secondary" />
+                  Trial includes BIXEPS & Body Composition Analysis
+                </div>
               </div>
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ 
-                opacity: 1, 
-                scale: 1,
-              }}
-              className="relative"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+              className="lg:col-span-5 relative"
             >
-              <motion.div 
-                animate={{ 
-                  boxShadow: ["0 0 0px rgba(59, 130, 246, 0)", "0 0 40px rgba(59, 130, 246, 0.3)", "0 0 0px rgba(59, 130, 246, 0)"] 
-                }}
-                transition={{ 
-                  duration: 4, 
-                  repeat: Infinity, 
-                  ease: "easeInOut" 
-                }}
-                className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-white"
-              >
+              <div className="relative rounded-[48px] overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,0.2)] border-[12px] border-white z-10">
                 <img
                   src="/images/bixeps.jpg"
-                  alt="BIXEPS Pro Technology - Muscle Activation"
-                  className="w-full h-[400px] object-cover transition-transform duration-700 hover:scale-105"
+                  alt="Muscle Resilience Activation"
+                  className="w-full h-[550px] object-cover"
                   referrerPolicy="no-referrer"
                 />
-              </motion.div>
-              
-              {/* Decorative Pulse Rings */}
-              <motion.div 
-                animate={{ scale: [1, 1.2], opacity: [0.5, 0] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeOut" }}
-                className="absolute inset-0 border-2 border-primary/30 rounded-[40px] -z-10"
-              />
+              </div>
+              <div className="absolute -bottom-6 -left-6 glass p-6 rounded-2xl shadow-xl z-20">
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">Biological Result</p>
+                <p className="text-lg font-serif text-slate-900">85% Improvement in Balance</p>
+              </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* What is BIXEPS Pro? */}
+      {/* The Protocol: Muscle Resilience Activation */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -125,17 +118,17 @@ export function Bixeps() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">What is BIXEPS Pro?</h2>
-              <p className="text-slate-600 text-lg leading-relaxed mb-6">
-                BIXEPS Pro is the advanced, high-performance version of our muscle activation technology, and it is the <strong>exclusive standard used at AESPI Wellness Studio</strong>.
+              <h2 className="text-3xl md:text-5xl font-serif text-slate-900 mb-8 italic">The Technology: <br />Muscle Resilience Activation</h2>
+              <p className="text-slate-500 text-lg font-light leading-relaxed mb-6">
+                Biological strength is the cornerstone of physical independence. At AESPI, we utilise <strong>Muscle Resilience Activation</strong> (powered by BIXEPS Pro) as our primary protocol for sarcopenia prevention.
               </p>
-              <p className="text-slate-600 text-lg leading-relaxed mb-8">
+              <p className="text-slate-500 text-lg font-light leading-relaxed mb-8">
                 Developed through a collaboration between the <strong>National University of Singapore (NUS)</strong> 
-                and <strong>ETH Zurich</strong>, BIXEPS Pro uses patented <strong>Magnetic Mitohormesis</strong> to stimulate muscles at a cellular level.
+                and <strong>ETH Zurich</strong>, this technology uses patented <strong>Magnetic Mitohormesis</strong> to stimulate muscles at a cellular level, mimicking the benefits of exercise without the physical load.
               </p>
               <div className="flex items-center gap-4 text-primary font-bold">
                 <CheckCircle2 size={24} />
-                <span>Safe, painless, and effective for all ages.</span>
+                <span className="font-serif">Safe, painless, and effective for sustained autonomy.</span>
               </div>
             </motion.div>
 
@@ -526,21 +519,21 @@ export function Bixeps() {
         </div>
         
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Ignite Your Muscles with BIXEPS Pro?</h2>
-          <p className="text-white/80 text-lg mb-8">
-            Join hundreds of others who have improved their mobility and strength with BIXEPS Pro. 
-            Book your trial session today at our Vision Exchange studio.
+          <h2 className="text-4xl md:text-6xl font-serif text-white mb-8 italic">Ready to architecture your physical independence?</h2>
+          <p className="text-white/80 text-lg font-light mb-10 max-w-2xl mx-auto">
+            Join the community of longevity-focused individuals who have reclaimed their mobility and strength. 
+            Experience our Muscle Resilience protocol at the AESPI Vision Exchange collective.
           </p>
-          <div className="mb-10 inline-block px-6 py-3 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
-            <p className="text-white font-bold">Trial Session: $50 (Redeemable)</p>
-            <p className="text-xs text-white/70">Consists of BIXEPS + Body composition analysis</p>
+          <div className="mb-12 inline-block px-8 py-4 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20">
+            <p className="text-white font-bold text-lg mb-1">Introductory Protocol: $50</p>
+            <p className="text-xs text-white/70 uppercase tracking-widest font-black">Consists of Resilience Activation + Longevity Biometrics</p>
           </div>
           <div className="flex justify-center">
             <button
               onClick={handleBookTrial}
-              className="inline-block bg-white text-primary px-10 py-4 rounded-full font-bold text-lg hover:bg-slate-100 transition-all shadow-2xl"
+              className="group bg-white text-primary px-12 py-5 rounded-full font-bold text-xl hover:bg-slate-50 transition-all shadow-[0_20px_50px_-20px_rgba(255,255,255,0.3)] transform hover:-translate-y-1"
             >
-              Book My Trial Session
+              Start Your Protocol
             </button>
           </div>
         </div>

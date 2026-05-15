@@ -8,14 +8,10 @@ import { TrialChoiceModal } from './TrialChoiceModal';
 
 const NAV_LINKS = [
   { name: 'Home', href: '/' },
-  { name: 'BIXEPS Pro', href: '/bixeps' },
-  { name: 'Molecular Hydrogen', href: '/h2-hydrogen' },
-  { name: 'Power Plate', href: '/powerplate' },
-  { name: 'Body Composition', href: '/body-composition' },
-  { name: 'Why Choose Us', href: '/#why-choose-us' },
-  { name: 'Services', href: '/#services' },
-  { name: 'About', href: '/#about' },
-  { name: 'Contact', href: '/#contact' },
+  { name: 'Longevity Strategy', href: '/#longevity' },
+  { name: 'Technologies', href: '/#technologies' },
+  { name: 'Who We Serve', href: '/#who-we-serve' },
+  { name: 'Locations', href: '/#contact' },
 ];
 
 export function Navbar() {

@@ -30,25 +30,25 @@ export function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="py-24 bg-slate-50">
+    <section id="faq" className="py-32 bg-surface">
       <div className="max-w-4xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl md:text-4xl font-bold text-slate-900 mb-4"
+            className="text-4xl md:text-6xl font-serif text-slate-900 mb-6"
           >
-            Frequently Asked Questions
+            Insights & <span className="italic text-primary">Answers</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-slate-600"
+            className="text-slate-500 text-lg font-light"
           >
-            Everything you need to know about our services, pricing, and what to expect.
+            Everything you need to know about navigating your longevity journey with AESPI.
           </motion.p>
         </div>
 
@@ -64,22 +64,24 @@ export function FAQ() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1 }}
                 className={cn(
-                  "bg-white border rounded-2xl overflow-hidden transition-all duration-300",
-                  isOpen ? "border-primary/30 shadow-md" : "border-slate-200 hover:border-primary/30"
+                  "bg-white rounded-[32px] overflow-hidden transition-all duration-500",
+                  isOpen ? "shadow-[0_20px_50px_-20px_rgba(0,0,0,0.1)]" : "hover:bg-white/50"
                 )}
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full px-6 py-5 flex items-center justify-between text-left focus:outline-none"
+                  className="w-full px-8 py-7 flex items-center justify-between text-left focus:outline-none group"
                 >
-                  <span className="font-bold text-slate-900 pr-8">{faq.question}</span>
+                  <span className="text-xl md:text-2xl font-serif text-slate-900 pr-12 leading-tight">
+                    {faq.question}
+                  </span>
                   <div
                     className={cn(
-                      "flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-transform duration-300",
-                      isOpen ? "bg-primary text-white rotate-180" : "bg-slate-100 text-slate-500"
+                      "flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center border transition-all duration-500",
+                      isOpen ? "bg-primary text-white border-primary rotate-180" : "bg-white text-slate-400 border-slate-100 group-hover:border-primary/20"
                     )}
                   >
-                    <ChevronDown size={18} />
+                    <ChevronDown size={22} strokeWidth={1.5} />
                   </div>
                 </button>
                 <AnimatePresence>
@@ -88,9 +90,9 @@ export function FAQ() {
                       initial={{ height: 0, opacity: 0 }}
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
+                      transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                     >
-                      <div className="px-6 pb-6 text-slate-600 leading-relaxed">
+                      <div className="px-8 pb-8 text-slate-500 leading-relaxed font-light text-lg max-w-3xl">
                         {faq.answer}
                       </div>
                     </motion.div>

@@ -9,67 +9,77 @@ export function PowerPlate() {
   return (
     <div className="pt-32 pb-20">
       <SEO 
-        title="Power Plate Whole Body Vibration Training" 
-        description="Improve bone density, balance, and circulation with Power Plate at AESPI. Scientific whole-body vibration technology for effective, low-impact senior fitness in Singapore."
+        title="Functional Movement & Stability Strategy" 
+        description="Master your biological balance. Precision whole-body vibration training enhances bone density and motor control at AESPI Wellness Studio Singapore."
         canonical="/powerplate"
       />
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-accent/5 -z-10" />
-        <div className="max-w-7xl mx-auto px-6">
-          <Link to="/" className="inline-flex items-center gap-2 text-primary font-bold mb-8 hover:gap-3 transition-all">
-            <ArrowLeft size={20} /> Back to Home
+      <section className="relative py-24 md:py-32 overflow-hidden bg-surface">
+        <div className="absolute inset-0 z-0 opacity-30">
+          <div className="absolute top-0 right-0 w-[50%] h-full bg-gradient-to-l from-accent/10 to-transparent" />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <Link to="/" className="inline-flex items-center gap-2 text-primary font-bold mb-12 hover:gap-4 transition-all group">
+            <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" /> Back to Strategy
           </Link>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-12 gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              className="lg:col-span-7"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-bold uppercase tracking-wider mb-6">
-                <Dumbbell size={14} />
-                Whole Body Vibration Technology
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
-                Power Plate: <span className="text-accent italic">Move Better</span>
+              <span className="inline-block px-4 py-1.5 bg-accent/5 text-accent text-[10px] font-bold uppercase tracking-[.25em] rounded-full mb-8">
+                Foundation: Functional Movement
+              </span>
+              <h1 className="text-5xl md:text-8xl font-serif text-slate-900 mb-8 leading-[1.1]">
+                Master Your <br /> <span className="italic text-accent">Biological Balance.</span>
               </h1>
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                A low-impact vibration technology that helps seniors improve bone density, balance, and circulation. 
-                Experience a total-body workout that is gentle on your joints and easy on your schedule.
+              <p className="text-xl text-slate-500 mb-12 leading-relaxed font-light max-w-2xl">
+                Precision stability for active living. Whole-body vibration training enhances bone density and motor control, providing seniors a <span className="font-medium text-slate-900 underline decoration-secondary/30 decoration-4 underline-offset-4">safe environment</span> to build confidence in every step.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  to="/#contact"
-                  className="bg-primary text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-primary/25 transition-all"
-                >
-                  Enquire Now
-                </Link>
+              <div className="flex flex-col gap-6">
+                <div className="flex flex-wrap gap-5">
+                  <Link
+                    to="/#contact"
+                    className="bg-primary text-white px-10 py-5 rounded-full font-bold shadow-xl shadow-primary/10 hover:shadow-primary/20 transition-all transform hover:-translate-y-0.5"
+                  >
+                    Discuss Your Movement Plan
+                  </Link>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-slate-400 font-medium italic">
+                  <span className="w-1.5 h-1.5 rounded-full bg-accent" />
+                  Tri-axial vibration used by professional medical collectives
+                </div>
               </div>
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="relative"
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+              className="lg:col-span-5 relative"
             >
-              <div className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-white">
+              <div className="relative rounded-[48px] overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,0.2)] border-[12px] border-white z-10">
                 <img
                   src="/images/powerplate.jpg"
-                  alt="Power Plate Training - Whole Body Vibration"
-                  className="w-full h-[400px] object-cover"
+                  alt="Functional Movement Stability"
+                  className="w-full h-[550px] object-cover"
                   referrerPolicy="no-referrer"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 glass p-6 rounded-2xl shadow-xl z-20">
-                <p className="text-3xl font-bold text-accent">3D</p>
-                <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Vibration Tech</p>
+                <p className="text-3xl font-serif text-accent italic leading-none mb-1">Stability</p>
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Bone Density Support</p>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* What is Power Plate? */}
+      {/* The Protocol: Functional Movement */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -78,20 +88,16 @@ export function PowerPlate() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">What is Power Plate?</h2>
-              <p className="text-slate-600 text-lg leading-relaxed mb-6">
-                Power Plate is the global leader in whole-body vibration technology. 
-                It uses PrecisionWave™ Technology—a high-fidelity harmonic vibration system that triggers 
-                up to 50 muscle contractions per second.
+              <h2 className="text-3xl md:text-5xl font-serif text-slate-900 mb-8 italic">Pillar 03: <br />Functional Movement Protocol</h2>
+              <p className="text-slate-500 text-lg font-light leading-relaxed mb-6">
+                Stability is the ultimate luxury of ageing. At AESPI, we utilise <strong>Whole Body Vibration (WBV)</strong> via Power Plate to enhance proprioception and skeletal integrity.
               </p>
-              <p className="text-slate-600 text-lg leading-relaxed mb-8">
-                This rapid contraction and relaxation of muscles leads to increased strength, 
-                improved circulation, and enhanced recovery, all in a fraction of the time 
-                of traditional workouts.
+              <p className="text-slate-500 text-lg font-light leading-relaxed mb-8">
+                By creating a high-frequency harmonic vibration, the platform triggers up to 50 involuntary muscle contractions per second. This rapid neuromuscular feedback loop builds confidence in movement and supports bone mineral density without the risks of heavy resistance training.
               </p>
               <div className="flex items-center gap-4 text-primary font-bold">
                 <Timer size={24} />
-                <span>Get a 60-minute workout in just 15 minutes.</span>
+                <span className="font-serif">Maximum biological impact for movement efficiency.</span>
               </div>
             </motion.div>
 
@@ -425,16 +431,15 @@ export function PowerPlate() {
       {/* CTA */}
       <section className="py-24 bg-accent relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-4xl font-bold text-white mb-6">Feel the Vibration</h2>
-          <p className="text-white/80 text-lg mb-10">
-            Discover why Power Plate is the preferred choice for health professionals and elite athletes worldwide. 
-            Book your session at AESPI today.
+          <h2 className="text-4xl md:text-6xl font-serif text-white mb-8 italic">Master your biological balance.</h2>
+          <p className="text-white/80 text-lg font-light mb-10 max-w-2xl mx-auto">
+            Discover why precision movement is the preferred choice for longevity seekers and health professionals worldwide.
           </p>
           <Link
             to="/#contact"
-            className="inline-block bg-white text-accent px-10 py-4 rounded-full font-bold text-lg hover:bg-slate-100 transition-all shadow-2xl"
+            className="bg-white text-accent px-12 py-5 rounded-full font-bold text-xl hover:bg-slate-50 transition-all shadow-[0_20px_50px_-20px_rgba(255,255,255,0.3)] transform hover:-translate-y-1"
           >
-            Enquire Now
+            Enhance My Movement
           </Link>
         </div>
       </section>

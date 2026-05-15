@@ -15,9 +15,8 @@ export function Footer() {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <p className="text-slate-400 max-w-sm mb-8 leading-relaxed">
-              AESPI is a technology-driven wellness brand that helps people build strength, 
-              energy, and longevity—without the strain of traditional exercise.
+            <p className="text-slate-400 max-w-sm mb-8 leading-relaxed font-light">
+              AESPI is a premium longevity and healthy ageing collective. We help adults and seniors stay active, independent, and resilient through science-backed wellness technologies.
             </p>
             <div className="flex gap-4">
               <a 
@@ -51,13 +50,13 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-bold text-lg mb-6">Quick Links</h4>
-            <ul className="space-y-4 text-slate-400">
-              <li><a href="#" className="hover:text-white transition-colors">Home</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Services</a></li>
-              <li><a href="#about" className="hover:text-white transition-colors">About Us</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
+            <h4 className="font-serif text-xl mb-6">Explore</h4>
+            <ul className="space-y-4 text-slate-400 font-light">
+              <li><a href="/" className="hover:text-white transition-colors">Vision</a></li>
+              <li><a href="#longevity" className="hover:text-white transition-colors">Strategy</a></li>
+              <li><a href="#technologies" className="hover:text-white transition-colors">Technologies</a></li>
+              <li><a href="#who-we-serve" className="hover:text-white transition-colors">Focus Groups</a></li>
+              <li><a href="#contact" className="hover:text-white transition-colors">Locations</a></li>
             </ul>
           </div>
 

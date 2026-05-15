@@ -8,55 +8,65 @@ export function BodyComposition() {
   return (
     <div className="pt-32 pb-20">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-primary/5 -z-10" />
-        <div className="max-w-7xl mx-auto px-6">
-          <Link to="/" className="inline-flex items-center gap-2 text-primary font-bold mb-8 hover:gap-3 transition-all">
-            <ArrowLeft size={20} /> Back to Home
+      <section className="relative py-24 md:py-32 overflow-hidden bg-surface">
+        <div className="absolute inset-0 z-0 opacity-30">
+          <div className="absolute top-0 right-0 w-[50%] h-full bg-gradient-to-l from-primary/10 to-transparent" />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <Link to="/" className="inline-flex items-center gap-2 text-primary font-bold mb-12 hover:gap-4 transition-all group">
+            <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" /> Back to Strategy
           </Link>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-12 gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              className="lg:col-span-7"
             >
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-6">
-                <ClipboardList size={14} />
-                Medical-Grade Analysis
-              </div>
-              <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
-                Body Composition: <span className="text-primary italic">Know Your Body</span>
+              <span className="inline-block px-4 py-1.5 bg-primary/5 text-primary text-[10px] font-bold uppercase tracking-[.25em] rounded-full mb-8">
+                Foundation: Longevity Biometrics
+              </span>
+              <h1 className="text-5xl md:text-8xl font-serif text-slate-900 mb-8 leading-[1.1]">
+                Quantify Your <br /> <span className="italic text-primary">Health Span.</span>
               </h1>
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                Understand your health at a deeper level. We use medical-grade analysis to track muscle mass, 
-                bone minerals, and sarcopenia risk to help you age with confidence.
+              <p className="text-xl text-slate-500 mb-12 leading-relaxed font-light max-w-2xl">
+                Know your markers for longevity. Medical-grade analysis tracks your muscle-to-fat ratio and biological ageing markers, allowing for a <span className="font-medium text-slate-900 underline decoration-secondary/30 decoration-4 underline-offset-4">precise strategy</span> to pivot your journey as you age.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  to="/#contact"
-                  className="bg-primary text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-primary/25 transition-all"
-                >
-                  Enquire Now
-                </Link>
+              <div className="flex flex-col gap-6">
+                <div className="flex flex-wrap gap-5">
+                  <Link
+                    to="/#contact"
+                    className="bg-primary text-white px-10 py-5 rounded-full font-bold shadow-xl shadow-primary/10 hover:shadow-primary/20 transition-all transform hover:-translate-y-0.5"
+                  >
+                    Analyse My Markers
+                  </Link>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-slate-400 font-medium italic">
+                  <span className="w-1.5 h-1.5 rounded-full bg-secondary" />
+                  Medical-grade InBody analysis used by global clinics
+                </div>
               </div>
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="relative"
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+              className="lg:col-span-5 relative"
             >
-              <div className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-white">
+              <div className="relative rounded-[48px] overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,0.2)] border-[12px] border-white z-10">
                 <img
                   src="/images/body-composition.png"
-                  alt="InBody Analysis - Medical Grade Body Composition"
-                  className="w-full h-[400px] object-cover"
+                  alt="Longevity Biometrics Tracking"
+                  className="w-full h-[550px] object-cover"
                   referrerPolicy="no-referrer"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 glass p-6 rounded-2xl shadow-xl z-20">
-                <p className="text-3xl font-bold text-primary">InBody</p>
-                <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Global Leader</p>
+                <p className="text-3xl font-serif text-primary italic leading-none mb-1">Precision</p>
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Sarcopenia Screening</p>
               </div>
             </motion.div>
           </div>

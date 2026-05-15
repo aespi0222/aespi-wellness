@@ -1,5 +1,5 @@
 {
-  "name": "AESPI - Wellness Studio",
-  "description": "AESPI Wellness Studio delivering BIXEPS Pro sessions that promote muscle health, recovery, and overall vitality.",
+  "name": "AESPI - Longevity & Mobility",
+  "description": "Live Stronger. Age Better. AESPI provides science-backed longevity technologies including BIXEPS, Power Plate, and Molecular Hydrogen to help seniors stay active and independent.",
   "requestFramePermissions": ["geolocation"]
 }

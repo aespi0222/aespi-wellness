@@ -4,69 +4,70 @@ import { ShieldCheck, Zap, Microscope, HeartPulse, Clock, Award } from 'lucide-r
 const REASONS = [
   {
     icon: <Microscope className="text-primary" />,
-    title: "Science-Backed Safety",
-    description: "Our core technologies like BIXEPS Pro are developed through research at world-class institutions, ensuring safe and effective care for seniors."
+    title: "Biological Resilience",
+    description: "Our technologies are curated from world-class research to strengthen your biological foundation, helping you stay resilient against the challenges of ageing."
   },
   {
     icon: <ShieldCheck className="text-primary" />,
-    title: "Gentle & Non-Invasive",
-    description: "We prioritize treatments that are gentle on your body. No surgery, no needles, and no physical strain—perfect for maintaining mobility."
+    title: "Non-Invasive Precision",
+    description: "We prioritize gentle, precise interventions. No surgery, no strain—just advanced science working in harmony with your body."
   },
   {
     icon: <Award className="text-primary" />,
-    title: "Independence & Vitality",
-    description: "Our goal is to help you maintain your independence. Improve balance and strength to stay active in your daily life."
+    title: "Sustained Independence",
+    description: "Maintaining strength and stability is the ultimate luxury. Our ecosystem is designed to keep you mobile, confident, and independent."
   },
   {
     icon: <HeartPulse className="text-primary" />,
-    title: "Cellular Health",
-    description: "From muscle activation to molecular hydrogen therapy, we address health at the cellular level to support overall longevity."
+    title: "Cellular Rejuvenation",
+    description: "Longevity starts at the cellular level. We target inflammation and oxidative stress to rejuvenate your system from the inside out."
   },
   {
     icon: <Clock className="text-primary" />,
-    title: "Efficient Sessions",
-    description: "Our protocols are designed for maximum benefit in minimal time, offering significant health improvements in just 10-20 minutes."
+    title: "Longevity-First Efficiency",
+    description: "Maximum biological impact with minimal time commitment. Our protocols are designed for the high-performing individual who values health span."
   },
   {
     icon: <Zap className="text-primary" />,
-    title: "Better Balance",
-    description: "Many of our senior clients report feeling more stable and confident on their feet after just a few sessions."
+    title: "Stability & Confidence",
+    description: "Enhance your proprioception and motor control. Rediscover the confidence of a body that responds with power and precision."
   }
 ];
 
 export function WhyChooseUs() {
   return (
-    <section id="why-choose-us" className="py-24 bg-white overflow-hidden">
+    <section id="why-choose-us" className="py-32 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-left mb-16">
+        <div className="mb-20">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Why Seniors Choose AESPI?</h2>
-            <p className="text-slate-600 max-w-2xl">
-              We specialize in non-invasive technologies that help seniors maintain independence, 
-              improve mobility, and enjoy a higher quality of life without the strain of traditional exercise.
+            <span className="text-[10px] font-bold text-secondary uppercase tracking-[.3em] mb-4 block">The Value</span>
+            <h2 className="text-4xl md:text-6xl font-serif text-slate-900 mb-6">Why Longevity Seekers <br /><span className="italic text-primary">Choose AESPI</span></h2>
+            <p className="text-slate-500 max-w-xl text-lg font-light leading-relaxed">
+              We integrate non-invasive technologies that empower you to take control of your health span. 
+              Stay active, independent, and resilient through science-led wellness.
             </p>
           </motion.div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {REASONS.map((reason, i) => (
             <motion.div
               key={i}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="group p-8 rounded-3xl border border-slate-100 bg-slate-50/50 hover:bg-white hover:shadow-xl transition-all duration-300"
+              transition={{ delay: i * 0.1, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="group"
             >
-              <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center shadow-sm mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="w-16 h-16 glass rounded-2xl flex items-center justify-center mb-8 border-slate-100 group-hover:bg-primary group-hover:text-white transition-all duration-500">
                 {reason.icon}
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">{reason.title}</h3>
-              <p className="text-slate-600 text-sm leading-relaxed">
+              <h3 className="text-2xl font-serif text-slate-900 mb-4">{reason.title}</h3>
+              <p className="text-slate-500 text-sm leading-relaxed font-light">
                 {reason.description}
               </p>
             </motion.div>
@@ -77,19 +78,21 @@ export function WhyChooseUs() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ delay: 0.6 }}
-          className="mt-16 p-8 rounded-[40px] bg-primary/5 border border-primary/10 flex flex-col md:flex-row items-center justify-between gap-8"
+          className="mt-24 p-12 rounded-[60px] bg-slate-900 relative overflow-hidden group transition-all"
         >
-          <div className="text-center md:text-left">
-            <h4 className="text-xl font-bold text-slate-900 mb-2">Ready to experience the AESPI difference?</h4>
-            <p className="text-slate-600 text-sm">Book a consultation or trial session at our Vision Exchange centre today.</p>
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-transparent pointer-events-none" />
+          <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div className="text-center md:text-left max-w-xl">
+              <h4 className="text-3xl md:text-4xl font-serif text-white mb-4">Ready to architecture your <span className="italic text-secondary">biological health span?</span></h4>
+              <p className="text-white/60 text-lg font-light">Book a strategic consultation or trial session at our Vision Exchange centre.</p>
+            </div>
+            <a
+              href="#contact"
+              className="bg-white text-slate-900 px-10 py-5 rounded-full font-bold shadow-2xl hover:bg-slate-50 transition-all whitespace-nowrap transform group-hover:scale-105 active:scale-95"
+            >
+              Get Started Now
+            </a>
           </div>
-          <a
-            href="#contact"
-            className="bg-primary text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-primary/25 transition-all whitespace-nowrap"
-          >
-            Get Started Now
-          </a>
         </motion.div>
       </div>
     </section>

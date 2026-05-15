@@ -39,69 +39,77 @@ export function H2Hydrogen() {
   return (
     <div className="pt-32 pb-20">
       <SEO 
-        title="Molecular Hydrogen Therapy - Cellular Rejuvenation" 
-        description="Discover the benefits of Molecular Hydrogen (H2) inhalation at AESPI. Reduce oxidative stress, inflammation, and improve sleep with the smallest therapeutic molecule."
+        title="Cellular Recovery & Oxidative Stress Management" 
+        description="Rejuvenate your system from the source. High-purity Molecular Hydrogen therapy targets chronic inflammation and oxidative stress at AESPI Wellness Studio Singapore."
         canonical="/h2-hydrogen"
       />
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 bg-secondary/5 -z-10" />
-        <div className="max-w-7xl mx-auto px-6">
-          <Link to="/" className="inline-flex items-center gap-2 text-primary font-bold mb-8 hover:gap-3 transition-all">
-            <ArrowLeft size={20} /> Back to Home
+      <section className="relative py-24 md:py-32 overflow-hidden bg-surface">
+        <div className="absolute inset-0 z-0 opacity-30">
+          <div className="absolute top-0 right-0 w-[50%] h-full bg-gradient-to-l from-secondary/10 to-transparent" />
+        </div>
+        
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
+          <Link to="/" className="inline-flex items-center gap-2 text-primary font-bold mb-12 hover:gap-4 transition-all group">
+            <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" /> Back to Strategy
           </Link>
           
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-12 gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              animate={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+              className="lg:col-span-7"
             >
-              <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6">
-                Molecular Hydrogen (H₂): <span className="text-secondary italic">Recover Faster</span>
+              <span className="inline-block px-4 py-1.5 bg-secondary/5 text-secondary text-[10px] font-bold uppercase tracking-[.25em] rounded-full mb-8">
+                Foundation: Cellular Recovery
+              </span>
+              <h1 className="text-5xl md:text-8xl font-serif text-slate-900 mb-8 leading-[1.1]">
+                Cleanse Your <br /> <span className="italic text-secondary">Biological System.</span>
               </h1>
-              <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                A gentle, cellular-level therapy that supports healthy aging. H₂ helps seniors reduce inflammation, 
-                improve sleep quality, and boost daily energy levels through a simple, relaxing inhalation process.
+              <p className="text-xl text-slate-500 mb-12 leading-relaxed font-light max-w-2xl">
+                Rejuvenate at the cellular level. Molecular Hydrogen (H₂) neutralises oxidative stress and chronic inflammation, helping seniors <span className="font-medium text-slate-900 underline decoration-primary/30 decoration-4 underline-offset-4">recover vitality</span> through gentle inhalation.
               </p>
-              <div className="flex flex-wrap gap-4">
-                <button
-                  onClick={handleBookTrial}
-                  className="bg-primary text-white px-8 py-4 rounded-full font-bold shadow-lg hover:shadow-primary/25 transition-all text-center min-w-[180px]"
-                >
-                  Book Your Trial
-                </button>
-                <Link
-                  to="/#contact"
-                  className="bg-white text-primary border-2 border-primary/20 px-8 py-4 rounded-full font-bold hover:bg-slate-50 transition-all text-center min-w-[180px]"
-                >
-                  General Enquiry
-                </Link>
+              <div className="flex flex-col gap-6">
+                <div className="flex flex-wrap gap-5">
+                  <button
+                    onClick={handleBookTrial}
+                    className="bg-primary text-white px-10 py-5 rounded-full font-bold shadow-xl shadow-primary/10 hover:shadow-primary/20 transition-all transform hover:-translate-y-0.5"
+                  >
+                    Start Cellular Protocol
+                  </button>
+                </div>
+                <div className="flex items-center gap-2 text-sm text-slate-400 font-medium italic">
+                  <span className="w-1.5 h-1.5 rounded-full bg-primary" />
+                  Smallest therapeutic molecule in the universe
+                </div>
               </div>
             </motion.div>
             
             <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
+              initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="relative"
+              transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1], delay: 0.2 }}
+              className="lg:col-span-5 relative"
             >
-              <div className="rounded-[40px] overflow-hidden shadow-2xl border-8 border-white">
+              <div className="relative rounded-[48px] overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,0.2)] border-[12px] border-white z-10">
                 <img
                   src="/images/hydrogen.png"
-                  alt="Molecular Hydrogen Therapy - Relaxation"
-                  className="w-full h-[400px] object-cover"
+                  alt="Cellular Recovery Therapy"
+                  className="w-full h-[550px] object-cover"
                   referrerPolicy="no-referrer"
                 />
               </div>
               <div className="absolute -bottom-6 -right-6 glass p-6 rounded-2xl shadow-xl z-20">
-                <p className="text-3xl font-bold text-primary">H₂</p>
-                <p className="text-xs font-bold text-slate-500 uppercase tracking-widest">Smallest Molecule</p>
+                <p className="text-3xl font-serif text-secondary italic leading-none mb-1">Purity</p>
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Selective Antioxidant</p>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* What is Molecular Hydrogen? */}
+      {/* The Protocol: Cellular Recovery */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -110,20 +118,16 @@ export function H2Hydrogen() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">What is Molecular Hydrogen?</h2>
-              <p className="text-slate-600 text-lg leading-relaxed mb-6">
-                Molecular Hydrogen (H₂) is a tasteless, odorless gas that has emerged as a powerful therapeutic medical gas. 
-                As the smallest molecule in the universe, it possesses unique properties that allow it to penetrate deep into 
-                cells and even the blood-brain barrier.
+              <h2 className="text-3xl md:text-5xl font-serif text-slate-900 mb-8 italic">Pillar 02: <br />Cellular Recovery Protocol</h2>
+              <p className="text-slate-500 text-lg font-light leading-relaxed mb-6">
+                Longevity starts with systemic maintenance. At AESPI, we utilise <strong>Molecular Hydrogen (H₂)</strong> as a critical protocol to neutralise the biological friction of ageing.
               </p>
-              <p className="text-slate-600 text-lg leading-relaxed mb-8">
-                Unlike traditional antioxidants, H₂ is a <strong>selective antioxidant</strong>. It specifically targets the most 
-                harmful free radicals in your body while leaving beneficial ones intact, helping to reduce oxidative stress 
-                and inflammation at their source.
+              <p className="text-slate-500 text-lg font-light leading-relaxed mb-8">
+                H₂ is the smallest molecule in the universe, a quality that allows it to penetrate deep into cells and pass the blood-brain barrier. It acts as a <strong>selective antioxidant</strong>, targeting toxic free radicals without disrupting essential biological signals.
               </p>
               <div className="flex items-center gap-4 text-secondary font-bold">
                 <Droplets size={24} />
-                <span>Pure, natural, and zero-waste cellular support.</span>
+                <span className="font-serif">Zero-waste cellular support for a cleaner biological system.</span>
               </div>
             </motion.div>
 
@@ -480,24 +484,17 @@ export function H2Hydrogen() {
       {/* CTA */}
       <section className="py-24 bg-secondary relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-4xl font-bold text-white mb-6">Experience the Power of H₂</h2>
-          <p className="text-white/80 text-lg mb-10">
-            Rejuvenate your body from the inside out with our molecular hydrogen wellness sessions. 
-            Safe, effective, and backed by science.
+          <h2 className="text-4xl md:text-6xl font-serif text-white mb-8 italic">Neutralise the friction of ageing.</h2>
+          <p className="text-white/80 text-lg font-light mb-10 max-w-2xl mx-auto">
+            Rejuvenate your system from the inside out. Experience the most foundational antioxidant protocol available in the longevity space.
           </p>
-          <div className="flex flex-wrap justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-6">
             <button
               onClick={handleBookTrial}
-              className="inline-block bg-white text-secondary px-10 py-4 rounded-full font-bold text-lg hover:bg-slate-100 transition-all shadow-2xl"
+              className="bg-white text-secondary px-12 py-5 rounded-full font-bold text-xl hover:bg-slate-50 transition-all shadow-[0_20px_50px_-20px_rgba(255,255,255,0.3)] transform hover:-translate-y-1"
             >
-              Book Trial Session
+              Book Cellular Protocol
             </button>
-            <Link
-              to="/#contact"
-              className="inline-block bg-secondary-dark border-2 border-white/20 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-white/10 transition-all shadow-xl"
-            >
-              Ask a Question
-            </Link>
           </div>
         </div>
       </section>
