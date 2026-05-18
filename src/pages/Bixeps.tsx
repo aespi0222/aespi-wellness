@@ -39,10 +39,41 @@ export function Bixeps() {
   return (
     <div className="pt-32 pb-20">
       <SEO 
-        title="Muscle Resilience & Sarcopenia Prevention" 
-        description="Build biological strength and autonomy. Our non-invasive muscle resilience technology helps seniors prevent sarcopenia and improve balance at AESPI Wellness Studio Singapore."
+        title="BIXEPS Singapore | Muscle Strength & Mobility for Seniors | AESPI" 
+        description="Experience BIXEPS in Singapore at AESPI. Our non-invasive muscle activation technology helps seniors improve mobility, prevent sarcopenia, and stay active."
         canonical="/bixeps"
       />
+      <script type="application/ld+json">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "name": "BIXEPS Muscle Resilience Activation",
+          "description": "Non-invasive muscle activation technology for seniors to prevent sarcopenia and improve mobility in Singapore.",
+          "provider": {
+            "@type": "WellnessCenter",
+            "name": "AESPI Wellness Studio"
+          },
+          "areaServed": {
+            "@type": "Country",
+            "name": "Singapore"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "BIXEPS Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Introductory BIXEPS Trial"
+                },
+                "price": "50.00",
+                "priceCurrency": "SGD"
+              }
+            ]
+          }
+        })}
+      </script>
       {/* Hero Section */}
       <section className="relative py-24 md:py-32 overflow-hidden bg-surface">
         <div className="absolute inset-0 z-0 opacity-30">
@@ -51,7 +82,7 @@ export function Bixeps() {
         
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <Link to="/" className="inline-flex items-center gap-2 text-primary font-bold mb-12 hover:gap-4 transition-all group">
-            <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" /> Back to Strategy
+            <ArrowLeft size={20} className="group-hover:-translate-x-1 transition-transform" /> Back to healthy ageing strategy
           </Link>
           
           <div className="grid lg:grid-cols-12 gap-16 items-center">
@@ -62,13 +93,13 @@ export function Bixeps() {
               className="lg:col-span-7"
             >
               <span className="inline-block px-4 py-1.5 bg-primary/5 text-primary text-[10px] font-bold uppercase tracking-[.25em] rounded-full mb-8">
-                Foundation: Muscle Resilience
+                BIXEPS Singapore: Muscle Resilience
               </span>
               <h1 className="text-5xl md:text-8xl font-serif text-slate-900 mb-8 leading-[1.1]">
-                Rebuild Your <br /> <span className="italic text-primary">Biological Strength.</span>
+                BIXEPS Singapore: <br /> <span className="italic text-primary">Biological Strength.</span>
               </h1>
               <p className="text-xl text-slate-500 mb-12 leading-relaxed font-light max-w-2xl">
-                Maintain independence through patented muscle activation. Our non-invasive technology helps seniors prevent sarcopenia and improve balance <span className="font-medium text-slate-900 underline decoration-secondary/30 decoration-4 underline-offset-4">without physical strain</span>.
+                Maintain independence through patented BIXEPS mobility support. Our non-invasive technology helps seniors in Singapore prevent sarcopenia and improve balance <span className="font-medium text-slate-900 underline decoration-secondary/30 decoration-4 underline-offset-4">without physical strain</span>.
               </p>
               <div className="flex flex-col gap-6">
                 <div className="flex flex-wrap gap-5">
@@ -95,7 +126,7 @@ export function Bixeps() {
               <div className="relative rounded-[48px] overflow-hidden shadow-[0_40px_100px_-20px_rgba(0,0,0,0.2)] border-[12px] border-white z-10">
                 <img
                   src="/images/bixeps.jpg"
-                  alt="Muscle Resilience Activation"
+                  alt="BIXEPS Singapore: Muscle Resilience Activation for Seniors at Jurong East"
                   className="w-full h-[550px] object-cover"
                   referrerPolicy="no-referrer"
                 />
@@ -118,13 +149,13 @@ export function Bixeps() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-5xl font-serif text-slate-900 mb-8 italic">The Technology: <br />Muscle Resilience Activation</h2>
+              <h2 className="text-3xl md:text-5xl font-serif text-slate-900 mb-8 italic">BIXEPS for Seniors: <br />Muscle Resilience Activation</h2>
               <p className="text-slate-500 text-lg font-light leading-relaxed mb-6">
-                Biological strength is the cornerstone of physical independence. At AESPI, we utilise <strong>Muscle Resilience Activation</strong> (powered by BIXEPS Pro) as our primary protocol for sarcopenia prevention.
+                Biological strength is the legacy of a healthy ageing lifestyle. At AESPI Singapore, we utilise <strong>Muscle Resilience Activation</strong> (powered by BIXEPS Pro) as our primary protocol for sarcopenia prevention and longevity.
               </p>
               <p className="text-slate-500 text-lg font-light leading-relaxed mb-8">
                 Developed through a collaboration between the <strong>National University of Singapore (NUS)</strong> 
-                and <strong>ETH Zurich</strong>, this technology uses patented <strong>Magnetic Mitohormesis</strong> to stimulate muscles at a cellular level, mimicking the benefits of exercise without the physical load.
+                and <strong>ETH Zurich</strong>, this technology uses patented <strong>Magnetic Mitohormesis</strong> to stimulate muscles at a cellular level, providing BIXEPS mobility support and the benefits of exercise without the physical load.
               </p>
               <div className="flex items-center gap-4 text-primary font-bold">
                 <CheckCircle2 size={24} />
@@ -241,24 +272,24 @@ export function Bixeps() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-4xl font-bold text-slate-900 mb-8">Comprehensive Health Benefits</h2>
+              <h2 className="text-4xl font-bold text-slate-900 mb-8">Trusted BIXEPS Singapore Provider</h2>
               <div className="space-y-8">
                 {[
                   { 
-                    title: "Enhanced Mobility & Balance", 
-                    desc: "Clinical observations show that seniors report significantly better balance and leg strength after just 12 sessions, reducing the risk of falls." 
+                    title: "BIXEPS Mobility Support & Balance", 
+                    desc: "Clinical observations show that seniors in Singapore report significantly better balance and leg strength after just 12 sessions, reducing the risk of falls." 
                   },
                   { 
-                    title: "Metabolic Transformation", 
-                    desc: "By activating muscle mitochondria, BIXEPS helps increase your resting metabolic rate, assisting in weight management and blood sugar regulation." 
+                    title: "Metabolic Health for Longevity", 
+                    desc: "By activating muscle mitochondria, BIXEPS helps increase your resting metabolic rate, assisting in weight management and blood sugar regulation in line with healthy ageing goals." 
                   },
                   { 
-                    title: "Accelerated Sports Recovery", 
-                    desc: "Athletes use BIXEPS to flush out toxins and reduce muscle soreness (DOMS) without the need for additional physical strain or 'active recovery' sessions." 
+                    title: "BIXEPS for Sports Recovery", 
+                    desc: "Athletes in Singapore use BIXEPS to flush out toxins and reduce muscle soreness (DOMS) without the need for additional physical strain." 
                   },
                   { 
                     title: "Anti-Inflammatory Support", 
-                    desc: "The release of myokines helps combat systemic inflammation, which is linked to various chronic conditions and age-related decline." 
+                    desc: "The release of myokines helps combat systemic inflammation, a key component of the AESPI longevity ecosystem." 
                   }
                 ].map((benefit, i) => (
                   <div key={i} className="flex gap-4">
@@ -454,6 +485,41 @@ export function Bixeps() {
       {/* Research & Media */}
       <ResourceSection serviceId="bixeps" />
 
+      {/* FAQ Section */}
+      <section className="py-24 bg-white border-y border-slate-100">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-serif text-slate-900 mb-4 italic">BIXEPS Singapore: Common Questions</h2>
+            <p className="text-slate-500 font-light">Learn more about how BIXEPS for seniors can transform your mobility.</p>
+          </div>
+          <div className="space-y-6">
+            {[
+              {
+                q: "Is BIXEPS safe for seniors in Singapore?",
+                a: "Yes, BIXEPS is 100% non-invasive and was specifically designed to be safe for seniors. It requires zero physical exertion, making it ideal for those with mobility challenges or those recovering from surgery."
+              },
+              {
+                q: "How many BIXEPS sessions do I need for mobility support?",
+                a: "While many report feeling more 'light-footed' after a single session, a protocol of 12 sessions (1-2 times weekly) is typically recommended for measurable improvements in balance and muscle resilience."
+              },
+              {
+                q: "Where can I find BIXEPS in Singapore?",
+                a: "AESPI Wellness Studio is a premier provider of BIXEPS Pro technology in Singapore, located conveniently at Vision Exchange in Jurong East."
+              },
+              {
+                q: "Does BIXEPS help with healthy ageing?",
+                a: "Absolutely. By preventing sarcopenia (age-related muscle loss) and improving metabolic function, BIXEPS is a cornerstone of a proactive healthy ageing strategy."
+              }
+            ].map((faq, i) => (
+              <div key={i} className="p-6 md:p-8 bg-slate-50 rounded-[32px] border border-slate-100">
+                <h4 className="text-xl font-serif text-slate-900 mb-3">{faq.q}</h4>
+                <p className="text-slate-500 font-light leading-relaxed text-sm md:text-base">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <Testimonials serviceFilter="BIXEPS Pro" />
 
@@ -519,21 +585,30 @@ export function Bixeps() {
         </div>
         
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
-          <h2 className="text-4xl md:text-6xl font-serif text-white mb-8 italic">Ready to architecture your physical independence?</h2>
+          <h2 className="text-4xl md:text-6xl font-serif text-white mb-8 italic">Ready to architecture your physical independence in Singapore?</h2>
           <p className="text-white/80 text-lg font-light mb-10 max-w-2xl mx-auto">
             Join the community of longevity-focused individuals who have reclaimed their mobility and strength. 
-            Experience our Muscle Resilience protocol at the AESPI Vision Exchange collective.
+            Experience our BIXEPS mobility support protocol at AESPI Jurong East.
           </p>
-          <div className="mb-12 inline-block px-8 py-4 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20">
-            <p className="text-white font-bold text-lg mb-1">Introductory Protocol: $50</p>
-            <p className="text-xs text-white/70 uppercase tracking-widest font-black">Consists of Resilience Activation + Longevity Biometrics</p>
+          <div className="mb-12 flex flex-col md:flex-row justify-center gap-6">
+            <div className="px-8 py-4 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20">
+              <p className="text-white font-bold text-lg mb-1">Introductory Protocol: $50</p>
+              <p className="text-xs text-white/70 uppercase tracking-widest font-black">Resilience Activation + Longevity Biometrics</p>
+            </div>
+            <Link 
+              to="/body-composition"
+              className="px-8 py-4 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 text-white/90 text-sm flex flex-col justify-center hover:bg-white/10 transition-all"
+            >
+              <p className="font-bold">Pair with Biometrics Analysis</p>
+              <p className="text-[10px] uppercase tracking-widest">Understand your baseline →</p>
+            </Link>
           </div>
           <div className="flex justify-center">
             <button
               onClick={handleBookTrial}
-              className="group bg-white text-primary px-12 py-5 rounded-full font-bold text-xl hover:bg-slate-50 transition-all shadow-[0_20px_50px_-20px_rgba(255,255,255,0.3)] transform hover:-translate-y-1"
+              className="group bg-white text-primary px-12 py-5 rounded-full font-bold text-xl hover:bg-slate-50 transition-all shadow-[0_20px_50px_-20_rgba(255,255,255,0.3)] transform hover:-translate-y-1"
             >
-              Start Your Protocol
+              Start BIXEPS Trial
             </button>
           </div>
         </div>
