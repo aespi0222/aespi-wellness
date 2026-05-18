@@ -1,3 +1,4 @@
+import { SEO } from '../components/SEO';
 import { motion } from 'motion/react';
 import { Activity, PieChart, BarChart3, Info, CheckCircle2, ArrowLeft, ClipboardList, Target, TrendingDown } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -7,6 +8,11 @@ import { ResourceSection } from '../components/ResourceSection';
 export function BodyComposition() {
   return (
     <div className="pt-32 pb-20">
+      <SEO 
+        title="Longevity Biometrics & Health Span Analysis" 
+        description="Know your biological markers. Medical-grade analysis tracks your health span through muscle-to-fat ratios and sarcopenia risk at AESPI Singapore."
+        canonical="/body-composition"
+      />
       {/* Hero Section */}
       <section className="relative py-24 md:py-32 overflow-hidden bg-surface">
         <div className="absolute inset-0 z-0 opacity-30">
