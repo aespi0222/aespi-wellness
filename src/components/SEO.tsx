@@ -17,8 +17,8 @@ export function SEO({
   ogImage = 'https://www.aespi.com.sg/images/about.JPG'
 }: SEOProps) {
   const siteTitle = BRAND.name;
-  const fullTitle = title ? `${title} | ${siteTitle}` : `${siteTitle} | Longevity, Mobility & Healthy Ageing Singapore`;
-  const defaultDescription = "AESPI Wellness Studio at Jurong East offers a science-backed longevity ecosystem including Muscle Resilience, Cellular Recovery, and Functional Movement protocols. Specialized in biological resilience and healthy ageing for seniors in Singapore.";
+  const fullTitle = title ? `${title} | ${siteTitle}` : `${siteTitle} | Live Stronger. Age Better. | Healthy Ageing Singapore`;
+  const defaultDescription = "AESPI helps adults and seniors stay active, independent and resilient through science-backed wellness technologies focused on mobility, recovery and healthy ageing.";
   const metaDescription = description || defaultDescription;
   const baseUrl = 'https://www.aespi.com.sg';
   const url = canonical ? `${baseUrl}${canonical}` : `${baseUrl}/`;
@@ -53,6 +53,7 @@ export function SEO({
           "@context": "https://schema.org",
           "@type": "WellnessCenter",
           "name": "AESPI Wellness Studio",
+          "description": "AESPI helps adults and seniors stay active, independent and resilient through science-backed wellness technologies focused on mobility, recovery and healthy ageing.",
           "image": "https://www.aespi.com.sg/images/about.JPG",
           "@id": "https://www.aespi.com.sg",
           "url": "https://www.aespi.com.sg",
