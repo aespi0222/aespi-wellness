@@ -426,6 +426,85 @@ export function H2Hydrogen() {
       {/* Research & Media */}
       <ResourceSection serviceId="h2" />
 
+      {/* FAQ Section */}
+      <section className="py-24 bg-white border-y border-slate-100">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-5xl font-serif text-slate-900 mb-4 italic">Frequently Asked Questions About Molecular Hydrogen Therapy</h2>
+            <p className="text-slate-500 font-light">Learn more about the science and application of cellular recovery through H₂.</p>
+          </div>
+          <div className="space-y-6">
+            {[
+              {
+                q: "What is Molecular Hydrogen Therapy?",
+                a: "Molecular Hydrogen therapy involves inhaling or consuming hydrogen-rich solutions containing H₂ molecules. Molecular hydrogen is being studied for its potential antioxidant and wellness-supporting properties."
+              },
+              {
+                q: "How does Molecular Hydrogen work?",
+                a: "Hydrogen molecules are extremely small and may diffuse rapidly throughout the body. Research has explored hydrogen’s potential role in reducing oxidative stress and supporting cellular health."
+              },
+              {
+                q: "Why is oxidative stress important?",
+                a: "Oxidative stress is associated with ageing, inflammation, fatigue, and various chronic health conditions. Antioxidants help neutralise harmful free radicals in the body."
+              },
+              {
+                q: "What are the potential benefits of Molecular Hydrogen?",
+                a: "Research and user experiences suggest potential support for energy and recovery, sleep quality, exercise recovery, general wellness, oxidative stress management, and healthy ageing support. Individual experiences vary."
+              },
+              {
+                q: "Is Molecular Hydrogen therapy safe?",
+                a: "Molecular hydrogen has been studied extensively and is generally considered safe when used appropriately. However, users with medical conditions should consult their healthcare provider before beginning therapy."
+              },
+              {
+                q: "What does a session feel like?",
+                a: "Most sessions are relaxing and comfortable. Users typically inhale hydrogen gas through a nasal cannula while seated comfortably."
+              },
+              {
+                q: "How long is each session?",
+                a: "Sessions are typically between 30 to 60 minutes depending on the selected program."
+              },
+              {
+                q: "Is Molecular Hydrogen approved as a medical treatment?",
+                a: "Hydrogen therapy is primarily positioned as a wellness and supportive therapy. It should not be considered a cure or replacement for medical treatment."
+              },
+              {
+                q: "Can Molecular Hydrogen help with sleep?",
+                a: "Some users report improved relaxation and sleep quality after regular sessions. Sleep responses vary from person to person."
+              },
+              {
+                q: "Can athletes or active individuals use Molecular Hydrogen?",
+                a: "Yes. Molecular hydrogen is increasingly explored for recovery, oxidative stress management, and exercise support."
+              },
+              {
+                q: "Can seniors use Molecular Hydrogen therapy?",
+                a: "Yes. Many seniors use hydrogen therapy as part of a broader wellness and healthy ageing routine."
+              },
+              {
+                q: "Are there side effects?",
+                a: "Most users tolerate hydrogen therapy well. Some individuals may experience temporary lightheadedness or relaxation effects during initial sessions."
+              },
+              {
+                q: "How many sessions are recommended?",
+                a: "Frequency depends on wellness goals and individual needs. Some users prefer occasional sessions while others incorporate it regularly into their routine."
+              },
+              {
+                q: "Can Molecular Hydrogen be combined with BIXEPS or Power Plate?",
+                a: "Yes. Many AESPI clients combine hydrogen therapy with BIXEPS and Power Plate programs to support recovery, energy, mobility, and wellness."
+              },
+              {
+                q: "Is there scientific research behind Molecular Hydrogen?",
+                a: "Yes. Molecular hydrogen has been the subject of increasing scientific research globally, particularly in oxidative stress, inflammation, and cellular health."
+              }
+            ].map((faq, i) => (
+              <div key={i} className="p-6 md:p-8 bg-slate-50 rounded-[32px] border border-slate-100">
+                <h4 className="text-xl font-serif text-slate-900 mb-3">{faq.q}</h4>
+                <p className="text-slate-500 font-light leading-relaxed text-sm md:text-base">{faq.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <Testimonials />
 

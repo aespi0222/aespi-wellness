@@ -489,26 +489,78 @@ export function Bixeps() {
       <section className="py-24 bg-white border-y border-slate-100">
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-serif text-slate-900 mb-4 italic">BIXEPS Singapore: Common Questions</h2>
-            <p className="text-slate-500 font-light">Learn more about how BIXEPS for seniors can transform your mobility.</p>
+            <h2 className="text-3xl md:text-5xl font-serif text-slate-900 mb-4 italic">Frequently Asked Questions About BIXEPS</h2>
+            <p className="text-slate-500 font-light">Everything you need to know about BIXEPS muscle resilience activation.</p>
           </div>
           <div className="space-y-6">
             {[
               {
-                q: "Is BIXEPS safe for seniors in Singapore?",
-                a: "Yes, BIXEPS is 100% non-invasive and was specifically designed to be safe for seniors. It requires zero physical exertion, making it ideal for those with mobility challenges or those recovering from surgery."
+                q: "What is BIXEPS?",
+                a: "BIXEPS is a non-invasive muscle activation technology developed using research from the National University of Singapore and ETH Zurich. It uses magnetic stimulation to activate muscles and support mitochondrial function, helping users improve strength, mobility, balance, and overall wellness."
               },
               {
-                q: "How many BIXEPS sessions do I need for mobility support?",
-                a: "While many report feeling more 'light-footed' after a single session, a protocol of 12 sessions (1-2 times weekly) is typically recommended for measurable improvements in balance and muscle resilience."
+                q: "How does BIXEPS work?",
+                a: "BIXEPS delivers targeted magnetic stimulation to muscles, triggering muscle contractions and mitochondrial activation. This process may stimulate the release of beneficial myokines associated with metabolism, circulation, recovery, and muscle health."
               },
               {
-                q: "Where can I find BIXEPS in Singapore?",
-                a: "AESPI Wellness Studio is a premier provider of BIXEPS Pro technology in Singapore, located conveniently at Vision Exchange in Jurong East."
+                q: "Is BIXEPS like exercise?",
+                a: "BIXEPS is not a replacement for exercise, but it can complement an active lifestyle. It is especially useful for individuals who have difficulty exercising due to age, deconditioning, injury, or reduced mobility."
               },
               {
-                q: "Does BIXEPS help with healthy ageing?",
-                a: "Absolutely. By preventing sarcopenia (age-related muscle loss) and improving metabolic function, BIXEPS is a cornerstone of a proactive healthy ageing strategy."
+                q: "What does a BIXEPS session feel like?",
+                a: "Different users report having different sensations while using BIXEPS, namely: slight warmth in their muscles, a tingling sensation, slight cooling or numbness in their legs or other parts of the body. A large number of users also report having no perceivable sensation."
+              },
+              {
+                q: "How long is each session?",
+                a: "Each leg is typically treated for approximately 10 minutes. Treating both legs usually takes about 20 minutes per visit."
+              },
+              {
+                q: "How many sessions are recommended?",
+                a: "Most users start with a 12-session program performed weekly. Consistency is important because muscle conditioning and functional improvements occur progressively over time."
+              },
+              {
+                q: "Who is BIXEPS suitable for?",
+                a: "BIXEPS may benefit seniors experiencing muscle weakness or reduced mobility, individuals recovering from inactivity, people seeking muscle activation without high-impact exercise, users wanting to complement rehabilitation or wellness programs, and individuals aiming to improve balance and mobility."
+              },
+              {
+                q: "Can BIXEPS help seniors?",
+                a: "Many seniors use BIXEPS to support mobility, leg strength, walking confidence, and balance. It is designed to be gentle and accessible, even for individuals who may not tolerate intensive workouts."
+              },
+              {
+                q: "Can BIXEPS help with balance and fall prevention?",
+                a: "Muscle strength plays an important role in balance and stability. By activating leg muscles, BIXEPS may support mobility and functional movement associated with fall prevention strategies."
+              },
+              {
+                q: "Is BIXEPS painful?",
+                a: "No. Most users describe the sensation as strong but tolerable muscle contractions. The intensity can be adjusted based on individual comfort."
+              },
+              {
+                q: "Is there downtime after treatment?",
+                a: "No downtime is required. Most users resume normal daily activities immediately after the session."
+              },
+              {
+                q: "Who should NOT use BIXEPS?",
+                a: "BIXEPS is not suitable for users with active implanted electronic devices such as pacemakers or defibrillators, pregnant individuals, individuals undergoing active cancer treatments such as chemotherapy, or anyone advised by their doctor to avoid electromagnetic stimulation."
+              },
+              {
+                q: "Can people with metal implants use BIXEPS?",
+                a: "Many individuals with passive implants may safely use BIXEPS if they are cleared for MRI procedures. However, users should always consult their doctor if unsure."
+              },
+              {
+                q: "Can BIXEPS replace physiotherapy?",
+                a: "BIXEPS is not a replacement for medical care or physiotherapy. It may be used alongside rehabilitation, exercise, and wellness programs as part of a broader approach."
+              },
+              {
+                q: "Can I combine BIXEPS with other AESPI services?",
+                a: "Yes. Many clients combine BIXEPS with Power Plate Whole Body Vibration training, Molecular Hydrogen therapy, and Body composition assessments for a more comprehensive wellness and longevity program."
+              },
+              {
+                q: "How soon will I notice results?",
+                a: "Some users notice changes in muscle engagement, walking confidence, or energy within several sessions. Results vary depending on age, consistency, lifestyle, and individual condition."
+              },
+              {
+                q: "Where is AESPI located?",
+                a: "AESPI operates at Vision Exchange near Jurong East MRT in Singapore."
               }
             ].map((faq, i) => (
               <div key={i} className="p-6 md:p-8 bg-slate-50 rounded-[32px] border border-slate-100">

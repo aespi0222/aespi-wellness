@@ -56,18 +56,46 @@ export function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [formErrors, setFormErrors] = useState<{ [key: string]: string }>({});
+
+  const validateForm = (data: { [k: string]: FormDataEntryValue }) => {
+    const errors: { [key: string]: string } = {};
+    
+    if (!data.name || String(data.name).trim().length < 2) {
+      errors.name = "Please enter your full name (at least 2 characters).";
+    }
+    
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!data.email || !emailRegex.test(String(data.email))) {
+      errors.email = "Please enter a valid email address.";
+    }
+    
+    if (!data.message || String(data.message).trim().length < 10) {
+      errors.message = "Please provide more details (at least 10 characters).";
+    }
+    
+    return errors;
+  };
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     console.log("Form submission triggered");
     e.preventDefault();
     setIsSubmitting(true);
     setSubmitError(null);
+    setFormErrors({});
     
     const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData.entries());
+
+    // Client-side validation
+    const errors = validateForm(data);
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      setIsSubmitting(false);
+      return;
+    }
     
     try {
-      const data = Object.fromEntries(formData.entries());
-      
       // 1. Save to Firestore FIRST (Reliable backup)
       console.log("Saving to Firestore...");
       try {
@@ -267,8 +295,13 @@ export function Contact() {
                           name="name"
                           type="text"
                           placeholder="John Doe"
-                          className="w-full px-5 py-4 rounded-2xl bg-white border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all"
+                          className={`w-full px-5 py-4 rounded-2xl bg-white border outline-none transition-all ${
+                            formErrors.name ? 'border-red-500 focus:ring-red-500/5' : 'border-slate-200 focus:border-primary focus:ring-primary/5'
+                          }`}
                         />
+                        {formErrors.name && (
+                          <p className="text-red-500 text-[10px] font-bold uppercase tracking-wider mt-1">{formErrors.name}</p>
+                        )}
                       </div>
                       <div className="space-y-2">
                         <label className="text-xs font-bold text-slate-500 uppercase tracking-wider">Email Address</label>
@@ -277,8 +310,13 @@ export function Contact() {
                           name="email"
                           type="email"
                           placeholder="john@example.com"
-                          className="w-full px-5 py-4 rounded-2xl bg-white border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all"
+                          className={`w-full px-5 py-4 rounded-2xl bg-white border outline-none transition-all ${
+                            formErrors.email ? 'border-red-500 focus:ring-red-500/5' : 'border-slate-200 focus:border-primary focus:ring-primary/5'
+                          }`}
                         />
+                        {formErrors.email && (
+                          <p className="text-red-500 text-[10px] font-bold uppercase tracking-wider mt-1">{formErrors.email}</p>
+                        )}
                       </div>
                     </div>
                     <div className="space-y-2">
@@ -300,8 +338,13 @@ export function Contact() {
                         name="message"
                         rows={4}
                         placeholder="How can we help you?"
-                        className="w-full px-5 py-4 rounded-2xl bg-white border border-slate-200 focus:border-primary focus:ring-4 focus:ring-primary/5 outline-none transition-all resize-none"
+                        className={`w-full px-5 py-4 rounded-2xl bg-white border outline-none transition-all resize-none ${
+                          formErrors.message ? 'border-red-500 focus:ring-red-500/5' : 'border-slate-200 focus:border-primary focus:ring-primary/5'
+                        }`}
                       />
+                      {formErrors.message && (
+                        <p className="text-red-500 text-[10px] font-bold uppercase tracking-wider mt-1">{formErrors.message}</p>
+                      )}
                     </div>
                     <button 
                       type="submit"

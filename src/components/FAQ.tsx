@@ -9,20 +9,24 @@ const FAQS = [
     answer: "We specialize in non-invasive active aging therapies, including BIXEPS Pro (magnetic mitohormesis for muscle activation), Molecular Hydrogen (H₂) Inhalation (for cellular recovery), Power Plate (whole-body vibration for bone density and balance), and Medical-Grade Body Composition Analysis."
   },
   {
-    question: "How much do the sessions cost?",
-    answer: "We offer introductory trial sessions so you can experience the benefits firsthand. For ongoing wellness, we provide flexible packages tailored to your specific needs and goals. Please contact us via WhatsApp or book a trial to discuss the best pricing options for you."
+    question: "Are the treatments safe for seniors?",
+    answer: "Absolutely. All our therapies are 100% non-invasive, gentle, and specifically designed with senior safety and comfort in mind. They require zero physical exertion while delivering maximum physiological benefits, making them ideal for those with mobility challenges or those recovering from inactivity."
+  },
+  {
+    question: "Is BIXEPS like exercise?",
+    answer: "BIXEPS is not a replacement for exercise, but it can complement an active lifestyle. It uses patented magnetic stimulation to activate muscles and support mitochondrial function, which is especially useful for individuals who have difficulty exercising due to age, injury, or reduced mobility."
+  },
+  {
+    question: "What does a session feel like?",
+    answer: "Most users describe the sensations as very tolerable. For BIXEPS, you might feel a slight warmth or tingling. For Power Plate, you'll feel powerful but gentle vibrations. Molecular Hydrogen inhalation is completely effortless and relaxing. None of our treatments are painful."
   },
   {
     question: "How do I book an appointment?",
-    answer: "Booking is easy! You can schedule a trial session directly online using the 'Book a Trial' button, message us on WhatsApp, or fill out the contact form at the bottom of this page. We will get back to you promptly to confirm your slot."
+    answer: "Booking is easy! You can schedule a trial session directly online using the 'Book a Trial' button, message us on WhatsApp, or fill out the contact form at the bottom of this page. We typically recommend starting with a $50 introductory protocol."
   },
   {
-    question: "Are the treatments safe for seniors?",
-    answer: "Absolutely. All our therapies are 100% non-invasive, gentle, and specifically designed with senior safety and comfort in mind. They require minimal physical exertion while delivering maximum physiological benefits."
-  },
-  {
-    question: "Do I need to wear sports attire or change clothes?",
-    answer: "No special attire is required! Our core treatments like BIXEPS Pro and Molecular Hydrogen are 'no sweat' therapies. You can come in your comfortable everyday clothes and won't need to change or shower afterward."
+    question: "Where is AESPI located?",
+    answer: "AESPI Wellness Studio is located at Vision Exchange in Jurong East, Singapore. We are conveniently situated near the Jurong East MRT station for easy access."
   }
 ];
 
