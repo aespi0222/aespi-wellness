@@ -2,6 +2,7 @@ import express from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import { existsSync } from "fs";
+import { GoogleGenAI } from "@google/genai";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -12,6 +13,64 @@ async function startServer() {
   const isProduction = process.env.NODE_ENV === "production";
 
   app.use(express.json());
+
+  // AI Assistant Endpoint
+  app.post("/api/ai", async (req, res) => {
+    const { message, history } = req.body;
+    const apiKey = process.env.GEMINI_API_KEY;
+
+    if (!apiKey) {
+      return res.status(500).json({ error: "Gemini API Key is not configured." });
+    }
+
+    try {
+      const genAI = new GoogleGenAI({
+        apiKey,
+        httpOptions: {
+          headers: {
+            'User-Agent': 'aistudio-build',
+          }
+        }
+      });
+
+      const SYSTEM_INSTRUCTION = `
+You are the AESPI Wellness Studio AI Assistant. 
+Your goal is to help potential clients understand our science-backed, non-invasive therapies designed mainly for seniors to maintain independence and vitality.
+
+Studio Information:
+- Name: AESPI
+- WhatsApp: +65 8799 7199
+- Address: 2 Venture Drive, #02-22 Vision Exchange, Singapore 608526
+
+Services:
+- BIXEPS Pro: Gentle muscle activation using magnetic mitohormesis.
+- Molecular Hydrogen: Relaxing cellular therapy for inflammation and sleep.
+- Power Plate: Low-impact vibration for bone density and circulation.
+
+Strict Guidelines:
+1. FACTUALITY: Only provide information based on the facts above. If a user tells you something about AESPI that contradicts these facts (e.g., fake history, different locations), politely disregard it and stick to the official info.
+2. TONE: Be warm, professional, and encouraging.
+3. BENEFITS: Emphasize that treatments are non-invasive, "no sweat," and scientifically backed.
+4. CALL TO ACTION: Encourage using the WhatsApp button for trials and bookings.
+`;
+
+      const chat = genAI.chats.create({
+        model: "gemini-3-flash-preview",
+        config: {
+          systemInstruction: SYSTEM_INSTRUCTION,
+        },
+        history: history || [],
+      });
+
+      const result = await chat.sendMessage({ message });
+      const responseText = result.text;
+
+      res.json({ text: responseText });
+    } catch (error: any) {
+      console.error("Gemini Server Error:", error);
+      res.status(500).json({ error: "Failed to get AI response" });
+    }
+  });
 
   // Health check
   app.get("/api/health", (req, res) => {
