@@ -1,5 +1,5 @@
 {
-  "name": "react-example",
+  "name": "aespi-wellness",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,33 +10,33 @@
     "lint": "tsc --noEmit"
   },
   "dependencies": {
-    "@google/genai": "^1.32.0",
-    "@tailwindcss/typography": "^0.5.19",
-    "@tailwindcss/vite": "^4.1.14",
-    "@vitejs/plugin-react": "^5.0.4",
+    "@google/genai": "latest",
+    "@tailwindcss/typography": "^0.5.15",
     "clsx": "^2.1.1",
-    "dotenv": "^17.2.3",
-    "express": "^4.21.2",
-    "firebase": "^12.12.0",
-    "lucide-react": "0.474.0",
-    "motion": "^12.39.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "firebase": "^10.13.2",
+    "lucide-react": "^0.474.0",
+    "motion": "^12.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-ga4": "^3.0.1",
-    "react-helmet-async": "^3.0.0",
-    "react-router-dom": "^7.14.0",
+    "react-helmet-async": "latest",
+    "react-router-dom": "^7.0.0",
     "tailwind-merge": "^3.5.0",
-    "tsx": "^4.21.0",
-    "esbuild": "^0.28.0",
-    "vite": "^6.2.0",
-    "tailwindcss": "^4.3.0",
-    "autoprefixer": "^10.5.0",
-    "typescript": "^5.7.3"
+    "tsx": "^4.19.1",
+    "esbuild": "^0.24.0"
   },
   "devDependencies": {
-    "@types/express": "^5.0.6",
-    "@types/node": "^25.9.0",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3"
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.7.5",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.2",
+    "@tailwindcss/vite": "^4.0.0",
+    "autoprefixer": "^10.4.20",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.0"
   }
 }

@@ -9,8 +9,11 @@ const __dirname = path.dirname(__filename);
 
 async function startServer() {
   const app = express();
-  const PORT = Number(process.env.PORT) || 3000;
+  const PORT = process.env.PORT || 3000;
   const isProduction = process.env.NODE_ENV === "production";
+
+  console.log(`Starting server in ${isProduction ? 'production' : 'development'} mode...`);
+  console.log(`Target port: ${PORT}`);
 
   app.use(express.json());
 
@@ -105,6 +108,7 @@ Strict Guidelines:
   // Serve Application
   if (!isProduction) {
     try {
+      console.log("Loading Vite middleware...");
       const { createServer: createViteServer } = await import("vite");
       const vite = await createViteServer({
         server: { middlewareMode: true },
@@ -115,21 +119,35 @@ Strict Guidelines:
       console.error("Vite failed to load:", err);
     }
   } else {
-    const distPath = path.resolve(process.cwd(), 'dist');
-    if (existsSync(distPath)) {
+    // In production, we assume we are running from dist/server.cjs
+    // So __dirname points to the 'dist' directory.
+    const distPath = __dirname;
+    console.log(`Serving static files from: ${distPath}`);
+    
+    if (existsSync(path.join(distPath, 'index.html'))) {
       app.use(express.static(distPath));
       app.get('*', (req, res) => {
         res.sendFile(path.join(distPath, 'index.html'));
       });
     } else {
-      app.get('*', (req, res) => {
-        res.status(404).send("Build in progress or missing. Refresh soon.");
-      });
+      console.warn("index.html not found in distPath (__dirname), falling back to process.cwd()/dist");
+      const fallbackPath = path.resolve(process.cwd(), 'dist');
+      if (existsSync(path.join(fallbackPath, 'index.html'))) {
+        app.use(express.static(fallbackPath));
+        app.get('*', (req, res) => {
+          res.sendFile(path.join(fallbackPath, 'index.html'));
+        });
+      } else {
+        console.error("Critical: Build artifacts not found in fallbackPath either.");
+        app.get('*', (req, res) => {
+          res.status(404).send("Build artifacts not found. Deployment configuration error.");
+        });
+      }
     }
   }
 
-  app.listen(PORT, "0.0.0.0", () => {
-    console.log(`Server listening on port ${PORT}`);
+  app.listen(Number(PORT), "0.0.0.0", () => {
+    console.log(`Server is listening on 0.0.0.0:${PORT}`);
   });
 }
 
