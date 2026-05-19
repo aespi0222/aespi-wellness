@@ -4,16 +4,20 @@ import { fileURLToPath } from "url";
 import { existsSync } from "fs";
 import { GoogleGenAI } from "@google/genai";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Robust __dirname for both ESM (tsx) and CJS (esbuild bundle)
+const _filename = typeof __filename !== 'undefined' ? __filename : fileURLToPath(import.meta.url);
+const _dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(_filename);
 
 async function startServer() {
   const app = express();
-  const PORT = process.env.PORT || 3000;
+  const PORT = process.env.PORT || "3000";
   const isProduction = process.env.NODE_ENV === "production";
 
-  console.log(`Starting server in ${isProduction ? 'production' : 'development'} mode...`);
-  console.log(`Target port: ${PORT}`);
+  console.log(`[BOOT] MODE: ${isProduction ? 'production' : 'development'}`);
+  console.log(`[BOOT] PORT environment variable: ${process.env.PORT}`);
+  console.log(`[BOOT] Normalized PORT: ${PORT}`);
+  console.log(`[BOOT] __dirname: ${_dirname}`);
+  console.log(`[BOOT] cwd: ${process.cwd()}`);
 
   app.use(express.json());
 
@@ -120,9 +124,9 @@ Strict Guidelines:
     }
   } else {
     // In production, we assume we are running from dist/server.cjs
-    // So __dirname points to the 'dist' directory.
-    const distPath = __dirname;
-    console.log(`Serving static files from: ${distPath}`);
+    // So _dirname points to the 'dist' directory.
+    const distPath = _dirname;
+    console.log(`[BOOT] Serving static files from: ${distPath}`);
     
     if (existsSync(path.join(distPath, 'index.html'))) {
       app.use(express.static(distPath));
@@ -130,7 +134,7 @@ Strict Guidelines:
         res.sendFile(path.join(distPath, 'index.html'));
       });
     } else {
-      console.warn("index.html not found in distPath (__dirname), falling back to process.cwd()/dist");
+      console.warn(`[BOOT] index.html not found in distPath (${_dirname}), falling back to process.cwd()/dist`);
       const fallbackPath = path.resolve(process.cwd(), 'dist');
       if (existsSync(path.join(fallbackPath, 'index.html'))) {
         app.use(express.static(fallbackPath));
