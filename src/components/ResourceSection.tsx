@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { FileText, ExternalLink, Newspaper } from 'lucide-react';
+import { Helmet } from 'react-helmet-async';
 import { RESEARCH, PRESS } from '../constants';
 
 interface ResourceSectionProps {
@@ -12,8 +13,40 @@ export function ResourceSection({ serviceId }: ResourceSectionProps) {
 
   if (serviceResearch.length === 0 && servicePress.length === 0) return null;
 
+  const researchSchemas = serviceResearch.map(item => ({
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": item.title,
+    "author": {
+      "@type": "Organization",
+      "name": item.source
+    },
+    "url": item.link
+  }));
+
+  const pressSchemas = servicePress.map(item => ({
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": item.title,
+    "datePublished": item.date,
+    "publisher": {
+      "@type": "Organization",
+      "name": item.source
+    },
+    "url": item.link
+  }));
+
+  const allSchemas = [...researchSchemas, ...pressSchemas];
+
   return (
     <section className="py-24 bg-slate-50">
+      <Helmet>
+        {allSchemas.map((schema, index) => (
+          <script key={index} type="application/ld+json">
+            {JSON.stringify(schema)}
+          </script>
+        ))}
+      </Helmet>
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Research & Media</h2>

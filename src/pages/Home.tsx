@@ -6,13 +6,26 @@ import { WhoWeServe } from '../components/WhoWeServe';
 import { WhyChooseUs } from '../components/WhyChooseUs';
 import { Testimonials } from '../components/Testimonials';
 import { About } from '../components/About';
-import { FAQ } from '../components/FAQ';
+import { FAQ, FAQS } from '../components/FAQ';
 import { Contact } from '../components/Contact';
 
 export function Home() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": FAQS.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
-      <SEO />
+      <SEO additionalSchema={[faqSchema]} />
       <Hero />
       <MissionStatement />
       <Services />

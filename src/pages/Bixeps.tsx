@@ -11,6 +11,120 @@ export function Bixeps() {
   const [showBooking, setShowBooking] = useState(false);
   const location = useLocation();
 
+  const faqs = [
+    {
+      q: "What is BIXEPS?",
+      a: "BIXEPS is a non-invasive muscle activation technology developed using research from the National University of Singapore and ETH Zurich. It uses magnetic stimulation to activate muscles and support mitochondrial function, helping users improve strength, mobility, balance, and overall wellness."
+    },
+    {
+      q: "How does BIXEPS work?",
+      a: "BIXEPS delivers targeted magnetic stimulation to muscles, triggering muscle contractions and mitochondrial activation. This process may stimulate the release of beneficial myokines associated with metabolism, circulation, recovery, and muscle health."
+    },
+    {
+      q: "Is BIXEPS like exercise?",
+      a: "BIXEPS is not a replacement for exercise, but it can complement an active lifestyle. It is especially useful for individuals who have difficulty exercising due to age, deconditioning, injury, or reduced mobility."
+    },
+    {
+      q: "What does a BIXEPS session feel like?",
+      a: "Different users report having different sensations while using BIXEPS, namely: slight warmth in their muscles, a tingling sensation, slight cooling or numbness in their legs or other parts of the body. A large number of users also report having no perceivable sensation."
+    },
+    {
+      q: "How long is each session?",
+      a: "Each leg is typically treated for approximately 10 minutes. Treating both legs usually takes about 20 minutes per visit."
+    },
+    {
+      q: "How many sessions are recommended?",
+      a: "Most users start with a 12-session program performed weekly. Consistency is important because muscle conditioning and functional improvements occur progressively over time."
+    },
+    {
+      q: "Who is BIXEPS suitable for?",
+      a: "BIXEPS may benefit seniors experiencing muscle weakness or reduced mobility, individuals recovering from inactivity, people seeking muscle activation without high-impact exercise, users wanting to complement rehabilitation or wellness programs, and individuals aiming to improve balance and mobility."
+    },
+    {
+      q: "Can BIXEPS help seniors?",
+      a: "Many seniors use BIXEPS to support mobility, leg strength, walking confidence, and balance. It is designed to be gentle and accessible, even for individuals who may not tolerate intensive workouts."
+    },
+    {
+      q: "Can BIXEPS help with balance and fall prevention?",
+      a: "Muscle strength plays an important role in balance and stability. By activating leg muscles, BIXEPS may support mobility and functional movement associated with fall prevention strategies."
+    },
+    {
+      q: "Is BIXEPS painful?",
+      a: "No. Most users describe the sensation as strong but tolerable muscle contractions. The intensity can be adjusted based on individual comfort."
+    },
+    {
+      q: "Is there downtime after treatment?",
+      a: "No downtime is required. Most users resume normal daily activities immediately after the session."
+    },
+    {
+      q: "Who should NOT use BIXEPS?",
+      a: "BIXEPS is not suitable for users with active implanted electronic devices such as pacemakers or defibrillators, pregnant individuals, individuals undergoing active cancer treatments such as chemotherapy, or anyone advised by their doctor to avoid electromagnetic stimulation."
+    },
+    {
+      q: "Can people with metal implants use BIXEPS?",
+      a: "Many individuals with passive implants may safely use BIXEPS if they are cleared for MRI procedures. However, users should always consult their doctor if unsure."
+    },
+    {
+      q: "Can BIXEPS replace physiotherapy?",
+      a: "BIXEPS is not a replacement for medical care or physiotherapy. It may be used alongside rehabilitation, exercise, and wellness programs as part of a broader approach."
+    },
+    {
+      q: "Can I combine BIXEPS with other AESPI services?",
+      a: "Yes. Many clients combine BIXEPS with Power Plate Whole Body Vibration training, Molecular Hydrogen therapy, and Body composition assessments for a more comprehensive wellness and longevity program."
+    },
+    {
+      q: "How soon will I notice results?",
+      a: "Some users notice changes in muscle engagement, walking confidence, or energy within several sessions. Results vary depending on age, consistency, lifestyle, and individual condition."
+    },
+    {
+      q: "Where is AESPI located?",
+      a: "AESPI operates at Vision Exchange near Jurong East MRT in Singapore."
+    }
+  ];
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "BIXEPS Muscle Resilience Activation",
+    "description": "Non-invasive muscle activation technology for seniors to prevent sarcopenia and improve mobility in Singapore.",
+    "provider": {
+      "@type": "WellnessCenter",
+      "name": "AESPI Wellness Studio"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Singapore"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "BIXEPS Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Introductory BIXEPS Trial"
+          },
+          "price": "50.00",
+          "priceCurrency": "SGD"
+        }
+      ]
+    }
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  };
+
   // Handle ?book=true query param
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -42,38 +156,8 @@ export function Bixeps() {
         title="BIXEPS Singapore | Muscle Strength & Mobility for Seniors | AESPI" 
         description="Experience BIXEPS in Singapore at AESPI. Our non-invasive muscle activation technology helps seniors improve mobility, prevent sarcopenia, and stay active."
         canonical="/bixeps"
+        additionalSchema={[serviceSchema, faqSchema]}
       />
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Service",
-          "name": "BIXEPS Muscle Resilience Activation",
-          "description": "Non-invasive muscle activation technology for seniors to prevent sarcopenia and improve mobility in Singapore.",
-          "provider": {
-            "@type": "WellnessCenter",
-            "name": "AESPI Wellness Studio"
-          },
-          "areaServed": {
-            "@type": "Country",
-            "name": "Singapore"
-          },
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "BIXEPS Services",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Introductory BIXEPS Trial"
-                },
-                "price": "50.00",
-                "priceCurrency": "SGD"
-              }
-            ]
-          }
-        })}
-      </script>
       {/* Hero Section */}
       <section className="relative py-24 md:py-32 overflow-hidden bg-surface">
         <div className="absolute inset-0 z-0 opacity-30">

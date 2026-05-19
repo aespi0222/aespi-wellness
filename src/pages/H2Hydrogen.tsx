@@ -11,6 +11,97 @@ export function H2Hydrogen() {
   const [showBooking, setShowBooking] = useState(false);
   const location = useLocation();
 
+  const faqs = [
+    {
+      q: "What is Molecular Hydrogen Therapy?",
+      a: "Molecular Hydrogen therapy involves inhaling or consuming hydrogen-rich solutions containing H₂ molecules. Molecular hydrogen is being studied for its potential antioxidant and wellness-supporting properties."
+    },
+    {
+      q: "How does Molecular Hydrogen work?",
+      a: "Hydrogen molecules are extremely small and may diffuse rapidly throughout the body. Research has explored hydrogen’s potential role in reducing oxidative stress and supporting cellular health."
+    },
+    {
+      q: "Why is oxidative stress important?",
+      a: "Oxidative stress is associated with ageing, inflammation, fatigue, and various chronic health conditions. Antioxidants help neutralise harmful free radicals in the body."
+    },
+    {
+      q: "What are the potential benefits of Molecular Hydrogen?",
+      a: "Research and user experiences suggest potential support for energy and recovery, sleep quality, exercise recovery, general wellness, oxidative stress management, and healthy ageing support. Individual experiences vary."
+    },
+    {
+      q: "Is Molecular Hydrogen therapy safe?",
+      a: "Molecular hydrogen has been studied extensively and is generally considered safe when used appropriately. However, users with medical conditions should consult their healthcare provider before beginning therapy."
+    },
+    {
+      q: "What does a session feel like?",
+      a: "Most sessions are relaxing and comfortable. Users typically inhale hydrogen gas through a nasal cannula while seated comfortably."
+    },
+    {
+      q: "How long is each session?",
+      a: "Sessions are typically between 30 to 60 minutes depending on the selected program."
+    },
+    {
+      q: "Is Molecular Hydrogen approved as a medical treatment?",
+      a: "Hydrogen therapy is primarily positioned as a wellness and supportive therapy. It should not be considered a cure or replacement for medical treatment."
+    },
+    {
+      q: "Can Molecular Hydrogen help with sleep?",
+      a: "Some users report improved relaxation and sleep quality after regular sessions. Sleep responses vary from person to person."
+    },
+    {
+      q: "Can athletes or active individuals use Molecular Hydrogen?",
+      a: "Yes. Molecular hydrogen is increasingly explored for recovery, oxidative stress management, and exercise support."
+    },
+    {
+      q: "Can seniors use Molecular Hydrogen therapy?",
+      a: "Yes. Many seniors use hydrogen therapy as part of a broader wellness and healthy ageing routine."
+    },
+    {
+      q: "Are there side effects?",
+      a: "Most users tolerate hydrogen therapy well. Some individuals may experience temporary lightheadedness or relaxation effects during initial sessions."
+    },
+    {
+      q: "How many sessions are recommended?",
+      a: "Frequency depends on wellness goals and individual needs. Some users prefer occasional sessions while others incorporate it regularly into their routine."
+    },
+    {
+      q: "Can Molecular Hydrogen be combined with BIXEPS or Power Plate?",
+      a: "Yes. Many AESPI clients combine hydrogen therapy with BIXEPS and Power Plate programs to support recovery, energy, mobility, and wellness."
+    },
+    {
+      q: "Is there scientific research behind Molecular Hydrogen?",
+      a: "Yes. Molecular hydrogen has been the subject of increasing scientific research globally, particularly in oxidative stress, inflammation, and cellular health."
+    }
+  ];
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Molecular Hydrogen (H₂) Therapy",
+    "description": "High-purity Molecular Hydrogen therapy targets chronic inflammation and oxidative stress at AESPI Wellness Studio Singapore.",
+    "provider": {
+      "@type": "WellnessCenter",
+      "name": "AESPI Wellness Studio"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Singapore"
+    }
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  };
+
   // Handle ?book=true query param
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -39,9 +130,10 @@ export function H2Hydrogen() {
   return (
     <div className="pt-32 pb-20">
       <SEO 
-        title="Cellular Recovery & Oxidative Stress Management" 
+        title="Molecular Hydrogen (H2) Therapy Singapore | Cellular Recovery | AESPI" 
         description="Rejuvenate your system from the source. High-purity Molecular Hydrogen therapy targets chronic inflammation and oxidative stress at AESPI Wellness Studio Singapore."
         canonical="/h2-hydrogen"
+        additionalSchema={[serviceSchema, faqSchema]}
       />
       {/* Hero Section */}
       <section className="relative py-24 md:py-32 overflow-hidden bg-surface">
