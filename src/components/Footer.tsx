@@ -50,13 +50,23 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-serif text-xl mb-6">Explore</h4>
-            <ul className="space-y-4 text-slate-400 font-light">
-              <li><a href="/" className="hover:text-white transition-colors">Vision</a></li>
-              <li><a href="#longevity" className="hover:text-white transition-colors">Strategy</a></li>
-              <li><a href="#technologies" className="hover:text-white transition-colors">Technologies</a></li>
-              <li><a href="#who-we-serve" className="hover:text-white transition-colors">Focus Groups</a></li>
-              <li><a href="#contact" className="hover:text-white transition-colors">Locations</a></li>
+            <h4 className="font-serif text-xl mb-6 text-white/90">Technologies</h4>
+            <ul className="space-y-4 text-slate-400 font-light text-sm">
+              <li><a href="/bixeps" className="hover:text-primary transition-colors flex items-center gap-2 group"><div className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" /> BIXEPS Muscle Activation</a></li>
+              <li><a href="/powerplate" className="hover:text-primary transition-colors flex items-center gap-2 group"><div className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" /> Power Plate Vibration</a></li>
+              <li><a href="/h2-hydrogen" className="hover:text-primary transition-colors flex items-center gap-2 group"><div className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" /> Molecular Hydrogen Therapy</a></li>
+              <li><a href="/body-composition" className="hover:text-primary transition-colors flex items-center gap-2 group"><div className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" /> Body Composition Analysis</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="font-serif text-xl mb-6 text-white/90">Quick Links</h4>
+            <ul className="space-y-4 text-slate-400 font-light text-sm">
+              <li><a href="/" className="hover:text-white transition-colors">Home & Vision</a></li>
+              <li><a href="/#longevity" className="hover:text-white transition-colors">Longevity Strategy</a></li>
+              <li><a href="/#who-we-serve" className="hover:text-white transition-colors">Who We Serve</a></li>
+              <li><a href="/blog" className="hover:text-white transition-colors">Healthy Ageing Blog</a></li>
+              <li><a href="/#contact" className="hover:text-white transition-colors">Contact & Locations</a></li>
             </ul>
           </div>
 

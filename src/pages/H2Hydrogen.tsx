@@ -6,6 +6,7 @@ import { Wind, Shield, Zap, Brain, Heart, CheckCircle2, ArrowLeft, Droplets, Act
 import { Link } from 'react-router-dom';
 import { Testimonials } from '../components/Testimonials';
 import { ResourceSection } from '../components/ResourceSection';
+import { RelatedServices } from '../components/RelatedServices';
 
 export function H2Hydrogen() {
   const [showBooking, setShowBooking] = useState(false);
@@ -160,7 +161,7 @@ export function H2Hydrogen() {
                 Cleanse Your <br /> <span className="italic text-secondary">Biological System.</span>
               </h1>
               <p className="text-xl text-slate-500 mb-12 leading-relaxed font-light max-w-2xl">
-                Rejuvenate at the cellular level. Molecular Hydrogen (H₂) neutralises oxidative stress and chronic inflammation, helping seniors <span className="font-medium text-slate-900 underline decoration-primary/30 decoration-4 underline-offset-4">recover vitality</span> through gentle inhalation.
+                Rejuvenate at the cellular level. Molecular Hydrogen (H₂) neutralises oxidative stress and chronic inflammation, helping seniors <Link to="/body-composition" className="text-secondary hover:underline font-bold">recover vitality</Link> through gentle inhalation.
               </p>
               <div className="flex flex-col gap-6">
                 <div className="flex flex-wrap gap-5">
@@ -212,7 +213,7 @@ export function H2Hydrogen() {
             >
               <h2 className="text-3xl md:text-5xl font-serif text-slate-900 mb-8 italic">Pillar 02: <br />Cellular Recovery Protocol</h2>
               <p className="text-slate-500 text-lg font-light leading-relaxed mb-6">
-                Longevity starts with systemic maintenance. At AESPI, we utilise <strong>Molecular Hydrogen (H₂)</strong> as a critical protocol to neutralise the biological friction of ageing.
+                Longevity starts with systemic maintenance. At AESPI, we utilise <strong>Molecular Hydrogen (H₂)</strong> as a critical protocol to neutralise the biological friction of ageing, a core part of our <Link to="/#longevity" className="text-secondary hover:underline font-bold">longevity strategy</Link>.
               </p>
               <p className="text-slate-500 text-lg font-light leading-relaxed mb-8">
                 H₂ is the smallest molecule in the universe, a quality that allows it to penetrate deep into cells and pass the blood-brain barrier. It acts as a <strong>selective antioxidant</strong>, targeting toxic free radicals without disrupting essential biological signals.
@@ -597,8 +598,11 @@ export function H2Hydrogen() {
         </div>
       </section>
 
+      {/* Related Services */}
+      <RelatedServices />
+
       {/* Testimonials */}
-      <Testimonials />
+      <Testimonials serviceFilter="Molecular Hydrogen" />
 
       {/* Booking Modal */}
       <AnimatePresence>

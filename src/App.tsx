@@ -11,6 +11,8 @@ import { Bixeps } from './pages/Bixeps';
 import { H2Hydrogen } from './pages/H2Hydrogen';
 import { PowerPlate } from './pages/PowerPlate';
 import { BodyComposition } from './pages/BodyComposition';
+import { Blog } from './pages/Blog';
+import { BlogPost } from './pages/BlogPost';
 import { MessageCircle } from 'lucide-react';
 import { BRAND } from './constants';
 import { GoogleAnalytics } from './components/GoogleAnalytics';
@@ -33,6 +35,8 @@ export default function App() {
             <Route path="/h2-hydrogen" element={<H2Hydrogen />} />
             <Route path="/powerplate" element={<PowerPlate />} />
             <Route path="/body-composition" element={<BodyComposition />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
           </Routes>
         </main>
         <Footer />

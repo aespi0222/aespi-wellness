@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { BRAND } from '@/src/constants';
 
@@ -37,7 +38,7 @@ export function About() {
             Building the Foundation for <br /> <span className="italic text-primary text-secondary">Healthy Ageing</span>
           </h2>
           <p className="text-xl text-slate-500 mb-10 leading-relaxed font-light">
-            At AESPI, we are architects of longevity. We believe true wellness isn't just the absence of illness, but the <span className="font-medium text-slate-900">presence of biological resilience</span>. We curate a synchronized ecosystem of science-backed technologies to help you navigate the second half of life with power, grace, and independence.
+            At AESPI, we are architects of longevity. We believe true wellness isn't just the absence of illness, but the <span className="font-medium text-slate-900">presence of biological resilience</span>. We curate a <Link to="/#technologies" className="text-secondary hover:underline font-bold">synchronized ecosystem of science-backed technologies</Link> to help you navigate the second half of life with power, grace, and independence.
           </p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 mb-12">

@@ -6,6 +6,7 @@ import { Zap, Shield, Activity, TrendingUp, Users, CheckCircle2, ArrowLeft, Cpu,
 import { Link } from 'react-router-dom';
 import { Testimonials } from '../components/Testimonials';
 import { ResourceSection } from '../components/ResourceSection';
+import { RelatedServices } from '../components/RelatedServices';
 
 export function Bixeps() {
   const [showBooking, setShowBooking] = useState(false);
@@ -183,7 +184,7 @@ export function Bixeps() {
                 BIXEPS Singapore: <br /> <span className="italic text-primary">Biological Strength.</span>
               </h1>
               <p className="text-xl text-slate-500 mb-12 leading-relaxed font-light max-w-2xl">
-                Maintain independence through patented BIXEPS mobility support. Our non-invasive technology helps seniors in Singapore prevent sarcopenia and improve balance <span className="font-medium text-slate-900 underline decoration-secondary/30 decoration-4 underline-offset-4">without physical strain</span>.
+                Maintain independence through patented BIXEPS mobility support. Our non-invasive technology helps seniors in Singapore prevent sarcopenia and improve balance <span className="font-medium text-slate-900 underline decoration-secondary/30 decoration-4 underline-offset-4">without physical strain</span>. Complement your protocol with <Link to="/h2-hydrogen" className="text-primary hover:underline font-bold">Molecular Hydrogen recovery</Link> for optimal results.
               </p>
               <div className="flex flex-col gap-6">
                 <div className="flex flex-wrap gap-5">
@@ -235,7 +236,7 @@ export function Bixeps() {
             >
               <h2 className="text-3xl md:text-5xl font-serif text-slate-900 mb-8 italic">BIXEPS for Seniors: <br />Muscle Resilience Activation</h2>
               <p className="text-slate-500 text-lg font-light leading-relaxed mb-6">
-                Biological strength is the legacy of a healthy ageing lifestyle. At AESPI Singapore, we utilise <strong>Muscle Resilience Activation</strong> (powered by BIXEPS Pro) as our primary protocol for sarcopenia prevention and longevity.
+                Biological strength is the legacy of a healthy ageing lifestyle. At AESPI Singapore, we utilise <strong>Muscle Resilience Activation</strong> (powered by BIXEPS Pro) as our primary protocol for sarcopenia prevention and <Link to="/#longevity" className="text-primary hover:underline font-bold">longevity strategy</Link>.
               </p>
               <p className="text-slate-500 text-lg font-light leading-relaxed mb-8">
                 Developed through a collaboration between the <strong>National University of Singapore (NUS)</strong> 
@@ -365,15 +366,15 @@ export function Bixeps() {
                   },
                   { 
                     title: "Metabolic Health for Longevity", 
-                    desc: "By activating muscle mitochondria, BIXEPS helps increase your resting metabolic rate, assisting in weight management and blood sugar regulation in line with healthy ageing goals." 
+                    desc: <>By activating muscle mitochondria, BIXEPS helps increase your resting metabolic rate, assisting in weight management and blood sugar regulation in line with <Link to="/#longevity" className="text-primary hover:underline font-bold">healthy ageing goals</Link>.</>
                   },
                   { 
                     title: "BIXEPS for Sports Recovery", 
-                    desc: "Athletes in Singapore use BIXEPS to flush out toxins and reduce muscle soreness (DOMS) without the need for additional physical strain." 
+                    desc: <>Athletes in Singapore use BIXEPS to flush out toxins and reduce muscle soreness (DOMS) without the need for additional physical strain. Combine with <Link to="/powerplate" className="text-primary hover:underline font-bold">Power Plate vibration</Link> for enhanced circulation.</>
                   },
                   { 
                     title: "Anti-Inflammatory Support", 
-                    desc: "The release of myokines helps combat systemic inflammation, a key component of the AESPI longevity ecosystem." 
+                    desc: <>The release of myokines helps combat systemic inflammation, a key component of the <Link to="/#technologies" className="text-primary hover:underline font-bold">AESPI longevity ecosystem</Link>.</>
                   }
                 ].map((benefit, i) => (
                   <div key={i} className="flex gap-4">
@@ -382,7 +383,7 @@ export function Bixeps() {
                     </div>
                     <div>
                       <h4 className="font-bold text-slate-900">{benefit.title}</h4>
-                      <p className="text-slate-500 text-sm leading-relaxed">{benefit.desc}</p>
+                      <div className="text-slate-500 text-sm leading-relaxed">{benefit.desc}</div>
                     </div>
                   </div>
                 ))}
@@ -712,6 +713,9 @@ export function Bixeps() {
           </div>
         )}
       </AnimatePresence>
+
+      {/* Related Services */}
+      <RelatedServices />
 
       {/* CTA */}
       <section className="py-24 bg-primary relative overflow-hidden">

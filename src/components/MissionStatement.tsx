@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 
 export function MissionStatement() {
@@ -24,7 +25,7 @@ export function MissionStatement() {
             Our Foundation
           </span>
           <h2 className="text-4xl md:text-6xl font-serif text-white leading-[1.2] text-balance">
-            “Helping adults and seniors stay <span className="italic text-secondary">active, independent, and resilient</span> through science-backed wellness technologies.”
+            “Helping adults and seniors stay <span className="italic text-secondary">active, independent, and resilient</span> through <Link to="/#technologies" className="text-secondary hover:underline transition-all">science-backed wellness technologies</Link>.”
           </h2>
           <div className="w-24 h-px bg-white/20 mx-auto" />
           <p className="text-white/60 text-xl font-light tracking-wide max-w-2xl mx-auto leading-relaxed">

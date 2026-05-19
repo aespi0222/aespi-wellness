@@ -1,12 +1,17 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ChevronDown } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { cn } from '@/src/lib/utils';
 
 export const FAQS = [
   {
     question: "What services do you offer?",
-    answer: "We specialize in non-invasive active aging therapies, including BIXEPS Pro (magnetic mitohormesis for muscle activation), Molecular Hydrogen (H₂) Inhalation (for cellular recovery), Power Plate (whole-body vibration for bone density and balance), and Medical-Grade Body Composition Analysis."
+    answer: (
+      <>
+        We specialize in non-invasive active aging therapies, including <Link to="/bixeps" className="text-primary hover:underline font-medium">BIXEPS Pro</Link> (magnetic mitohormesis for muscle activation), <Link to="/h2-hydrogen" className="text-primary hover:underline font-medium">Molecular Hydrogen (H₂)</Link> Inhalation (for cellular recovery), <Link to="/powerplate" className="text-primary hover:underline font-medium">Power Plate</Link> (whole-body vibration for bone density and balance), and <Link to="/body-composition" className="text-primary hover:underline font-medium">Medical-Grade Body Composition Analysis</Link>.
+      </>
+    )
   },
   {
     question: "Are the treatments safe for seniors?",
@@ -14,11 +19,19 @@ export const FAQS = [
   },
   {
     question: "Is BIXEPS like exercise?",
-    answer: "BIXEPS is not a replacement for exercise, but it can complement an active lifestyle. It uses patented magnetic stimulation to activate muscles and support mitochondrial function, which is especially useful for individuals who have difficulty exercising due to age, injury, or reduced mobility."
+    answer: (
+      <>
+        BIXEPS is not a replacement for exercise, but it can complement an active lifestyle. It uses patented magnetic stimulation to activate muscles and support mitochondrial function, which is especially useful for individuals who have difficulty exercising due to age, injury, or reduced mobility. Learn more about <Link to="/bixeps" className="text-primary hover:underline font-medium">BIXEPS technology</Link>.
+      </>
+    )
   },
   {
     question: "What does a session feel like?",
-    answer: "Most users describe the sensations as very tolerable. For BIXEPS, you might feel a slight warmth or tingling. For Power Plate, you'll feel powerful but gentle vibrations. Molecular Hydrogen inhalation is completely effortless and relaxing. None of our treatments are painful."
+    answer: (
+      <>
+        Most users describe the sensations as very tolerable. For <Link to="/bixeps" className="text-primary hover:underline font-medium">BIXEPS</Link>, you might feel a slight warmth or tingling. For <Link to="/powerplate" className="text-primary hover:underline font-medium">Power Plate</Link>, you'll feel powerful but gentle vibrations. <Link to="/h2-hydrogen" className="text-primary hover:underline font-medium">Molecular Hydrogen</Link> inhalation is completely effortless and relaxing. None of our treatments are painful.
+      </>
+    )
   },
   {
     question: "How do I book an appointment?",
@@ -26,7 +39,11 @@ export const FAQS = [
   },
   {
     question: "Where is AESPI located?",
-    answer: "AESPI Wellness Studio is located at Vision Exchange in Jurong East, Singapore. We are conveniently situated near the Jurong East MRT station for easy access."
+    answer: (
+      <>
+        AESPI Wellness Studio is located at Vision Exchange in Jurong East, Singapore. We are conveniently situated near the Jurong East MRT station for easy access. Visit our <a href="#contact" className="text-primary hover:underline font-medium">Contact session</a> for more details.
+      </>
+    )
   }
 ];
 

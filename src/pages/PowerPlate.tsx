@@ -4,6 +4,7 @@ import { Activity, Zap, Shield, TrendingUp, Users, CheckCircle2, ArrowLeft, Dumb
 import { Link } from 'react-router-dom';
 import { Testimonials } from '../components/Testimonials';
 import { ResourceSection } from '../components/ResourceSection';
+import { RelatedServices } from '../components/RelatedServices';
 
 export function PowerPlate() {
   const faqs = [
@@ -194,7 +195,7 @@ export function PowerPlate() {
             >
               <h2 className="text-3xl md:text-5xl font-serif text-slate-900 mb-8 italic">Pillar 03: <br />Functional Movement Protocol</h2>
               <p className="text-slate-500 text-lg font-light leading-relaxed mb-6">
-                Stability is the ultimate luxury of ageing. At AESPI, we utilise <strong>Whole Body Vibration (WBV)</strong> via Power Plate to enhance proprioception and skeletal integrity.
+                Stability is the ultimate luxury of ageing. At AESPI, we utilise <strong>Whole Body Vibration (WBV)</strong> via Power Plate to enhance proprioception and skeletal integrity, forming a core part of our <Link to="/#longevity" className="text-primary hover:underline font-bold">longevity strategy</Link>.
               </p>
               <p className="text-slate-500 text-lg font-light leading-relaxed mb-8">
                 By creating a high-frequency harmonic vibration, the platform triggers up to 50 involuntary muscle contractions per second. This rapid neuromuscular feedback loop builds confidence in movement and supports bone mineral density without the risks of heavy resistance training.
@@ -620,8 +621,11 @@ export function PowerPlate() {
         </div>
       </section>
 
+      {/* Related Services */}
+      <RelatedServices />
+
       {/* Testimonials */}
-      <Testimonials />
+      <Testimonials serviceFilter="Power Plate" />
 
       {/* CTA */}
       <section className="py-24 bg-accent relative overflow-hidden">

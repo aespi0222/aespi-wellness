@@ -4,6 +4,7 @@ import { Activity, PieChart, BarChart3, Info, CheckCircle2, ArrowLeft, Clipboard
 import { Link } from 'react-router-dom';
 import { Testimonials } from '../components/Testimonials';
 import { ResourceSection } from '../components/ResourceSection';
+import { RelatedServices } from '../components/RelatedServices';
 
 export function BodyComposition() {
   const serviceSchema = {
@@ -54,7 +55,7 @@ export function BodyComposition() {
                 Quantify Your <br /> <span className="italic text-primary">Health Span.</span>
               </h1>
               <p className="text-xl text-slate-500 mb-12 leading-relaxed font-light max-w-2xl">
-                Know your markers for longevity. Medical-grade analysis tracks your muscle-to-fat ratio and biological ageing markers, allowing for a <span className="font-medium text-slate-900 underline decoration-secondary/30 decoration-4 underline-offset-4">precise strategy</span> to pivot your journey as you age.
+                Know your markers for longevity. Medical-grade analysis tracks your muscle-to-fat ratio and biological ageing markers, allowing for a <Link to="/#longevity" className="text-primary hover:underline font-bold">precise longevity strategy</Link> to pivot your journey as you age.
               </p>
               <div className="flex flex-col gap-6">
                 <div className="flex flex-wrap gap-5">
@@ -162,17 +163,17 @@ export function BodyComposition() {
                   { 
                     icon: <Activity size={24} />, 
                     title: "Body Composition Analysis", 
-                    desc: "Breaks down total weight into lean body mass, fat, and body water." 
+                    desc: <>Breaks down total weight into lean body mass, fat, and body water. Use these markers to track progress with <Link to="/bixeps" className="text-primary hover:underline font-bold">BIXEPS Pro</Link>.</> 
                   },
                   { 
                     icon: <BarChart3 size={24} />, 
                     title: "Muscle-Fat Analysis", 
-                    desc: "Compares weight, Skeletal Muscle Mass, and Body Fat Mass to healthy averages." 
+                    desc: <>Compares weight, Skeletal Muscle Mass, and Body Fat Mass to healthy averages, vital for <Link to="/powerplate" className="text-primary hover:underline font-bold">Power Plate stability</Link>.</>
                   },
                   { 
                     icon: <PieChart size={24} />, 
                     title: "Obesity Analysis", 
-                    desc: "Displays BMI and Percent Body Fat for a more accurate health indicator." 
+                    desc: <>Displays BMI and Percent Body Fat for a more accurate health indicator of <Link to="/h2-hydrogen" className="text-primary hover:underline font-bold">cellular wellness</Link>.</> 
                   },
                   { 
                     icon: <Target size={24} />, 
@@ -186,7 +187,7 @@ export function BodyComposition() {
                     </div>
                     <div>
                       <h4 className="font-bold text-slate-900">{item.title}</h4>
-                      <p className="text-slate-500 text-sm">{item.desc}</p>
+                      <div className="text-slate-500 text-sm leading-relaxed">{item.desc}</div>
                     </div>
                   </div>
                 ))}
@@ -230,8 +231,11 @@ export function BodyComposition() {
       {/* Research & Media */}
       <ResourceSection serviceId="inbody" />
 
+      {/* Related Services */}
+      <RelatedServices />
+
       {/* Testimonials */}
-      <Testimonials />
+      <Testimonials serviceFilter="InBody Analysis" />
 
       {/* CTA */}
       <section className="py-24 bg-primary relative overflow-hidden">

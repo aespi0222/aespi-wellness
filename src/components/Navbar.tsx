@@ -11,6 +11,7 @@ const NAV_LINKS = [
   { name: 'Longevity Strategy', href: '/#longevity' },
   { name: 'Technologies', href: '/#technologies' },
   { name: 'Who We Serve', href: '/#who-we-serve' },
+  { name: 'Blog', href: '/blog' },
   { name: 'Locations', href: '/#contact' },
 ];
 
