@@ -9,6 +9,7 @@ export interface BlogPost {
   image: string;
   category: "Healthy Ageing" | "Muscle Health" | "Recovery" | "Technology";
   readingTime: string;
+  insights?: string[];
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -148,6 +149,124 @@ export const BLOG_POSTS: BlogPost[] = [
     date: "2024-03-10",
     image: "/images/molecular-hydrogen.png",
     category: "Recovery",
-    readingTime: "4 min"
+    readingTime: "4 min",
+    insights: [
+      "Molecular Hydrogen is the smallest molecule in the universe, enabling deep cellular penetration.",
+      "It acts as a selective antioxidant, targeting only toxic free radicals while leaving beneficial species intact.",
+      "Strategic combination with circulation platforms like Power Plate amplifies recovery and metabolic outcomes."
+    ]
+  },
+  {
+    id: "3",
+    slug: "what-is-bixeps-singapore-guide-muscle-health-longevity",
+    title: "What is BIXEPS? The Singapore Guide to Muscle Health & Longevity",
+    excerpt: "Discover BIXEPS at AESPI Singapore. Learn how this non-invasive magnetic muscle activation technology, developed over the years by NUS Singapore and ETH Zurich, Switzerland universities, boosts mobility, strength, and healthy ageing without intense workouts.",
+    content: `
+      <p>As we celebrate living longer lives in Singapore, a quiet challenge often catches us off guard: the natural loss of muscle mass. After the age of 30, we can lose up to 3% to 8% of our muscle mass per decade, a process that accelerates significantly after 60. This isn't just about strength; it directly impacts our balance, mobility, and independence.</p>
+
+      <p>For many seniors, health-conscious adults, or those recovering from injuries, traditional heavy weightlifting isn't always safe or accessible.</p>
+
+      <p>This is where <strong>BIXEPS</strong> comes in. If you are looking for a scientifically backed, gentle way to support your muscle health and age gracefully, here is everything you need to know about this innovative technology available at AESPI.</p>
+
+      <hr />
+
+      <h2>What is BIXEPS?</h2>
+      <p><strong>BIXEPS</strong> is a non-invasive, painless wellness technology that uses safe magnetic fields to activate muscle fibers. Known scientifically as <strong>Muscle Magnetic Mitohormesis</strong>, it was developed through extensive biomedical research to help individuals maintain and improve their muscle health without the need for strenuous physical exertion.</p>
+
+      <p>Unlike electrical stimulation devices that cause your muscles to twitch forcefully or painfully, BIXEPS works at a cellular level. It is completely hands-off, relaxed, and designed with safety and comfort in mind.</p>
+
+      <hr />
+
+      <h2>How Does BIXEPS Work? (The Simple Science)</h2>
+      <p>To understand BIXEPS, think of your muscles as a hybrid car. To run efficiently, they need a well-functioning battery.</p>
+
+      <img src="/images/Diagram showing how BIXEPS stimulates mitochondria in muscle cells to release beneficial myokines.png" alt="Diagram showing how BIXEPS stimulates mitochondria in muscle cells to release beneficial myokines" class="w-full rounded-2xl shadow-lg my-12" />
+
+      <p>BIXEPS utilizes a specific, low-energy magnetic field that safely passes through skin and bone to target the "powerhouses" inside your muscle cells, known as <strong>mitochondria</strong>.</p>
+
+      <p>When these mitochondria are stimulated by BIXEPS, two remarkable things happen:</p>
+
+      <ul>
+        <li><strong>Energy Production Boost:</strong> Your cells produce more energy, helping muscles recover faster from daily fatigue or mild exercise.</li>
+        <li><strong>Release of Myokines:</strong> Muscles naturally release beneficial proteins called <em>myokines</em> during physical exercise. Myokines travel through the body to support metabolic health, reduce inflammation, and encourage tissue repair. BIXEPS triggers this positive cellular response even while you are resting.</li>
+      </ul>
+
+      <p>In short, BIXEPS gives your muscles the cellular benefits of a mild workout, without the strain on your heart or joints.</p>
+
+      <hr />
+
+      <h2>The Key Benefits of BIXEPS for Healthy Ageing</h2>
+      <p>For the 40+ demographic and seniors in Singapore, maintaining muscle is the ultimate insurance policy for longevity. BIXEPS supports this through several distinct pathways:</p>
+
+      <h3>1. Combats Sarcopenia (Age-Related Muscle Loss)</h3>
+      <p>Sarcopenia can creep up slowly, making everyday tasks like carrying groceries or standing up from a chair feel heavy. BIXEPS helps keep muscle cells active and vital, preserving the strength needed to stay independent.</p>
+
+      <h3>2. Gentle on the Joints</h3>
+      <p>Traditional strength training is excellent, but chronic joint pain, arthritis, or old knee injuries can make it difficult to perform. Because BIXEPS requires no active lifting or straining, it provides muscle stimulation with <strong>zero joint impact</strong>.</p>
+
+      <h3>3. Enhances Mobility and Balance</h3>
+      <p>Stronger leg and core muscles mean better stability. By waking up dormant muscle fibers, BIXEPS helps improve overall balance, reducing the anxiety of slips and falls—a major concern for seniors and their caregivers.</p>
+
+      <h3>4. Accelerates Recovery</h3>
+      <p>Whether you are dealing with stiffness after a short walk or recovering from a mild injury, the increased blood circulation and cellular energy from BIXEPS speeds up the body's natural healing processes.</p>
+
+      <hr />
+
+      <h2>Who Should Consider BIXEPS?</h2>
+      <p>BIXEPS is highly versatile, making it an excellent addition to the wellness routines of various individuals in Singapore:</p>
+
+      <ul>
+        <li><strong>Active Seniors:</strong> Those who want to maintain their current walking pace, play with grandchildren, and travel without fatigue.</li>
+        <li><strong>Adults in Post-Injury Recovery:</strong> Individuals undergoing physical therapy who need to prevent muscle wasting while their joints heal.</li>
+        <li><strong>Busy, Health-Conscious Professionals:</strong> Adults aged 40+ who want a preventative, science-backed approach to longevity but have limited time.</li>
+        <li><strong>Individuals with Limited Mobility:</strong> Those who find traditional exercise challenging due to neurological, cardiovascular, or orthopedic limitations.</li>
+      </ul>
+
+      <hr />
+
+      <h2>What to Expect During a BIXEPS Session at AESPI</h2>
+      <p>Visiting AESPI for a BIXEPS session is a stress-free, premium experience. Located in a welcoming environment designed for comfort, here is how a typical session unfolds:</p>
+
+      <ol>
+        <li><strong>Personalized Assessment:</strong> We begin by understanding your wellness history, current mobility levels, and longevity goals.</li>
+        <li><strong>The Setup:</strong> You remain fully clothed and sit comfortably in a relaxing chair. The BIXEPS device—a sleek, specialized limb-fitting cradle—is positioned gently over your leg or arm.</li>
+        <li><strong>The Session:</strong> For 10 to 20 minutes, the machine runs quietly. You will not feel any painful shocks, heat, or aggressive muscle contractions. Most clients simply read a book, check their phone, or enjoy a moment of quiet relaxation.</li>
+        <li><strong>Afterward:</strong> There is no downtime, no sweating, and no muscle soreness. You can immediately return to your daily Singapore activities or pair it with our other services, like Power Plate vibration training or Molecular Hydrogen therapy.</li>
+      </ol>
+
+      <hr />
+
+      <h2>Take Charge of Your Muscle Health Today</h2>
+      <p>Ageing vibrant, independent, and strong is entirely possible when we care for our muscles at a cellular level. BIXEPS offers a safe, scientifically proven bridge to better mobility and energy, right here in Singapore.</p>
+
+      <blockquote>
+        <strong>Ready to experience it for yourself?</strong> 
+        <a href="https://www.aespi.com.sg">Learn how AESPI supports healthy ageing and explore whether this gentle, effective approach suits your unique lifestyle needs. Contact our team today or book a trial session.</a>
+      </blockquote>
+
+      <hr />
+
+      <h2>Frequently Asked Questions (FAQs)</h2>
+
+      <h3>Is BIXEPS safe?</h3>
+      <p>Yes. BIXEPS uses extremely low-energy, safe magnetic fields similar to those naturally found in the earth or used in everyday household technologies. It is entirely non-invasive and painless. However, if you have a pacemaker or are pregnant, please consult our team beforehand.</p>
+
+      <h3>How often should I do BIXEPS?</h3>
+      <p>For optimal longevity and muscle maintenance benefits, we generally recommend 1 to 2 short sessions per week. Our wellness experts at AESPI will help customize a frequency that aligns with your specific goals.</p>
+
+      <h3>Can BIXEPS replace regular exercise?</h3>
+      <p>We view BIXEPS as a powerful <strong>multiplier</strong> and stabilizer. While it mimics the cellular benefits of exercise for your muscles, it works best when integrated into a healthy lifestyle that includes movement, proper nutrition, and adequate rest.</p>
+
+    `,
+    author: "AESPI Editorial Team",
+    date: "2026-05-20",
+    image: "/images/A senior client experiencing a comfortable BIXEPS magnetic muscle activation session at AESPI Singapore.jpg",
+    category: "Muscle Health",
+    readingTime: "5 min",
+    insights: [
+      "BIXEPS is a painless, hands-off muscle activation developed by NUS and ETH Zurich.",
+      "It stimulates cell powerhouses (mitochondria) to release protective myokines.",
+      "Designed specifically for healthy ageing, providing cellular benefits with zero joint strain."
+    ]
   }
 ];

@@ -124,11 +124,11 @@ export function BlogPost() {
               Key Article Insights
             </h3>
             <div className="grid sm:grid-cols-3 gap-8">
-              {[
+              {(post.insights || [
                 "Muscle loss is natural but reversible after age 50.",
                 "Protein and resistance training are key pillars.",
                 "Non-invasive tech like BIXEPS assists all levels."
-              ].map((insight, i) => (
+              ]).map((insight, i) => (
                 <div key={i} className="flex flex-col gap-3">
                   <span className="w-6 h-6 rounded-full bg-slate-900 text-white flex items-center justify-center text-[10px] font-bold">{i + 1}</span>
                   <p className="text-slate-600 text-xs leading-relaxed italic">{insight}</p>
