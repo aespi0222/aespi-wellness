@@ -14,6 +14,111 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    id: "4",
+    slug: "who-is-aespi-reimagining-longevity-healthy-ageing-singapore",
+    title: "Who is AESPI? Reimagining Longevity and Healthy Ageing in Singapore",
+    excerpt: "Singaporeans live long, but do we live healthy? Learn how AESPI bridges medical science and gentle daily wellness to preserve your healthspan, muscle strength, and balance.",
+    content: `
+      <p>Singaporeans have one of the longest life expectancies in the world. However, living longer does not automatically mean living healthier. As our nation navigates the "silver tsunami," the conversation is shifting from <strong>lifespan</strong> (how many years we live) to <strong>healthspan</strong> (how many of those years we spend free from chronic disease and disability).</p>
+
+      <p>If you are over 40, caring for elderly parents, or simply looking for ways to stay vibrant and independent as you age, you might have realized that conventional high-intensity gyms aren't always the right fit.</p>
+
+      <p>This is where <strong>AESPI</strong> steps in.</p>
+
+      <p>Located in Singapore, AESPI is a premium, science-backed longevity and wellness studio. We bridge the gap between complex medical science and gentle, accessible everyday wellness. Our mission is simple: to help you move better, feel stronger, and age gracefully using cutting-edge, non-invasive technologies.</p>
+
+      <hr />
+
+      <h2>The AESPI Philosophy: Science-Backed, Human-Centred</h2>
+
+      <p>At AESPI, we believe that growing older shouldn't mean giving up the activities you love. Whether it is playing with your grandchildren, traveling the world, or simply walking around your neighborhood without joint pain, independence relies on structural health.</p>
+
+      <p>Many adults want to stay active but are held back by joint pain, low energy, or fear of injury. AESPI addresses these exact pain points. We combine advanced biophysical technologies with personalized care to stimulate muscle recovery, enhance mobility, and optimize wellness at a cellular level—all without putting undue stress on your joints.</p>
+
+      <hr />
+
+      <h2>The Core Pillars of Longevity at AESPI</h2>
+
+      <p>Our programs focus on the fundamental pillars of active ageing:</p>
+
+      <h3>1. Prioritizing Muscle Health</h3>
+      <p>Starting in our 30s, we naturally begin to lose muscle mass and function—a condition known as sarcopenia. Over time, this can lead to frailty and a loss of independence. AESPI utilizes specialized therapies that gently stimulate muscle fibres, encouraging regeneration and strength maintenance even if traditional weightlifting is no longer an option.</p>
+
+      <h3>2. Improving Mobility and Balance</h3>
+      <p>Falls are one of the leading causes of injury among seniors in Singapore. By focusing on core stability, joint flexibility, and neuro-muscular coordination, we help individuals regain confidence in their balance and steady their gait.</p>
+
+      <h3>3. Boosting Recovery and Cellular Vitality</h3>
+      <p>True wellness starts at the cellular level. When your cells have the energy they need to repair themselves, systemic inflammation decreases, sleep quality improves, and overall vitality returns.</p>
+
+      <hr />
+
+      <h2>Inside the Studio: Our Signature Technologies</h2>
+
+      <p>We don't believe in fitness fads. Every service offered at AESPI is grounded in scientific research and designed to be safe, efficient, and non-invasive.</p>
+
+      <h3>BIXEPS: Magnetic Muscle Activation</h3>
+      <p>BIXEPS is a revolutionary, non-invasive technology that uses patented magnetic fields to activate skeletal muscles.</p>
+      <ul>
+        <li><strong>How it works:</strong> You sit comfortably while a specialized device safely delivers targeted magnetic fields to your limbs. This process triggers the release of <em>myokines</em>—beneficial proteins often called "hope molecules"—which promote muscle repair, boost metabolism, and reduce inflammation.</li>
+        <li><strong>Why it matters:</strong> It delivers the cellular benefits of exercise without requiring strenuous physical exertion, making it ideal for those recovering from injury or dealing with severe joint stiffness.</li>
+      </ul>
+
+      <h3>Power Plate: Whole-Body Vibration Training</h3>
+      <p>Power Plate is a premium acceleration training platform used by elite athletes and wellness medical centers globally.</p>
+      <ul>
+        <li><strong>How it works:</strong> As you perform simple, low-impact movements on the vibrating plate, your muscles are forced to contract and relax up to 40 times per second.</li>
+        <li><strong>Why it matters:</strong> A quick 15-to-30-minute session significantly enhances blood circulation, improves bone density, activates core muscles, and sharpens balance reflexes.</li>
+      </ul>
+
+      <h3>Molecular Hydrogen Therapy</h3>
+      <ul>
+        <li><strong>How it works:</strong> Relax in our quiet lounge while inhaling medical-grade, pure molecular hydrogen gas.</li>
+        <li><strong>Why it matters:</strong> Molecular hydrogen acts as a powerful, selective antioxidant. It targets harmful free radicals in the body, dampening oxidative stress and accelerating recovery after physical exertion or a stressful day.</li>
+      </ul>
+
+      <h3>Body Composition &amp; Wellness Assessments</h3>
+      <p>We don't guess; we measure. To ensure your journey is effective, we conduct precise body composition analyses to track muscle mass, fat distribution, and metabolic markers over time.</p>
+
+      <hr />
+
+      <h2>Is AESPI Right for You?</h2>
+
+      <p>Our studio is purposefully designed to feel warm, calm, and approachable. We regularly welcome:</p>
+      <ul>
+        <li><strong>Adults Aged 40 to 60+:</strong> Who want to proactively slow down the physical signs of ageing and maintain their youthful energy.</li>
+        <li><strong>Seniors &amp; Golden Agers:</strong> Seeking a safe, low-impact environment to preserve their mobility, bone density, and muscle strength.</li>
+        <li><strong>Caregivers:</strong> Looking for trustworthy, non-pharmaceutical therapies to help their elderly parents stay mobile and pain-free.</li>
+        <li><strong>Health-Conscious Professionals:</strong> Who need efficient, science-backed recovery strategies to manage stress and physical fatigue.</li>
+      </ul>
+
+      <hr />
+
+      <h2>Experience a Different Approach to Longevity</h2>
+
+      <p>Ageing is inevitable, but <em>how</em> you age is within your control. You do not need to endure chronic stiffness, loss of strength, or declining energy as a natural consequence of time.</p>
+
+      <p>At AESPI, we walk alongside you on your wellness journey, providing the tools, technology, and clinical insights needed to live life to its fullest potential.</p>
+
+      <p>If you are curious about how our technologies can support your specific health goals, we welcome you to visit our studio for an introductory consultation.</p>
+
+      <ul>
+        <li><a href="https://www.aespi.com.sg">Learn how AESPI supports healthy ageing</a></li>
+        <li><a href="https://www.aespi.com.sg">Explore whether our low-impact approach suits your needs</a></li>
+        <li><a href="https://www.aespi.com.sg">Book an introductory trial session with our team</a></li>
+      </ul>
+    `,
+    author: "AESPI Editorial Team",
+    date: "2026-05-21",
+    image: "/images/AESPI Live Stronger Age Better.png",
+    category: "Healthy Ageing",
+    readingTime: "5 min",
+    insights: [
+      "AESPI is a premium, science-backed longevity studio bridging clinical research and gentle wellness in Singapore.",
+      "Programs focus on structural longevity pillars: muscle preservation, balance improvement, and cellular rejuvenation.",
+      "Provides advanced, non-invasive therapeutic solutions (BIXEPS, Power Plate, H2) with zero joint strain."
+    ]
+  },
+  {
     id: "1",
     slug: "muscle-loss-after-50-healthy-ageing",
     title: "Why Muscle Loss Accelerates After 50: The Hidden Threat to Healthy Ageing",
@@ -111,6 +216,8 @@ export const BLOG_POSTS: BlogPost[] = [
       <h2>The Biological "Friction" of Ageing: Understanding Oxidative Stress</h2>
       <p>Oxidative stress is often described as the 'rusting' of our internal systems. It is caused by an imbalance between free radicals and antioxidants in the body, leading to cellular damage that accelerates ageing and fuels chronic inflammation.</p>
       
+      <img src="/images/Hydrogen H2 the smallest antioxidant.png" alt="Hydrogen (H2): The Smallest Antioxidant Infographic" class="w-full rounded-2xl shadow-lg my-12" />
+
       <h2>Why Molecular Hydrogen (H2) is a Breakthrough in Modern Wellness</h2>
       <p>Molecular hydrogen is unique because it is the smallest molecule in the universe. This allows it to diffuse rapidly into cells, passing through the blood-brain barrier and reaching mitochondria where larger antioxidants cannot.</p>
 
@@ -256,7 +363,6 @@ export const BLOG_POSTS: BlogPost[] = [
 
       <h3>Can BIXEPS replace regular exercise?</h3>
       <p>We view BIXEPS as a powerful <strong>multiplier</strong> and stabilizer. While it mimics the cellular benefits of exercise for your muscles, it works best when integrated into a healthy lifestyle that includes movement, proper nutrition, and adequate rest.</p>
-
     `,
     author: "AESPI Editorial Team",
     date: "2026-05-20",
