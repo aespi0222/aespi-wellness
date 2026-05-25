@@ -54,7 +54,7 @@ export function BlogPost() {
         ogType="article"
         ogImage={post.image}
         canonical={`/blog/${post.slug}`}
-        additionalSchema={[articleSchema]}
+        additionalSchema={[articleSchema, ...(post.additionalSchemas || [])]}
       />
 
       {/* Reading Progress Bar */}

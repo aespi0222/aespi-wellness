@@ -10,6 +10,7 @@ export interface BlogPost {
   category: "Healthy Ageing" | "Muscle Health" | "Recovery" | "Technology";
   readingTime: string;
   insights?: string[];
+  additionalSchemas?: any[];
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -116,6 +117,136 @@ export const BLOG_POSTS: BlogPost[] = [
       "AESPI is a premium, science-backed longevity studio bridging clinical research and gentle wellness in Singapore.",
       "Programs focus on structural longevity pillars: muscle preservation, balance improvement, and cellular rejuvenation.",
       "Provides advanced, non-invasive therapeutic solutions (BIXEPS, Power Plate, H2) with zero joint strain."
+    ]
+  },
+  {
+    id: "5",
+    slug: "effects-of-whole-body-vibration-training-on-resting-blood-pressure",
+    title: "Effects of Whole-Body Vibration Training on Resting Blood Pressure: A Gentle Path to Better Circulation",
+    excerpt: "As we celebrate longer lifespans, maintaining healthy resting blood pressure is a top priority. Discover how whole-body vibration training serves as a gentle, low-impact path to cardiovascular health.",
+    content: `
+      <p>As we celebrate longer lifespans in Singapore, maintaining our everyday vitality becomes a top priority. However, reaching our 40s, 50s, and beyond often brings a quiet but significant health hurdle: rising resting blood pressure.</p>
+
+      <p>Managing blood pressure typically involves a familiar checklist: dietary changes, medication, and regular aerobic exercise. Yet, for many seniors or individuals recovering from injury, traditional workouts like jogging or heavy lifting can feel too stressful on the joints, or simply exhausting.</p>
+
+      <p>Fortunately, modern longevity science offers a gentler, highly effective alternative. <strong>Whole-body vibration (WBV) training</strong>—historically used by astronauts to maintain bone density—is emerging as a powerful, low-impact tool for supporting cardiovascular health and maintaining healthy resting blood pressure.</p>
+
+      <hr />
+
+      <h2>How Does Whole-Body Vibration Affect Blood Pressure?</h2>
+
+      <p>At first glance, standing or performing gentle movements on a vibrating platform might not look like a cardiovascular workout. However, beneath the surface, your body is working efficiently.</p>
+
+      <p>When you stand on a premium vibration platform, such as a <strong>Power Plate</strong>, the mechanical vibrations travel through your body. This stimulates your muscles to contract and relax automatically between 30 and 50 times per second.</p>
+
+      <p>This rapid, involuntary muscle activation influences your blood vessels in three distinct ways:</p>
+
+      <h3>1. Enhanced Nitric Oxide Production</h3>
+      <p>Clinical studies indicate that the mechanical shear stress of vibration therapy encourages the endothelial cells lining your blood vessels to release <strong>nitric oxide</strong>. Nitric oxide is a natural molecule that signals your blood vessels to relax and widen (a process known as vasodilation). When vessels relax, blood flows more freely, naturally reducing resting blood pressure.</p>
+
+      <h3>2. Decreased Arterial Stiffness</h3>
+      <p>As we age, our arteries can naturally lose their elasticity, forcing the heart to pump harder. Research published in prominent vascular health journals suggests that regular, long-term whole-body vibration training can help reduce arterial stiffness, particularly in postmenopausal women and older adults who may face mobility barriers to traditional cardio.</p>
+
+      <h3>3. The "Muscle Pump" Effect</h3>
+      <p>Every automatic muscle contraction acts like a gentle pump, pushing blood back up toward your heart. This significantly boosts peripheral circulation—especially in the legs—improving overall blood flow without requiring the high heart rates associated with intense treadmill running or cycling.</p>
+
+      <img src="/images/whole body vibration and blood circulation.png" alt="Whole body vibration and blood circulation diagram" class="w-full rounded-2xl shadow-lg my-12" />
+
+      <hr />
+
+      <h2>Why This Matters for Singaporean Seniors and Caregivers</h2>
+
+      <p>In Singapore, where nearly 1 in 3 adults aged 30 to 69 faces hypertension, finding accessible, sustainable ways to manage cardiovascular wellness is crucial.</p>
+
+      <p>For caregivers looking after elderly parents, or for individuals managing their own wellness transitions, whole-body vibration training offers several unique advantages:</p>
+
+      <ul>
+        <li><strong>Joint-Friendly Care:</strong> Because the platform does the primary work of activating muscles, you can achieve the circulatory benefits of exercise without putting heavy load or impact on your knees, hips, and lower back.</li>
+        <li><strong>Time-Efficient Wellness:</strong> Just 10 to 15 minutes of targeted vibration training can stimulate circulation and activate muscle tissue effectively, making it easy to fit into a busy weekly routine.</li>
+        <li><strong>Confidence and Stability:</strong> Many older adults hesitate to exercise due to a fear of falling. Advanced vibration platforms provide a stable, controlled environment to build up strength and cardiovascular resilience concurrently.</li>
+      </ul>
+
+      <hr />
+
+      <h2>The Longevity Ripple Effect: Mobility, Balance, and Recovery</h2>
+
+      <p>Supporting your resting blood pressure is only one piece of the healthy ageing puzzle. Cardiovascular health is deeply intertwined with how well you move and feel every day.</p>
+
+      <p>When your circulation improves through vibration training, your muscles receive a richer supply of oxygen and essential nutrients. This directly accelerates <strong>muscle recovery</strong> and eases chronic stiffness. Furthermore, the rapid micro-contractions strengthen the stabilizing muscles around your ankles, knees, and core, leading to noticeable improvements in <strong>balance and mobility</strong>.</p>
+
+      <p>By addressing blood pressure through a method that also protects your joints and builds strength, you actively invest in your long-term independence and quality of life.</p>
+
+      <hr />
+
+      <h2>Discover a Science-Backed Path at AESPI</h2>
+
+      <p>At <strong>AESPI</strong>, a premium wellness and longevity studio located in Jurong East, we believe that staying healthy as you age should be safe, evidence-based, and tailored to your body's unique pace.</p>
+
+      <p>We integrate premium <strong>Power Plate whole-body vibration training</strong> into personalized wellness programs designed specifically for healthy ageing, muscle health, and mobility. Whether you are looking to complement your current lifestyle modifications for blood pressure management, enhance your balance, or simply regain your everyday physical confidence, our team provides an approachable, educational, and supportive environment.</p>
+
+      <p>Every journey at AESPI begins with a comprehensive body composition and wellness assessment, ensuring that your time on the platform is perfectly matched to your physical comfort and long-term health goals.</p>
+
+      <h3>Ready to experience the benefits for yourself?</h3>
+      <ul>
+        <li><a href="https://www.aespi.com.sg/#technologies">Learn how AESPI supports healthy ageing and longevity</a></li>
+        <li><a href="https://www.aespi.com.sg/powerplate">Explore whether whole-body vibration training suits your wellness goals</a></li>
+        <li><a href="https://www.aespi.com.sg/#contact">Book an introductory consultation and trial session at our Jurong East studio</a></li>
+      </ul>
+
+      <hr />
+
+      <h2>Frequently Asked Questions (FAQ)</h2>
+
+      <h3>Is whole-body vibration training safe if I have high blood pressure?</h3>
+      <p>For most individuals with well-managed or borderline high blood pressure, whole-body vibration training is an excellent, low-impact exercise option. However, if you have severe, uncontrolled hypertension, or underlying conditions like deep vein thrombosis (DVT) or a pacemaker, it is essential to consult your physician before starting. At AESPI, we review your health history during your initial assessment to prioritize your safety.</p>
+
+      <h3>How many times a week should I do vibration training to see cardiovascular benefits?</h3>
+      <p>Clinical studies tracking vascular improvements typically observe the best results with 2 to 3 sessions per week over a period of 8 to 12 weeks. Consistency is key to encouraging long-term arterial elasticity and healthy resting blood pressure.</p>
+
+      <h3>Can whole-body vibration replace my prescribed blood pressure medication?</h3>
+      <p>No. Vibration training is a supportive lifestyle tool designed to improve circulation, fitness, and overall mobility. It should complement, not replace, any medical treatments or lifestyle advice prescribed by your doctor.</p>
+    `,
+    author: "AESPI Editorial Team",
+    date: "2026-05-25",
+    image: "/images/Power Plate at AESPI.png",
+    category: "Technology",
+    readingTime: "5 min",
+    insights: [
+      "Whole-body vibration increases nitric oxide production to dilate vessels and reduce blood pressure naturally.",
+      "Regular training can decrease arterial stiffness, offering cardiovascular support safe for knees and hips.",
+      "Active muscle pump mechanism boosts peripheral blood return, enhancing general balance and mobility."
+    ],
+    additionalSchemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is whole-body vibration training safe if I have high blood pressure?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For most individuals with well-managed or borderline high blood pressure, whole-body vibration training is an excellent, low-impact exercise option. However, if you have severe, uncontrolled hypertension, or underlying conditions like deep vein thrombosis (DVT) or a pacemaker, it is essential to consult your physician before starting."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many times a week should I do vibration training to see cardiovascular benefits?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Clinical studies tracking vascular improvements typically observe the best results with 2 to 3 sessions per week over a period of 8 to 12 weeks. Consistency is key to encouraging long-term arterial elasticity."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can whole-body vibration replace my prescribed blood pressure medication?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Vibration training is a supportive lifestyle tool designed to improve circulation, fitness, and overall mobility. It should complement, not replace, any medical treatments or lifestyle advice prescribed by your doctor."
+            }
+          }
+        ]
+      }
     ]
   },
   {
@@ -337,7 +468,7 @@ export const BLOG_POSTS: BlogPost[] = [
       <ol>
         <li><strong>Personalized Assessment:</strong> We begin by understanding your wellness history, current mobility levels, and longevity goals.</li>
         <li><strong>The Setup:</strong> You remain fully clothed and sit comfortably in a relaxing chair. The BIXEPS device—a sleek, specialized limb-fitting cradle—is positioned gently over your leg or arm.</li>
-        <li><strong>The Session:</strong> For 10 to 20 minutes, the machine runs quietly. You will not feel any painful shocks, heat, or aggressive muscle contractions. Most clients simply read a book, check their phone, or enjoy a moment of quiet relaxation.</li>
+         <li><strong>The Session:</strong> For 10 to 20 minutes, the machine runs quietly. You will not feel any painful shocks, heat, or aggressive muscle contractions. Most clients simply read a book, check their phone, or enjoy a moment of quiet relaxation.</li>
         <li><strong>Afterward:</strong> There is no downtime, no sweating, and no muscle soreness. You can immediately return to your daily Singapore activities or pair it with our other services, like Power Plate vibration training or Molecular Hydrogen therapy.</li>
       </ol>
 
@@ -348,7 +479,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
       <blockquote>
         <strong>Ready to experience it for yourself?</strong> 
-        <a href="https://www.aespi.com.sg">Learn how AESPI supports healthy ageing and explore whether this gentle, effective approach suits your unique lifestyle needs. Contact our team today or book a trial session.</a>
+        <a href="https://www.aespi.com.sg/#contact">Learn how AESPI supports healthy ageing and explore whether this gentle, effective approach suits your unique lifestyle needs. Contact our team today or book a trial session.</a>
       </blockquote>
 
       <hr />

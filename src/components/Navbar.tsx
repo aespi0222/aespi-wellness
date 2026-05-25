@@ -12,7 +12,7 @@ const NAV_LINKS = [
   { name: 'Technologies', href: '/#technologies' },
   { name: 'Who We Serve', href: '/#who-we-serve' },
   { name: 'Blog', href: '/blog' },
-  { name: 'Locations', href: '/#contact' },
+  { name: 'Location', href: '/#contact' },
 ];
 
 export function Navbar() {
