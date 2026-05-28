@@ -15,71 +15,123 @@ export function Bixeps() {
   const faqs = [
     {
       q: "What is BIXEPS?",
-      a: "BIXEPS is a non-invasive muscle activation technology developed using research from the National University of Singapore and ETH Zurich. It uses magnetic stimulation to activate muscles and support mitochondrial function, helping users improve strength, mobility, balance, and overall wellness."
+      a: "BIXEPS is a non-invasive muscle activation technology designed to support muscle conditioning, mobility, and healthy ageing through magnetic stimulation."
     },
     {
       q: "How does BIXEPS work?",
-      a: "BIXEPS delivers targeted magnetic stimulation to muscles, triggering muscle contractions and mitochondrial activation. This process may stimulate the release of beneficial myokines associated with metabolism, circulation, recovery, and muscle health."
+      a: "BIXEPS uses pulsed magnetic fields to stimulate muscles and trigger muscle contractions without requiring strenuous physical exercise."
     },
     {
-      q: "Is BIXEPS like exercise?",
-      a: "BIXEPS is not a replacement for exercise, but it can complement an active lifestyle. It is especially useful for individuals who have difficulty exercising due to age, deconditioning, injury, or reduced mobility."
+      q: "Is BIXEPS scientifically backed?",
+      a: "BIXEPS is based on research involving muscle stimulation, mitochondria, and muscle conditioning technologies developed with scientific collaboration and clinical research foundations."
     },
     {
-      q: "What does a BIXEPS session feel like?",
-      a: "Different users report having different sensations while using BIXEPS, namely: slight warmth in their muscles, a tingling sensation, slight cooling or numbness in their legs or other parts of the body. A large number of users also report having no perceivable sensation."
+      q: "Who developed BIXEPS?",
+      a: "BIXEPS was developed through research collaborations involving scientists and researchers from institutions including the National University of Singapore (NUS) and ETH Zurich."
     },
     {
-      q: "How long is each session?",
-      a: "Each leg is typically treated for approximately 10 minutes. Treating both legs usually takes about 20 minutes per visit."
+      q: "What does BIXEPS stand for?",
+      a: "BIXEPS refers to a muscle activation and conditioning technology focused on improving muscle health and supporting healthy ageing."
     },
     {
-      q: "How many sessions are recommended?",
-      a: "Most users start with a 12-session program performed weekly. Consistency is important because muscle conditioning and functional improvements occur progressively over time."
+      q: "Is BIXEPS safe for seniors?",
+      a: "BIXEPS is designed to be non-invasive and low impact, making it suitable for many seniors and older adults seeking support for mobility and muscle health."
     },
     {
-      q: "Who is BIXEPS suitable for?",
-      a: "BIXEPS may benefit seniors experiencing muscle weakness or reduced mobility, individuals recovering from inactivity, people seeking muscle activation without high-impact exercise, users wanting to complement rehabilitation or wellness programs, and individuals aiming to improve balance and mobility."
+      q: "Can BIXEPS replace exercise?",
+      a: "BIXEPS is not intended to fully replace exercise, but it may support muscle activation and complement an active lifestyle, especially for individuals with limited mobility or lower exercise tolerance."
     },
     {
-      q: "Can BIXEPS help seniors?",
-      a: "Many seniors use BIXEPS to support mobility, leg strength, walking confidence, and balance. It is designed to be gentle and accessible, even for individuals who may not tolerate intensive workouts."
+      q: "Can BIXEPS help older adults maintain muscle health?",
+      a: "BIXEPS is designed to support muscle activation and conditioning, which may help older adults maintain muscle function and mobility as they age."
     },
     {
-      q: "Can BIXEPS help with balance and fall prevention?",
-      a: "Muscle strength plays an important role in balance and stability. By activating leg muscles, BIXEPS may support mobility and functional movement associated with fall prevention strategies."
+      q: "What is muscle activation therapy?",
+      a: "Muscle activation therapy refers to techniques or technologies that stimulate muscles to contract and engage, helping support strength, circulation, and physical function."
+    },
+    {
+      q: "How long is a BIXEPS session?",
+      a: "A typical BIXEPS session lasts about 10 minutes per leg, depending on the program and treatment plan."
+    },
+    {
+      q: "Why does BIXEPS only require 10 minutes per leg?",
+      a: "BIXEPS uses low intensity magnetic stimulation technology designed to efficiently activate muscles within a relatively short session duration."
+    },
+    {
+      q: "Can BIXEPS help people with limited mobility?",
+      a: "BIXEPS may be suitable for individuals with limited mobility who are looking for low-impact ways to support muscle activation and movement."
+    },
+    {
+      q: "Does BIXEPS help with muscle loss after 50?",
+      a: "Age-related muscle loss, also known as sarcopenia, becomes more common after 50. BIXEPS is designed to support muscle conditioning and healthy ageing."
+    },
+    {
+      q: "Is BIXEPS suitable for osteoporosis support?",
+      a: "Muscle health plays an important role in supporting mobility and physical function. BIXEPS may complement healthy ageing and movement-focused programs for older adults."
+    },
+    {
+      q: "Can BIXEPS help improve walking confidence?",
+      a: "Supporting muscle activation and lower limb conditioning may help older adults maintain movement and confidence in daily activities."
     },
     {
       q: "Is BIXEPS painful?",
-      a: "No. Most users describe the sensation as strong but tolerable muscle contractions. The intensity can be adjusted based on individual comfort."
+      a: "Most users describe BIXEPS as a strong muscle contraction sensation rather than pain. Session intensity can be adjusted based on comfort level."
     },
     {
-      q: "Is there downtime after treatment?",
-      a: "No downtime is required. Most users resume normal daily activities immediately after the session."
+      q: "Can I wear clothes during BIXEPS?",
+      a: "Yes. BIXEPS is typically performed over comfortable clothing without the need for changing or undressing."
     },
     {
-      q: "Who should NOT use BIXEPS?",
-      a: "BIXEPS is not suitable for users with active implanted electronic devices such as pacemakers or defibrillators, pregnant individuals, individuals undergoing active cancer treatments such as chemotherapy, or anyone advised by their doctor to avoid electromagnetic stimulation."
+      q: "How many BIXEPS sessions are recommended?",
+      a: "The recommended number of sessions depends on individual goals, mobility levels, and program plans. Many users begin with a structured multi-session program."
     },
     {
-      q: "Can people with metal implants use BIXEPS?",
-      a: "Many individuals with passive implants may safely use BIXEPS if they are cleared for MRI procedures. However, users should always consult their doctor if unsure."
+      q: "Can BIXEPS be combined with Power Plate?",
+      a: "Yes. BIXEPS and Power Plate are commonly combined as part of a healthy ageing and mobility support program."
     },
     {
-      q: "Can BIXEPS replace physiotherapy?",
-      a: "BIXEPS is not a replacement for medical care or physiotherapy. It may be used alongside rehabilitation, exercise, and wellness programs as part of a broader approach."
+      q: "What are myokines and why are they important?",
+      a: "Myokines are signaling molecules released by muscles during muscle activity. They are associated with communication between muscles and other parts of the body."
     },
     {
-      q: "Can I combine BIXEPS with other AESPI services?",
-      a: "Yes. Many clients combine BIXEPS with Power Plate Whole Body Vibration training, Molecular Hydrogen therapy, and Body composition assessments for a more comprehensive wellness and longevity program."
+      q: "How does BIXEPS support healthy ageing?",
+      a: "BIXEPS is designed to support muscle activation, mobility, movement, and physical conditioning, which are important components of healthy ageing."
     },
     {
-      q: "How soon will I notice results?",
-      a: "Some users notice changes in muscle engagement, walking confidence, or energy within several sessions. Results vary depending on age, consistency, lifestyle, and individual condition."
+      q: "Can seniors use BIXEPS without gym workouts?",
+      a: "Yes. BIXEPS is designed to support muscle activation without requiring strenuous gym-based exercise."
     },
     {
-      q: "Where is AESPI located?",
-      a: "AESPI operates at Vision Exchange near Jurong East MRT in Singapore."
+      q: "What is magnetic muscle stimulation?",
+      a: "Magnetic muscle stimulation uses electromagnetic fields to stimulate nerves and muscles, causing muscle contractions without invasive procedures."
+    },
+    {
+      q: "Is BIXEPS suitable for frail older adults?",
+      a: "Because BIXEPS is low impact and non-invasive, it may be suitable for older adults seeking gentle muscle activation support. Individual suitability should always be assessed appropriately."
+    },
+    {
+      q: "Can BIXEPS support balance and mobility?",
+      a: "Healthy muscle activation and lower limb conditioning may help support mobility, balance, and daily movement in older adults."
+    },
+    {
+      q: "Is BIXEPS suitable for beginners?",
+      a: "Yes. BIXEPS is beginner-friendly and does not require prior fitness experience."
+    },
+    {
+      q: "What should I expect during my first BIXEPS session?",
+      a: "During a BIXEPS session, users typically sit comfortably while the device delivers magnetic stimulation to the muscles, producing visible muscle contractions."
+    },
+    {
+      q: "Is BIXEPS suitable for adults over 40?",
+      a: "Yes. BIXEPS is commonly used by adults over 40 who want to support muscle health, movement, and healthy ageing."
+    },
+    {
+      q: "Can BIXEPS support active ageing?",
+      a: "BIXEPS is designed to support mobility, movement, and muscle conditioning as part of an active ageing lifestyle."
+    },
+    {
+      q: "Where can I try BIXEPS in Singapore?",
+      a: "AESPI offers BIXEPS sessions at its healthy ageing and longevity studio located in Jurong East, Singapore."
     }
   ];
 
@@ -578,76 +630,7 @@ export function Bixeps() {
             <p className="text-slate-500 font-light">Everything you need to know about BIXEPS muscle resilience activation.</p>
           </div>
           <div className="space-y-6">
-            {[
-              {
-                q: "What is BIXEPS?",
-                a: "BIXEPS is a non-invasive muscle activation technology developed using research from the National University of Singapore and ETH Zurich. It uses magnetic stimulation to activate muscles and support mitochondrial function, helping users improve strength, mobility, balance, and overall wellness."
-              },
-              {
-                q: "How does BIXEPS work?",
-                a: "BIXEPS delivers targeted magnetic stimulation to muscles, triggering muscle contractions and mitochondrial activation. This process may stimulate the release of beneficial myokines associated with metabolism, circulation, recovery, and muscle health."
-              },
-              {
-                q: "Is BIXEPS like exercise?",
-                a: "BIXEPS is not a replacement for exercise, but it can complement an active lifestyle. It is especially useful for individuals who have difficulty exercising due to age, deconditioning, injury, or reduced mobility."
-              },
-              {
-                q: "What does a BIXEPS session feel like?",
-                a: "Different users report having different sensations while using BIXEPS, namely: slight warmth in their muscles, a tingling sensation, slight cooling or numbness in their legs or other parts of the body. A large number of users also report having no perceivable sensation."
-              },
-              {
-                q: "How long is each session?",
-                a: "Each leg is typically treated for approximately 10 minutes. Treating both legs usually takes about 20 minutes per visit."
-              },
-              {
-                q: "How many sessions are recommended?",
-                a: "Most users start with a 12-session program performed weekly. Consistency is important because muscle conditioning and functional improvements occur progressively over time."
-              },
-              {
-                q: "Who is BIXEPS suitable for?",
-                a: "BIXEPS may benefit seniors experiencing muscle weakness or reduced mobility, individuals recovering from inactivity, people seeking muscle activation without high-impact exercise, users wanting to complement rehabilitation or wellness programs, and individuals aiming to improve balance and mobility."
-              },
-              {
-                q: "Can BIXEPS help seniors?",
-                a: "Many seniors use BIXEPS to support mobility, leg strength, walking confidence, and balance. It is designed to be gentle and accessible, even for individuals who may not tolerate intensive workouts."
-              },
-              {
-                q: "Can BIXEPS help with balance and fall prevention?",
-                a: "Muscle strength plays an important role in balance and stability. By activating leg muscles, BIXEPS may support mobility and functional movement associated with fall prevention strategies."
-              },
-              {
-                q: "Is BIXEPS painful?",
-                a: "No. Most users describe the sensation as strong but tolerable muscle contractions. The intensity can be adjusted based on individual comfort."
-              },
-              {
-                q: "Is there downtime after treatment?",
-                a: "No downtime is required. Most users resume normal daily activities immediately after the session."
-              },
-              {
-                q: "Who should NOT use BIXEPS?",
-                a: "BIXEPS is not suitable for users with active implanted electronic devices such as pacemakers or defibrillators, pregnant individuals, individuals undergoing active cancer treatments such as chemotherapy, or anyone advised by their doctor to avoid electromagnetic stimulation."
-              },
-              {
-                q: "Can people with metal implants use BIXEPS?",
-                a: "Many individuals with passive implants may safely use BIXEPS if they are cleared for MRI procedures. However, users should always consult their doctor if unsure."
-              },
-              {
-                q: "Can BIXEPS replace physiotherapy?",
-                a: "BIXEPS is not a replacement for medical care or physiotherapy. It may be used alongside rehabilitation, exercise, and wellness programs as part of a broader approach."
-              },
-              {
-                q: "Can I combine BIXEPS with other AESPI services?",
-                a: "Yes. Many clients combine BIXEPS with Power Plate Whole Body Vibration training, Molecular Hydrogen therapy, and Body composition assessments for a more comprehensive wellness and longevity program."
-              },
-              {
-                q: "How soon will I notice results?",
-                a: "Some users notice changes in muscle engagement, walking confidence, or energy within several sessions. Results vary depending on age, consistency, lifestyle, and individual condition."
-              },
-              {
-                q: "Where is AESPI located?",
-                a: "AESPI operates at Vision Exchange near Jurong East MRT in Singapore."
-              }
-            ].map((faq, i) => (
+            {faqs.map((faq, i) => (
               <div key={i} className="p-6 md:p-8 bg-slate-50 rounded-[32px] border border-slate-100">
                 <h4 className="text-xl font-serif text-slate-900 mb-3">{faq.q}</h4>
                 <p className="text-slate-500 font-light leading-relaxed text-sm md:text-base">{faq.a}</p>

@@ -96,7 +96,7 @@ export function Footer() {
 
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
           <p>© {new Date().getFullYear()} {BRAND.name} PTE. LTD. All rights reserved.</p>
-          <p>Designed for a Better You</p>
+          <p>Science-Backed Healthy Ageing Solutions in Singapore</p>
         </div>
       </div>
     </footer>

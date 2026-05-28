@@ -6,44 +6,68 @@ import { cn } from '@/src/lib/utils';
 
 export const FAQS = [
   {
-    question: "What services do you offer?",
-    answer: (
-      <>
-        We specialize in non-invasive active aging therapies, including <Link to="/bixeps" className="text-primary hover:underline font-medium">BIXEPS Pro</Link> (magnetic mitohormesis for muscle activation), <Link to="/h2-hydrogen" className="text-primary hover:underline font-medium">Molecular Hydrogen (H₂)</Link> Inhalation (for cellular recovery), <Link to="/powerplate" className="text-primary hover:underline font-medium">Power Plate</Link> (whole-body vibration for bone density and balance), and <Link to="/body-composition" className="text-primary hover:underline font-medium">Medical-Grade Body Composition Analysis</Link>.
-      </>
-    )
+    question: "Who is AESPI?",
+    answer: "AESPI is a Singapore healthy ageing and longevity studio that helps adults and seniors improve mobility, strength, balance, recovery, and overall wellbeing through science-backed, non-invasive wellness technologies."
   },
   {
-    question: "Are the treatments safe for seniors?",
-    answer: "Absolutely. All our therapies are 100% non-invasive, gentle, and specifically designed with senior safety and comfort in mind. They require zero physical exertion while delivering maximum physiological benefits, making them ideal for those with mobility challenges or those recovering from inactivity."
+    question: "What does AESPI specialize in?",
+    answer: "AESPI specializes in healthy ageing solutions focused on muscle health, mobility, balance, recovery, sleep optimization, and longevity support for adults over 40 and seniors."
   },
   {
-    question: "Is BIXEPS like exercise?",
-    answer: (
-      <>
-        BIXEPS is not a replacement for exercise, but it can complement an active lifestyle. It uses patented magnetic stimulation to activate muscles and support mitochondrial function, which is especially useful for individuals who have difficulty exercising due to age, injury, or reduced mobility. Learn more about <Link to="/bixeps" className="text-primary hover:underline font-medium">BIXEPS technology</Link>.
-      </>
-    )
+    question: "How does AESPI support healthy ageing?",
+    answer: "AESPI combines non-invasive technologies such as BIXEPS muscle activation, Power Plate whole body vibration training, and molecular hydrogen therapy to support strength, recovery, movement, and active ageing."
   },
   {
-    question: "What does a session feel like?",
-    answer: (
-      <>
-        Most users describe the sensations as very tolerable. For <Link to="/bixeps" className="text-primary hover:underline font-medium">BIXEPS</Link>, you might feel a slight warmth or tingling. For <Link to="/powerplate" className="text-primary hover:underline font-medium">Power Plate</Link>, you'll feel powerful but gentle vibrations. <Link to="/h2-hydrogen" className="text-primary hover:underline font-medium">Molecular Hydrogen</Link> inhalation is completely effortless and relaxing. None of our treatments are painful.
-      </>
-    )
+    question: "Who are AESPI’s programs suitable for?",
+    answer: "AESPI’s programs are suitable for adults over 40, seniors, individuals with reduced mobility, people seeking low-impact wellness solutions, and those looking to maintain independence and physical function as they age."
   },
   {
-    question: "How do I book an appointment?",
-    answer: "Booking is easy! You can schedule a trial session directly online using the 'Book a Trial' button, message us on WhatsApp, or fill out the contact form at the bottom of this page. We typically recommend starting with a $50 introductory protocol."
+    question: "Can seniors benefit from AESPI programs?",
+    answer: "Yes. AESPI’s programs are designed to be senior-friendly, low impact, and easy to use while supporting mobility, balance, strength, and recovery."
   },
   {
-    question: "Where is AESPI located?",
-    answer: (
-      <>
-        AESPI Wellness Studio is located at Vision Exchange in Jurong East, Singapore. We are conveniently situated near the Jurong East MRT station for easy access. Visit our <a href="#contact" className="text-primary hover:underline font-medium">Contact session</a> for more details.
-      </>
-    )
+    question: "What are non-invasive wellness technologies?",
+    answer: "Non-invasive wellness technologies are therapies or devices designed to support health and wellbeing without surgery, injections, or intensive physical strain."
+  },
+  {
+    question: "How can adults maintain mobility as they age?",
+    answer: "Maintaining mobility involves regular movement, muscle activation, balance training, recovery support, and healthy lifestyle habits that help preserve strength and flexibility over time."
+  },
+  {
+    question: "What causes muscle loss after 50?",
+    answer: "Age-related muscle loss, also known as sarcopenia, can occur due to reduced physical activity, hormonal changes, inflammation, and decreased muscle protein synthesis."
+  },
+  {
+    question: "How can seniors improve strength and balance safely?",
+    answer: "Seniors can improve strength and balance through low-impact training, muscle activation, vibration training, and consistent movement routines that are appropriate for their fitness level."
+  },
+  {
+    question: "What is the AESPI Longevity Program?",
+    answer: "The AESPI Longevity Program combines muscle activation, whole body vibration training, and molecular hydrogen therapy to support mobility, strength, recovery, and healthy ageing."
+  },
+  {
+    question: "Are AESPI programs suitable for people who cannot exercise intensely?",
+    answer: "Yes. AESPI’s technologies are designed to support people who may prefer lower-impact alternatives or additional support alongside conventional exercise."
+  },
+  {
+    question: "Can AESPI help support active ageing?",
+    answer: "AESPI’s programs are designed to help adults and seniors remain active, mobile, and independent as they age."
+  },
+  {
+    question: "Is AESPI suitable for older adults with joint discomfort?",
+    answer: "Many AESPI programs are low impact and designed to minimize excessive strain on the joints while supporting movement and muscle conditioning."
+  },
+  {
+    question: "Where is AESPI located in Singapore?",
+    answer: "AESPI is located at Vision Exchange in Jurong East, Singapore."
+  },
+  {
+    question: "Do I need prior fitness experience to join AESPI programs?",
+    answer: "No prior fitness experience is required. AESPI’s programs are beginner-friendly and suitable for a wide range of fitness levels."
+  },
+  {
+    question: "What technologies does AESPI use?",
+    answer: "AESPI uses technologies including BIXEPS muscle activation, Power Plate whole body vibration training, molecular hydrogen therapy, and body composition analysis as part of its healthy ageing programs."
   }
 ];
 

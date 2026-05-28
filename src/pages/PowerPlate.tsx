@@ -10,75 +10,107 @@ export function PowerPlate() {
   const faqs = [
     {
       q: "What is Power Plate?",
-      a: "Power Plate is a whole body vibration training system designed to stimulate muscles through multidirectional vibrations. It is used worldwide in fitness, rehabilitation, wellness, and active ageing programs."
+      a: "Power Plate is a whole body vibration training platform designed to support strength, mobility, balance, circulation, and recovery through controlled vibrations."
     },
     {
-      q: "How does Power Plate work?",
-      a: "The platform produces precise vibrations that cause muscles to contract rapidly and reflexively. This increases muscle engagement during exercises and movement training."
+      q: "How does whole body vibration work?",
+      a: "Whole body vibration training uses rapid vibrations to stimulate muscles, causing them to contract and engage multiple times per second during exercises or standing positions."
     },
     {
-      q: "What are the benefits of Power Plate?",
-      a: "Power Plate training may support muscle activation, balance and stability, flexibility, circulation, core strength, and recovery and mobility."
+      q: "Is Power Plate scientifically backed?",
+      a: "Whole body vibration training has been studied for its potential benefits in areas such as balance, circulation, flexibility, muscle activation, and healthy ageing."
     },
     {
-      q: "Is Power Plate suitable for seniors?",
-      a: "Yes. Power Plate is widely used for older adults to support balance, mobility, coordination, and muscle conditioning under supervised guidance."
+      q: "Can Power Plate improve balance?",
+      a: "Whole body vibration training may help support balance, coordination, and stability by stimulating muscles and neuromuscular responses."
     },
     {
-      q: "Is Power Plate difficult to use?",
-      a: "No. Sessions can be customised for beginners, seniors, and active individuals. Exercises may range from simple standing positions to guided movement routines."
+      q: "Is Power Plate safe for seniors?",
+      a: "Power Plate is commonly used by older adults and seniors as a low-impact training option. Sessions can be adjusted based on comfort and fitness levels."
     },
     {
-      q: "How long is a Power Plate session?",
-      a: "Sessions are typically short and efficient, often lasting between 10 to 20 minutes."
+      q: "Can whole body vibration help older adults?",
+      a: "Whole body vibration training may support mobility, muscle activation, flexibility, circulation, and balance in older adults."
     },
     {
-      q: "Is Power Plate a workout?",
-      a: "Yes. Power Plate enhances muscle activation during exercise and movement training. Even simple exercises may feel more effective due to the vibration technology."
+      q: "Does Power Plate help with muscle strength?",
+      a: "Power Plate engages muscles through vibration stimulation, which may support muscle conditioning and strength when combined with regular use."
     },
     {
-      q: "What does vibration training feel like?",
-      a: "Users typically feel gentle but powerful vibrations throughout the body. Most sessions are comfortable and energising."
+      q: "Can Power Plate support mobility?",
+      a: "Yes. Power Plate is commonly used to support movement, flexibility, muscle activation, and overall mobility."
     },
     {
-      q: "Can Power Plate help with balance?",
-      a: "Yes. Whole body vibration training is commonly used to support balance, coordination, and lower-body stability."
+      q: "How often should seniors use Power Plate?",
+      a: "Usage frequency depends on individual goals and physical condition. Many users begin with shorter sessions multiple times per week."
     },
     {
-      q: "Can Power Plate help with flexibility?",
-      a: "Many users report improved flexibility and reduced muscle tightness after sessions."
+      q: "Is Power Plate suitable for osteoporosis?",
+      a: "Whole body vibration training has been explored as part of healthy ageing and mobility support programs for older adults."
     },
     {
-      q: "Is Power Plate suitable for rehabilitation?",
-      a: "Power Plate is often incorporated into rehabilitation and recovery programs under professional guidance. Users with medical conditions should seek medical advice first."
+      q: "What are the benefits of vibration training?",
+      a: "Potential benefits of vibration training may include muscle activation, flexibility, circulation support, balance improvement, recovery support, and movement conditioning."
     },
     {
-      q: "Who should avoid Power Plate?",
-      a: "Power Plate may not be suitable for pregnant individuals, users with certain medical implants, individuals with acute injuries or medical conditions, or anyone advised against vibration therapy by their doctor."
+      q: "Can Power Plate improve circulation?",
+      a: "The vibrations generated by Power Plate may help stimulate circulation and muscle engagement during sessions."
     },
     {
-      q: "Can I combine Power Plate with BIXEPS?",
-      a: "Yes. Many AESPI clients combine Power Plate with BIXEPS for a more comprehensive muscle activation and mobility program."
+      q: "Is Power Plate a replacement for exercise?",
+      a: "Power Plate is not intended to fully replace exercise but may complement movement, recovery, and low-impact training routines."
     },
     {
       q: "Can beginners use Power Plate?",
-      a: "Absolutely. Programs can be adjusted according to fitness level, mobility, and goals."
+      a: "Yes. Power Plate is beginner-friendly and suitable for a wide range of fitness levels."
     },
     {
-      q: "Why is Power Plate popular for healthy ageing?",
-      a: "Power Plate allows efficient muscle activation and movement training with lower perceived exertion, making it attractive for individuals seeking safe and time-efficient wellness solutions."
+      q: "How long is a Power Plate session?",
+      a: "Power Plate sessions can vary depending on the program, but many sessions range from 10 to 20 minutes."
     },
     {
-      q: "Do I need special clothing?",
-      a: "Comfortable exercise attire and stable footwear are recommended."
+      q: "What is NEAT and how does Power Plate support it?",
+      a: "NEAT stands for Non-Exercise Activity Thermogenesis, which refers to energy used during everyday movement. Power Plate training may help support overall movement and muscle activity."
     },
     {
-      q: "How often should I use Power Plate?",
-      a: "Frequency depends on goals and physical condition. Many users start with 1–3 sessions weekly."
+      q: "Can Power Plate help reduce fall risk?",
+      a: "Improving balance, coordination, and lower body strength may help older adults maintain stability and confidence during movement."
     },
     {
-      q: "Is Power Plate the same as cheap vibration machines?",
-      a: "No. Power Plate uses patented precision vibration technology designed for controlled performance, comfort, and safety."
+      q: "Can Power Plate help with flexibility?",
+      a: "Whole body vibration training may help support flexibility and range of motion when combined with stretching exercises."
+    },
+    {
+      q: "Is Power Plate low impact on joints?",
+      a: "Power Plate is generally considered a low-impact training option compared to high-impact exercise activities."
+    },
+    {
+      q: "What should I expect during a Power Plate session?",
+      a: "During a session, users stand, stretch, or perform guided exercises on the vibration platform while the machine delivers controlled vibrations."
+    },
+    {
+      q: "Can Power Plate support healthy ageing?",
+      a: "Power Plate may support mobility, muscle activation, flexibility, and balance, which are important components of healthy ageing."
+    },
+    {
+      q: "Is Power Plate suitable for adults over 50?",
+      a: "Yes. Many adults over 50 use whole body vibration training as part of an active ageing and wellness routine."
+    },
+    {
+      q: "Can Power Plate be combined with BIXEPS?",
+      a: "Yes. AESPI commonly combines Power Plate and BIXEPS as part of integrated healthy ageing and mobility programs."
+    },
+    {
+      q: "Can Power Plate support recovery?",
+      a: "Whole body vibration training is commonly used to support circulation, muscle activation, and post-exercise recovery."
+    },
+    {
+      q: "What makes Power Plate different from regular vibration machines?",
+      a: "Power Plate uses precision-engineered whole body vibration technology designed for fitness, wellness, recovery, and healthy ageing applications."
+    },
+    {
+      q: "Where can I try Power Plate in Singapore?",
+      a: "AESPI offers Power Plate sessions at its healthy ageing and longevity studio in Jurong East, Singapore."
     }
   ];
 
@@ -538,80 +570,7 @@ export function PowerPlate() {
             <p className="text-slate-500 font-light">Discover how whole body vibration training supports balance, mobility, and strength.</p>
           </div>
           <div className="space-y-6">
-            {[
-              {
-                q: "What is Power Plate?",
-                a: "Power Plate is a whole body vibration training system designed to stimulate muscles through multidirectional vibrations. It is used worldwide in fitness, rehabilitation, wellness, and active ageing programs."
-              },
-              {
-                q: "How does Power Plate work?",
-                a: "The platform produces precise vibrations that cause muscles to contract rapidly and reflexively. This increases muscle engagement during exercises and movement training."
-              },
-              {
-                q: "What are the benefits of Power Plate?",
-                a: "Power Plate training may support muscle activation, balance and stability, flexibility, circulation, core strength, and recovery and mobility."
-              },
-              {
-                q: "Is Power Plate suitable for seniors?",
-                a: "Yes. Power Plate is widely used for older adults to support balance, mobility, coordination, and muscle conditioning under supervised guidance."
-              },
-              {
-                q: "Is Power Plate difficult to use?",
-                a: "No. Sessions can be customised for beginners, seniors, and active individuals. Exercises may range from simple standing positions to guided movement routines."
-              },
-              {
-                q: "How long is a Power Plate session?",
-                a: "Sessions are typically short and efficient, often lasting between 10 to 20 minutes."
-              },
-              {
-                q: "Is Power Plate a workout?",
-                a: "Yes. Power Plate enhances muscle activation during exercise and movement training. Even simple exercises may feel more effective due to the vibration technology."
-              },
-              {
-                q: "What does vibration training feel like?",
-                a: "Users typically feel gentle but powerful vibrations throughout the body. Most sessions are comfortable and energising."
-              },
-              {
-                q: "Can Power Plate help with balance?",
-                a: "Yes. Whole body vibration training is commonly used to support balance, coordination, and lower-body stability."
-              },
-              {
-                q: "Can Power Plate help with flexibility?",
-                a: "Many users report improved flexibility and reduced muscle tightness after sessions."
-              },
-              {
-                q: "Is Power Plate suitable for rehabilitation?",
-                a: "Power Plate is often incorporated into rehabilitation and recovery programs under professional guidance. Users with medical conditions should seek medical advice first."
-              },
-              {
-                q: "Who should avoid Power Plate?",
-                a: "Power Plate may not be suitable for pregnant individuals, users with certain medical implants, individuals with acute injuries or medical conditions, or anyone advised against vibration therapy by their doctor."
-              },
-              {
-                q: "Can I combine Power Plate with BIXEPS?",
-                a: "Yes. Many AESPI clients combine Power Plate with BIXEPS for a more comprehensive muscle activation and mobility program."
-              },
-              {
-                q: "Can beginners use Power Plate?",
-                a: "Absolutely. Programs can be adjusted according to fitness level, mobility, and goals."
-              },
-              {
-                q: "Why is Power Plate popular for healthy ageing?",
-                a: "Power Plate allows efficient muscle activation and movement training with lower perceived exertion, making it attractive for individuals seeking safe and time-efficient wellness solutions."
-              },
-              {
-                q: "Do I need special clothing?",
-                a: "Comfortable exercise attire and stable footwear are recommended."
-              },
-              {
-                q: "How often should I use Power Plate?",
-                a: "Frequency depends on goals and physical condition. Many users start with 1–3 sessions weekly."
-              },
-              {
-                q: "Is Power Plate the same as cheap vibration machines?",
-                a: "No. Power Plate uses patented precision vibration technology designed for controlled performance, comfort, and safety."
-              }
-            ].map((faq, i) => (
+            {faqs.map((faq, i) => (
               <div key={i} className="p-6 md:p-8 bg-slate-50 rounded-[32px] border border-slate-100">
                 <h4 className="text-xl font-serif text-slate-900 mb-3">{faq.q}</h4>
                 <p className="text-slate-500 font-light leading-relaxed text-sm md:text-base">{faq.a}</p>
