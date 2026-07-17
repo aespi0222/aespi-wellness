@@ -67,14 +67,14 @@ export function Blog() {
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3" />
         <div className="max-w-4xl mx-auto px-6 text-center relative z-10">
           <h2 className="text-3xl md:text-5xl font-serif text-white mb-6 italic">Stay Informed on Longevity</h2>
-          <p className="text-slate-400 text-lg font-light mb-10 max-w-2xl mx-auto">
+          <p className="text-white text-lg font-light mb-10 max-w-2xl mx-auto">
             Get the latest research on muscle activation and cellular health delivered directly to your inbox.
           </p>
           <form className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <input 
               type="email" 
               placeholder="Your email address" 
-              className="flex-1 px-6 py-4 rounded-2xl bg-white/5 border border-white/10 text-white placeholder:text-slate-600 outline-none focus:border-primary transition-colors"
+              className="flex-1 px-6 py-4 rounded-2xl bg-white/10 border border-white/30 text-white placeholder:text-white/50 outline-none focus:border-primary transition-colors"
             />
             <button className="px-8 py-4 bg-primary text-white font-bold rounded-2xl hover:scale-105 transition-all">
               Subscribe

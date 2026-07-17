@@ -51,9 +51,11 @@ export function RelatedServices() {
                     <h3 className="text-xl font-serif text-white">{service.title}</h3>
                   </div>
                 </div>
-                <div className="flex items-center justify-between">
-                  <p className="text-slate-500 text-sm font-light line-clamp-1 pr-4">{service.description}</p>
-                  <ArrowRight size={18} className="text-primary opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                <div className="space-y-4">
+                  <p className="text-slate-500 text-sm font-light line-clamp-2 leading-relaxed">{service.description}</p>
+                  <div className="inline-flex items-center justify-center w-full bg-primary text-white text-center py-2.5 px-4 rounded-full font-extrabold text-xs shadow-sm hover:bg-primary-hover hover:scale-[1.01] active:scale-[0.99] transition-all">
+                    {service.cta}
+                  </div>
                 </div>
               </Link>
             </motion.div>

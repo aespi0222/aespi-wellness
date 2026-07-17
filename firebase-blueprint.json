@@ -38,12 +38,59 @@
         }
       },
       "required": ["name", "email", "message", "createdAt"]
+    },
+    "CommunityInquiry": {
+      "title": "CommunityInquiry",
+      "description": "An inquiry submitted via the Community Healthy Ageing Access Programme form.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the senior or caregiver."
+        },
+        "phone": {
+          "type": "string",
+          "description": "Phone number."
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Email address."
+        },
+        "age": {
+          "type": "string",
+          "description": "Age of the senior client."
+        },
+        "chasCardType": {
+          "type": "string",
+          "description": "Type of CHAS card (e.g. Blue, Orange)."
+        },
+        "message": {
+          "type": "string",
+          "description": "Enquiry details/message."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Timestamp of creation."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["new", "contacted", "closed"],
+          "description": "Status of the access enquiry."
+        }
+      },
+      "required": ["name", "phone", "email", "age", "chasCardType", "createdAt", "status"]
     }
   },
   "firestore": {
     "/inquiries/{inquiryId}": {
       "schema": "Inquiry",
       "description": "Collection of client inquiries."
+    },
+    "/community_inquiries/{inquiryId}": {
+      "schema": "CommunityInquiry",
+      "description": "Collection of submissions for the Community Healthy Ageing Access Programme."
     }
   }
 }

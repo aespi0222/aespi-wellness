@@ -1,33 +1,91 @@
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600;700;800&display=swap');
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+
+:root {
+  --primary: #14532D;
+  --primary-hover: #166534;
+  --secondary: #2F855A;
+  --accent: #C49A3A;
+  --surface: #FAFAF7;
+  --light-green: #ECFDF5;
+}
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Instrument Serif", serif;
   
-  --color-primary: #0F172A;
-  --color-secondary: #B45309;
-  --color-accent: #334155;
-  --color-surface: #F8F5F2;
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-surface: var(--surface);
+  --color-light-green: var(--light-green);
+  --color-gold: #C49A3A;
+
+  /* Premium Senior-friendly Redefined Text Contrast Overrides */
+  --color-slate-950: #111827;
+  --color-slate-900: #111827;
+  --color-slate-800: #111827;
+  --color-slate-700: #1F2937;
+  --color-slate-600: #374151;
+  --color-slate-500: #374151; /* Was #6B7280, now secondary text for maximum readability */
+  --color-slate-400: #4B5563; /* Was #9CA3AF, now muted text to avoid light text entirely */
+  --color-slate-300: #4B5563; /* Map slate-300 also to dark text to prevent low contrast grey tags */
+  --color-slate-200: #9CA3AF; /* Make slate-200 a readable border tone instead of soft grey */
+  --color-slate-100: #D1D5DB; /* Elevate slate-100 to make light borders easily visible to seniors */
+
+  --color-gray-950: #111827;
+  --color-gray-900: #111827;
+  --color-gray-800: #111827;
+  --color-gray-700: #1F2937;
+  --color-gray-600: #374151;
+  --color-gray-500: #374151;
+  --color-gray-400: #4B5563;
+  --color-gray-300: #4B5563;
+  --color-gray-200: #9CA3AF;
+  --color-gray-100: #D1D5DB;
 }
 
 @layer base {
   body {
-    @apply bg-surface text-slate-900 antialiased text-[17px];
+    @apply bg-surface text-slate-900 antialiased text-[17px] font-medium; /* Make basic text slightly bolder for easy senior reading */
   }
 
   h1, h2, h3 {
-    @apply font-serif;
+    @apply font-serif font-bold text-slate-950;
+  }
+
+  p {
+    @apply text-slate-700 leading-relaxed font-medium; /* Make paragraph texts bold and clear */
+  }
+
+  /* Form & Input Accessibility Overrides */
+  input:focus,
+  select:focus,
+  textarea:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(20, 83, 45, 0.15) !important;
+    outline: none !important;
+  }
+
+  /* Focus Visible Accessibility Outline Indicator (WCAG 2.2 compliant) */
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 3px solid #C49A3A !important;
+    outline-offset: 2px !important;
   }
 }
 
 .glass {
-  @apply bg-white/70 backdrop-blur-xl border border-white/30;
+  @apply bg-white/95 backdrop-blur-xl border-2 border-slate-300 shadow-md;
 }
 
 .longevity-gradient {
-  background: linear-gradient(135deg, #F8F5F2 0%, #E7E0D8 100%);
+  background: linear-gradient(135deg, #FAFAF7 0%, #ECFDF5 100%);
 }
 
 .text-balance {

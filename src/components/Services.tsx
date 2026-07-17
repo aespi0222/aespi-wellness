@@ -56,12 +56,6 @@ export function Services() {
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                <div className="absolute top-4 right-4 translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500">
-                  <div className="w-12 h-12 glass rounded-full flex items-center justify-center text-primary">
-                    <ArrowUpRight size={20} />
-                  </div>
-                </div>
               </div>
 
               <div className="flex-grow flex flex-col px-2">
@@ -75,12 +69,12 @@ export function Services() {
                   {service.description}
                 </p>
 
-                <div className="pt-6 border-t border-slate-100">
+                <div className="pt-6 border-t border-slate-100 mt-auto">
                   <Link
                     to={service.link}
-                    className="inline-flex items-center gap-3 text-sm font-bold text-primary group-hover:gap-5 transition-all"
+                    className="inline-flex items-center justify-center w-full bg-primary text-white text-center py-3 px-6 rounded-full font-extrabold text-sm shadow-md hover:bg-primary-hover border-2 border-transparent hover:scale-[1.02] active:scale-95 transition-all cursor-pointer"
                   >
-                    {service.cta} <ArrowRight size={18} className="text-secondary" />
+                    {service.cta}
                   </Link>
                 </div>
               </div>

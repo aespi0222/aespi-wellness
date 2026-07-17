@@ -61,7 +61,7 @@ export function TrialChoiceModal({ isOpen, onClose }: TrialChoiceModalProps) {
                   Pillar 01: Sarcopenia prevention protocol to maintain physical independence.
                 </p>
                 <div className="flex items-center justify-between mt-auto">
-                  <span className="text-[10px] font-bold text-primary group-hover:text-white uppercase tracking-widest">$50 Initial Session</span>
+                  <span className="text-[10px] font-bold text-primary group-hover:text-white uppercase tracking-widest">$30 Initial Session</span>
                   <ArrowRight size={18} className="text-primary group-hover:text-white group-hover:translate-x-1 transition-all" />
                 </div>
               </button>

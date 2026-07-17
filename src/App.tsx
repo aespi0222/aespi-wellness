@@ -13,6 +13,7 @@ import { PowerPlate } from './pages/PowerPlate';
 import { BodyComposition } from './pages/BodyComposition';
 import { Blog } from './pages/Blog';
 import { BlogPost } from './pages/BlogPost';
+import { CommunityProgramme } from './pages/CommunityProgramme';
 import { MessageCircle } from 'lucide-react';
 import { BRAND } from './constants';
 import { GoogleAnalytics } from './components/GoogleAnalytics';
@@ -37,6 +38,7 @@ export default function App() {
             <Route path="/body-composition" element={<BodyComposition />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/community-healthy-ageing-access-programme" element={<CommunityProgramme />} />
           </Routes>
         </main>
         <Footer />

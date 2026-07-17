@@ -179,6 +179,14 @@ export const RESEARCH = [
     source: "PubMed Central (PMC)",
     link: "https://pmc.ncbi.nlm.nih.gov/articles/PMC5792008/",
     type: "paper"
+  },
+  {
+    id: "powerplate-ejss-2022",
+    serviceId: "powerplate",
+    title: "Effects of whole-body vibration training on resting blood pressure in adults: a systematic review and meta-analysis",
+    source: "European Journal of Sport Science / PubMed",
+    link: "https://pubmed.ncbi.nlm.nih.gov/35174868/",
+    type: "paper"
   }
 ];
 

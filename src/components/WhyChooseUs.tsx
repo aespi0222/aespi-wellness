@@ -83,8 +83,8 @@ export function WhyChooseUs() {
           <div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-transparent pointer-events-none" />
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="text-center md:text-left max-w-xl">
-              <h4 className="text-3xl md:text-4xl font-serif text-white mb-4">Ready to architecture your <span className="italic text-secondary">biological health span?</span></h4>
-              <p className="text-white/60 text-lg font-light">Book a strategic consultation or trial session at our Vision Exchange centre.</p>
+              <h4 className="text-3xl md:text-4xl font-serif text-white mb-4">Ready to architecture your <span className="italic text-accent font-extrabold">biological health span?</span></h4>
+              <p className="text-white text-lg font-semibold">Book a strategic consultation or trial session at our Vision Exchange centre.</p>
             </div>
             <a
               href="#contact"

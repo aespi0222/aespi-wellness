@@ -445,8 +445,8 @@ export function Bixeps() {
             <div className="grid grid-cols-2 gap-6">
               <div className="bg-primary p-8 rounded-[40px] text-white flex flex-col justify-center items-center text-center shadow-xl">
                 <TrendingUp size={40} className="mb-4 text-secondary" />
-                <p className="text-3xl font-bold mb-1">85%</p>
-                <p className="text-xs font-medium uppercase tracking-wider opacity-80">Reported Better Balance</p>
+                <p className="text-3xl font-bold mb-1 text-white">85%</p>
+                <p className="text-xs font-bold uppercase tracking-wider text-white">Reported Better Balance</p>
               </div>
               <div className="bg-white p-8 rounded-[40px] text-slate-900 flex flex-col justify-center items-center text-center shadow-xl border border-slate-100">
                 <Users size={40} className="mb-4 text-primary" />
@@ -584,11 +584,11 @@ export function Bixeps() {
                   <Zap size={32} />
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2">BIXEPS Pro</h3>
-                <p className="text-secondary-light font-bold mb-4">The Professional Standard</p>
-                <p className="text-slate-300 text-sm mb-6 leading-relaxed italic">
+                <p className="text-white font-bold mb-4">The Professional Standard</p>
+                <p className="text-white text-sm mb-6 leading-relaxed italic">
                   "Everything in BIXEPS, and more."
                 </p>
-                <p className="text-slate-400 text-xs mb-8 leading-relaxed">
+                <p className="text-white text-xs mb-8 leading-relaxed">
                   BIXEPS Pro builds upon the foundational technology with higher-flux density and targeted protocols used exclusively in professional wellness environments.
                 </p>
                 <ul className="space-y-4">
@@ -609,7 +609,7 @@ export function Bixeps() {
                   <span className="inline-block px-4 py-1 rounded-full bg-white/10 border border-white/20 text-white text-[10px] font-bold uppercase tracking-widest">
                     Professional Grade
                   </span>
-                  <span className="inline-block px-4 py-1 rounded-full bg-secondary-light/20 border border-secondary-light/30 text-secondary-light text-[10px] font-bold uppercase tracking-widest">
+                  <span className="inline-block px-4 py-1 rounded-full bg-secondary-light/20 border border-secondary-light/30 text-white text-[10px] font-bold uppercase tracking-widest">
                     Used at AESPI
                   </span>
                 </div>
@@ -675,7 +675,7 @@ export function Bixeps() {
                 <p className="text-slate-500 text-xs md:text-sm mb-4">Experience the future of muscle activation at Vision Exchange.</p>
                 
                 <div className="inline-flex flex-col items-center gap-1 px-4 py-2 md:px-6 md:py-3 bg-primary/5 rounded-2xl border border-primary/10">
-                  <p className="text-primary font-bold text-sm md:text-base">Trial Session: $50</p>
+                  <p className="text-primary font-bold text-sm md:text-base">Trial Session: $30</p>
                   <p className="text-[10px] text-slate-500 uppercase tracking-widest font-bold">Includes BIXEPS + Body Composition Analysis</p>
                 </div>
               </div>
@@ -715,15 +715,15 @@ export function Bixeps() {
           </p>
           <div className="mb-12 flex flex-col md:flex-row justify-center gap-6">
             <div className="px-8 py-4 bg-white/10 backdrop-blur-md rounded-3xl border border-white/20">
-              <p className="text-white font-bold text-lg mb-1">Introductory Protocol: $50</p>
-              <p className="text-xs text-white/70 uppercase tracking-widest font-black">Resilience Activation + Longevity Biometrics</p>
+              <p className="text-white font-bold text-lg mb-1">Introductory Protocol: $30</p>
+              <p className="text-xs text-white uppercase tracking-widest font-black">Resilience Activation + Longevity Biometrics</p>
             </div>
             <Link 
               to="/body-composition"
-              className="px-8 py-4 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 text-white/90 text-sm flex flex-col justify-center hover:bg-white/10 transition-all"
+              className="px-8 py-4 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 text-white text-sm flex flex-col justify-center hover:bg-white/10 transition-all"
             >
-              <p className="font-bold">Pair with Biometrics Analysis</p>
-              <p className="text-[10px] uppercase tracking-widest">Understand your baseline →</p>
+              <p className="font-bold text-white">Pair with Biometrics Analysis</p>
+              <p className="text-[10px] text-white uppercase tracking-widest">Understand your baseline →</p>
             </Link>
           </div>
           <div className="flex justify-center">

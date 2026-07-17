@@ -7,6 +7,7 @@ import { WhyChooseUs } from '../components/WhyChooseUs';
 import { Testimonials } from '../components/Testimonials';
 import { About } from '../components/About';
 import { FAQ, FAQS } from '../components/FAQ';
+import { CommunityImpact } from '../components/CommunityImpact';
 import { Contact } from '../components/Contact';
 
 export function Home() {
@@ -33,6 +34,7 @@ export function Home() {
       <WhyChooseUs />
       <About />
       <Testimonials />
+      <CommunityImpact />
       <FAQ />
       <Contact />
     </>

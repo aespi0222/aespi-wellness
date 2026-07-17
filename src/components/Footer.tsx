@@ -15,9 +15,17 @@ export function Footer() {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <p className="text-slate-400 max-w-sm mb-8 leading-relaxed font-light">
+            <p className="text-white/80 max-w-sm mb-6 leading-relaxed font-medium text-sm">
               AESPI is a premium longevity and healthy ageing collective. We help adults and seniors stay active, independent, and resilient through science-backed wellness technologies.
             </p>
+            <div className="mb-8">
+              <a 
+                href="/community-healthy-ageing-access-programme" 
+                className="text-accent hover:text-white text-sm transition-colors font-serif italic border-b border-accent/20 hover:border-white/40 pb-0.5"
+              >
+                Community Healthy Ageing Access Programme
+              </a>
+            </div>
             <div className="flex gap-4">
               <a 
                 href={BRAND.socials.facebook} 
@@ -50,34 +58,34 @@ export function Footer() {
           </div>
 
           <div>
-            <h4 className="font-serif text-xl mb-6 text-white/90">Technologies</h4>
-            <ul className="space-y-4 text-slate-400 font-light text-sm">
-              <li><a href="/bixeps" className="hover:text-primary transition-colors flex items-center gap-2 group"><div className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" /> BIXEPS Muscle Activation</a></li>
-              <li><a href="/powerplate" className="hover:text-primary transition-colors flex items-center gap-2 group"><div className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" /> Power Plate Vibration</a></li>
-              <li><a href="/h2-hydrogen" className="hover:text-primary transition-colors flex items-center gap-2 group"><div className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" /> Molecular Hydrogen Therapy</a></li>
-              <li><a href="/body-composition" className="hover:text-primary transition-colors flex items-center gap-2 group"><div className="w-1.5 h-1.5 rounded-full bg-primary/40 group-hover:bg-primary transition-colors" /> Body Composition Analysis</a></li>
+            <h4 className="font-serif text-xl mb-6 text-white font-bold">Technologies</h4>
+            <ul className="space-y-4 text-white/80 font-medium text-sm">
+              <li><a href="/bixeps" className="hover:text-accent transition-colors flex items-center gap-2 group"><div className="w-1.5 h-1.5 rounded-full bg-accent/40 group-hover:bg-accent transition-colors" /> BIXEPS Muscle Activation</a></li>
+              <li><a href="/powerplate" className="hover:text-accent transition-colors flex items-center gap-2 group"><div className="w-1.5 h-1.5 rounded-full bg-accent/40 group-hover:bg-accent transition-colors" /> Power Plate Vibration</a></li>
+              <li><a href="/h2-hydrogen" className="hover:text-accent transition-colors flex items-center gap-2 group"><div className="w-1.5 h-1.5 rounded-full bg-accent/40 group-hover:bg-accent transition-colors" /> Molecular Hydrogen Therapy</a></li>
+              <li><a href="/body-composition" className="hover:text-accent transition-colors flex items-center gap-2 group"><div className="w-1.5 h-1.5 rounded-full bg-accent/40 group-hover:bg-accent transition-colors" /> Body Composition Analysis</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-serif text-xl mb-6 text-white/90">Quick Links</h4>
-            <ul className="space-y-4 text-slate-400 font-light text-sm">
-              <li><a href="/" className="hover:text-white transition-colors">Home & Vision</a></li>
-              <li><a href="/#longevity" className="hover:text-white transition-colors">Longevity Strategy</a></li>
-              <li><a href="/#who-we-serve" className="hover:text-white transition-colors">Who We Serve</a></li>
-              <li><a href="/blog" className="hover:text-white transition-colors">Healthy Ageing Blog</a></li>
-              <li><a href="/#contact" className="hover:text-white transition-colors">Contact & Locations</a></li>
+            <h4 className="font-serif text-xl mb-6 text-white font-bold">Quick Links</h4>
+            <ul className="space-y-4 text-white/80 font-medium text-sm">
+              <li><a href="/" className="hover:text-accent transition-colors">Home & Vision</a></li>
+              <li><a href="/#longevity" className="hover:text-accent transition-colors">Longevity Strategy</a></li>
+              <li><a href="/#who-we-serve" className="hover:text-accent transition-colors">Who We Serve</a></li>
+              <li><a href="/blog" className="hover:text-accent transition-colors">Healthy Ageing Blog</a></li>
+              <li><a href="/#contact" className="hover:text-accent transition-colors">Contact & Locations</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-bold text-lg mb-6">Contact Info</h4>
-            <ul className="space-y-4 text-slate-400 text-sm">
+            <h4 className="font-bold text-lg mb-6 text-white">Contact Info</h4>
+            <ul className="space-y-4 text-white/80 text-sm font-medium">
               <li className="leading-relaxed">{BRAND.address}</li>
               <li>
                 <a 
                   href={BRAND.phoneUrl} 
-                  className="hover:text-white transition-colors"
+                  className="hover:text-accent transition-colors"
                 >
                   Call or WhatsApp: {BRAND.whatsapp}
                 </a>
@@ -85,7 +93,7 @@ export function Footer() {
               <li>
                 <a 
                   href={`mailto:${BRAND.email}`} 
-                  className="hover:text-white transition-colors"
+                  className="hover:text-accent transition-colors"
                 >
                   Email: {BRAND.email}
                 </a>
@@ -94,7 +102,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60 font-medium">
           <p>© {new Date().getFullYear()} {BRAND.name} PTE. LTD. All rights reserved.</p>
           <p>Science-Backed Healthy Ageing Solutions in Singapore</p>
         </div>
