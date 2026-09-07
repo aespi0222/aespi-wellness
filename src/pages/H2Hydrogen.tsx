@@ -296,11 +296,11 @@ export function H2Hydrogen() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold mb-6">The Science of Selective Antioxidants</h2>
-              <p className="text-slate-300 mb-6 leading-relaxed">
+              <p className="text-white mb-6 leading-relaxed">
                 Oxidative stress is caused by Reactive Oxygen Species (ROS). While some ROS are beneficial for cell signaling, 
                 the <strong>Hydroxyl Radical (•OH)</strong> is highly toxic and causes significant cellular damage.
               </p>
-              <p className="text-slate-300 mb-8 leading-relaxed">
+              <p className="text-white mb-8 leading-relaxed">
                 Molecular Hydrogen (H₂) is a <strong>selective antioxidant</strong>. It specifically targets and neutralizes only the 
                 most harmful radicals (•OH), converting them into harmless water (H₂O) without interfering with essential biological processes.
               </p>
@@ -312,20 +312,20 @@ export function H2Hydrogen() {
                 <div className="flex items-center justify-center gap-4 py-6">
                   <div className="flex flex-col items-center">
                     <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center font-bold text-xl shadow-lg shadow-secondary/20">H₂</div>
-                    <span className="text-xs mt-2 text-slate-400">Hydrogen</span>
+                    <span className="text-xs mt-2 text-white">Hydrogen</span>
                   </div>
                   <div className="text-2xl font-bold text-slate-500">+</div>
                   <div className="flex flex-col items-center">
                     <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center font-bold text-xl shadow-lg shadow-accent/20">2•OH</div>
-                    <span className="text-xs mt-2 text-slate-400">Hydroxyl Radicals</span>
+                    <span className="text-xs mt-2 text-white">Hydroxyl Radicals</span>
                   </div>
                   <div className="text-2xl font-bold text-slate-500">→</div>
                   <div className="flex flex-col items-center">
                     <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center font-bold text-xl shadow-lg shadow-primary/20">2H₂O</div>
-                    <span className="text-xs mt-2 text-slate-400">Pure Water</span>
+                    <span className="text-xs mt-2 text-white">Pure Water</span>
                   </div>
                 </div>
-                <p className="text-center text-sm text-slate-400 italic">
+                <p className="text-center text-sm text-white italic">
                   H₂ neutralizes toxic radicals into pure water, hydrating your cells while removing waste.
                 </p>
               </div>
@@ -427,15 +427,15 @@ export function H2Hydrogen() {
                 <div className="space-y-6 relative z-10">
                   <div className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10">
                     <div className="w-10 h-10 bg-secondary text-white rounded-full flex items-center justify-center font-bold">30m</div>
-                    <p className="text-slate-300 font-medium text-sm">Standard recovery session</p>
+                    <p className="text-white font-medium text-sm">Standard recovery session</p>
                   </div>
                   <div className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10">
                     <div className="w-10 h-10 bg-secondary text-white rounded-full flex items-center justify-center font-bold">60m</div>
-                    <p className="text-slate-300 font-medium text-sm">Deep cellular rejuvenation</p>
+                    <p className="text-white font-medium text-sm">Deep cellular rejuvenation</p>
                   </div>
                   <div className="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10">
                     <div className="w-10 h-10 bg-secondary text-white rounded-full flex items-center justify-center font-bold">2-3x</div>
-                    <p className="text-slate-300 font-medium text-sm">Recommended sessions per week</p>
+                    <p className="text-white font-medium text-sm">Recommended sessions per week</p>
                   </div>
                 </div>
                 <div className="mt-8 p-6 bg-secondary/10 rounded-3xl border border-secondary/20">
@@ -487,14 +487,14 @@ export function H2Hydrogen() {
                     <p className="text-lg font-bold text-slate-900">100% Safe & Natural</p>
                   </div>
                   <div className="bg-secondary p-6 rounded-3xl shadow-lg text-white">
-                    <p className="text-sm font-bold opacity-80 uppercase tracking-widest mb-2">Bioavailability</p>
-                    <p className="text-lg font-bold">Superior Absorption</p>
+                    <p className="text-sm font-bold text-white uppercase tracking-widest mb-2">Bioavailability</p>
+                    <p className="text-lg font-bold text-white">Superior Absorption</p>
                   </div>
                 </div>
                 <div className="space-y-4 mt-8">
                   <div className="bg-primary p-6 rounded-3xl shadow-lg text-white">
-                    <p className="text-sm font-bold opacity-80 uppercase tracking-widest mb-2">Anti-Aging</p>
-                    <p className="text-lg font-bold">Cellular Rejuvenation</p>
+                    <p className="text-sm font-bold text-white uppercase tracking-widest mb-2">Anti-Aging</p>
+                    <p className="text-lg font-bold text-white">Cellular Rejuvenation</p>
                   </div>
                   <div className="bg-white p-6 rounded-3xl shadow-lg border border-slate-100">
                     <p className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-2">Effect</p>

@@ -266,11 +266,11 @@ export function PowerPlate() {
               viewport={{ once: true }}
             >
               <h2 className="text-4xl font-bold mb-6">The Science of Acceleration Training</h2>
-              <p className="text-slate-300 mb-6 leading-relaxed">
+              <p className="text-white mb-6 leading-relaxed">
                 Power Plate uses <strong>Whole Body Vibration (WBV)</strong> to create instability in the human body. 
                 As the plate vibrates, your muscles must automatically contract and relax to maintain balance.
               </p>
-              <p className="text-slate-300 mb-8 leading-relaxed">
+              <p className="text-white mb-8 leading-relaxed">
                 This is based on Newton's Second Law of Motion: <strong>Force = Mass × Acceleration</strong>. 
                 By increasing the acceleration (vibration), Power Plate increases the force on your muscles 
                 without the need for heavy weights, making it incredibly safe for seniors.
@@ -283,15 +283,15 @@ export function PowerPlate() {
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <CheckCircle2 size={18} className="text-accent shrink-0 mt-1" />
-                    <p className="text-sm text-slate-300">Tri-planar vibration (up/down, front/back, side/side) for natural movement.</p>
+                    <p className="text-sm text-white">Tri-planar vibration (up/down, front/back, side/side) for natural movement.</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 size={18} className="text-accent shrink-0 mt-1" />
-                    <p className="text-sm text-slate-300">Consistent harmonic frequency ensures safe and predictable muscle response.</p>
+                    <p className="text-sm text-white">Consistent harmonic frequency ensures safe and predictable muscle response.</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <CheckCircle2 size={18} className="text-accent shrink-0 mt-1" />
-                    <p className="text-sm text-slate-300">Triggers 30-50 involuntary muscle contractions every single second.</p>
+                    <p className="text-sm text-white">Triggers 30-50 involuntary muscle contractions every single second.</p>
                   </div>
                 </div>
               </div>
